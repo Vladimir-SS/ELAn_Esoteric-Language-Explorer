@@ -1,0 +1,151 @@
+@import './variables.scss';
+
+:root {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: $text-color;
+    background-color: $background-color;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    place-items: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+button {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.content {
+    margin: $spacing-unit;
+}
+
+.icon {
+    width: $icon-size;
+    height: $icon-size;
+}
+
+.icon--small {
+    width: $icon-size-small;
+    height: $icon-size-small;
+}
+
+.icon--link {
+    margin-left: $spacing-unit;
+    padding-bottom: $spacing-unit;
+}
+
+a {
+    text-decoration: none;
+    color: $text-color;
+    font-weight: bold;
+
+    &:hover {
+        color: $hover-color;
+    }
+}
+
+button {
+    display: flex;
+    align-items: center;
+    margin: $spacing-unit;
+    background-color: $button-color;
+    color: $text-color;
+    padding: $spacing-unit * 0.8 $spacing-unit * 1.2;
+    border: none;
+    font-size: $font-size-small;
+    border-radius: $border-radius-base;
+    cursor: pointer;
+
+    &:disabled {
+        color: $button-disabled-color;
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+
+    &:hover:not(:disabled) {
+        background-color: $hover-color;
+    }
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: $spacing-unit;
+}
+
+.content-box {
+    padding: $padding-base;
+    background-color: $background-color;
+    border-radius: $border-radius-base;
+    box-shadow: $box-shadow;
+
+    h1 {
+        color: $heading-color;
+        font-size: $font-size-heading;
+        margin-bottom: $spacing-unit * 1.5;
+    }
+}
+
+h4 {
+    margin: 0;
+}
+
+.dropdown {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    label {
+        font-weight: bold;
+    }
+
+    select {
+        padding: $padding-small;
+        border-radius: $border-radius-base;
+        border: 1px solid $border-color;
+        font-size: $font-size-small;
+        background-color: $secondary-background-color;
+        color: $text-color;
+        cursor: pointer;
+    }
+
+    select:hover {
+        border-color: $hover-color;
+    }
+
+    select:focus {
+        outline: none;
+        border-color: $hover-color;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-box {
+        width: 100%;
+    }
+}
