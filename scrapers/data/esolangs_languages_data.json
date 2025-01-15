@@ -1,0 +1,436 @@
+[
+    {
+        "Designed by": null,
+        "Memory system": null,
+        "Dimensions": null,
+        "Computational class": null,
+        "Reference implementation": null,
+        "Influenced by": null,
+        "File extension(s)": null,
+        "Year created": null,
+        "Paradigms": null,
+        "Language Name": "�􏿾",
+        "URL": "https://esolangs.org/wiki/Soh_supplementary_private_use_area-b_u%2B10fffe",
+        "Short Description": "�􏿾 (U+0001 and U+10FFFE), or \"soh supplementary private use area-b u+10fffe\" is a programming language where different operations are performed on a bit tape initialized with 50,000 zeroes. You can find more information inthis GitHub repo. �(SOH) takes input from the standard input stream \"overwriting the bits it needs, encoded as utf-8 if the current bit is 1, otherwise, encoded as latin-1. Remember to end the input stream with an EOF!\" (Input overwrites the bits in the bit tape, using utf-8 if the bit on the tape is 1, and Latin-1 otherwise. �(U+10FFFE) \"prints the bits in the output bit buffer, decoded as utf-8 if the current bit is 1, otherwise, encoded as latin-1. No overwriting occurs.\" 1 adds the current bit to the output bit buffer. 0 pops a bit from the output bit buffer, placing it in the current bit. > and < move the data pointer one bit in the specified direction. - performs a logical NOT. ? skips the next command if the current bit is 1. A, O, N, and X perform a logical AND, OR, NAND, or, XOR respectively of the previous 2 bits, and stores the result in the current bit. | goes back to the beginning of the code.",
+        "Categories": [
+            "Stubs",
+            "Languages",
+            "Cell-based",
+            "Implemented"
+        ]
+    },
+    {
+        "Designed by": null,
+        "Memory system": null,
+        "Dimensions": null,
+        "Computational class": null,
+        "Reference implementation": null,
+        "Influenced by": null,
+        "File extension(s)": null,
+        "Year created": null,
+        "Paradigms": null,
+        "Language Name": "§þłĳŧȉǩȃɖəɹ",
+        "URL": "https://esolangs.org/wiki/%C2%A7%C3%BE%C5%82%C4%B3%C5%A7%C8%89%C7%A9%C8%83%C9%96%C9%99%C9%B9",
+        "Short Description": "Splitikader is invented by PSTF.Note that this Esolang will controls the uncomputable commands. You are free to edit this Esolang.",
+        "Categories": [
+            "Works-in-Progress",
+            "Languages",
+            "2024"
+        ]
+    },
+    {
+        "Designed by": null,
+        "Memory system": null,
+        "Dimensions": null,
+        "Computational class": null,
+        "Reference implementation": null,
+        "Influenced by": null,
+        "File extension(s)": null,
+        "Year created": null,
+        "Paradigms": null,
+        "Language Name": "ʘ",
+        "URL": "https://esolangs.org/wiki/%CA%98",
+        "Short Description": "ʘ is an Esolang similar to C, but every character is different. If the ʘ interpreter finds any alphabetic character it will throw an error The ʘ interpreter replaces: Uppercase letters don't apply",
+        "Categories": [
+            "Languages",
+            "Low-level",
+            "Unimplemented"
+        ]
+    },
+    {
+        "Designed by": null,
+        "Memory system": null,
+        "Dimensions": null,
+        "Computational class": null,
+        "Reference implementation": null,
+        "Influenced by": null,
+        "File extension(s)": null,
+        "Year created": null,
+        "Paradigms": null,
+        "Language Name": NaN,
+        "URL": "https://esolangs.org/wiki/0widthnonjoiner",
+        "Short Description": "For ease of use, I'm going to go ahead and use the wrong title. 0widthnonjoiner is made byUnicodes. This language is run on a stack. For each line there is 1 instruction + arguments. Sorry, there are no sample programs here.",
+        "Categories": [
+            "Languages",
+            "Stack-based",
+            "No IO"
+        ]
+    },
+    {
+        "Designed by": "PSTF",
+        "Memory system": null,
+        "Dimensions": null,
+        "Computational class": ",High-level,Pseudonatural",
+        "Reference implementation": "Unimplemented",
+        "Influenced by": null,
+        "File extension(s)": [
+            ".english",
+            ".engl",
+            ".txt",
+            ".text"
+        ],
+        "Year created": "2024",
+        "Paradigms": null,
+        "Language Name": "^English",
+        "URL": "https://esolangs.org/wiki/%5EEnglish",
+        "Short Description": "^English was designed by PSTF. It is more visual script.",
+        "Categories": [
+            "Languages",
+            "2023",
+            "2024",
+            "Unimplemented",
+            "High-level",
+            "Pseudonatural"
+        ]
+    },
+    {
+        "Designed by": null,
+        "Memory system": null,
+        "Dimensions": null,
+        "Computational class": null,
+        "Reference implementation": null,
+        "Influenced by": null,
+        "File extension(s)": null,
+        "Year created": null,
+        "Paradigms": null,
+        "Language Name": "?",
+        "URL": "https://esolangs.org/wiki/%3F",
+        "Short Description": "? (Ask, None-Ask)is aNONEdialect created byJaipthat allows the user to input numbers and strings and calculate basic expressions.",
+        "Categories": [
+            "Languages",
+            "Implemented",
+            "Total"
+        ]
+    },
+    {
+        "Designed by": null,
+        "Memory system": null,
+        "Dimensions": null,
+        "Computational class": null,
+        "Reference implementation": null,
+        "Influenced by": null,
+        "File extension(s)": null,
+        "Year created": null,
+        "Paradigms": null,
+        "Language Name": "??????Infinity bits, Aleph-0 Bytes??????",
+        "URL": "https://esolangs.org/wiki/%E2%88%9E_bits,_%E2%84%B50_Bytes",
+        "Short Description": "∞ bits, ℵ0 Bytes is designed by PSTF.",
+        "Categories": [
+            "Works-in-Progress",
+            "Languages",
+            "2024"
+        ]
+    },
+    {
+        "Designed by": null,
+        "Memory system": null,
+        "Dimensions": null,
+        "Computational class": null,
+        "Reference implementation": null,
+        "Influenced by": null,
+        "File extension(s)": null,
+        "Year created": null,
+        "Paradigms": null,
+        "Language Name": "!",
+        "URL": "https://esolangs.org/wiki/!",
+        "Short Description": "!(pronounced 'not') is an esoteric language made byUser:PersonMan. initializing a ! program is simple. printing \"hello world!\" in ! looks like this: using the octothorpe to print a value data types:",
+        "Categories": [
+            "Languages",
+            "2020",
+            "Implemented"
+        ]
+    },
+    {
+        "Designed by": null,
+        "Memory system": null,
+        "Dimensions": null,
+        "Computational class": null,
+        "Reference implementation": null,
+        "Influenced by": null,
+        "File extension(s)": null,
+        "Year created": null,
+        "Paradigms": null,
+        "Language Name": "!한국어",
+        "URL": "https://esolangs.org/wiki/!%ED%95%9C%EA%B5%AD%EC%96%B4",
+        "Short Description": "!한국어 is designed by PSTF, and it is tottally and directly derivatived from！中文and^English. Programs must be written in Korean and must be strictly followed by their grammar. !한국어/Examples",
+        "Categories": [
+            "Languages",
+            "2023",
+            "2024",
+            "CJK",
+            "Unimplemented",
+            "High-level",
+            "Pseudonatural"
+        ]
+    },
+    {
+        "Designed by": "Mihai Popa",
+        "Memory system": null,
+        "Dimensions": null,
+        "Computational class": "High-level,Pseudonatural",
+        "Reference implementation": "Unimplemented",
+        "Influenced by": null,
+        "File extension(s)": [
+            ".en",
+            ".eng",
+            ".txt",
+            ".text"
+        ],
+        "Year created": "2023-2024",
+        "Paradigms": null,
+        "Language Name": "!English",
+        "URL": "https://esolangs.org/wiki/!English",
+        "Short Description": "!Englishis a esolang made by Mihai Popa. It uses the English syntax, so any English person will understand it.",
+        "Categories": [
+            "Languages",
+            "2023",
+            "2024",
+            "Unimplemented",
+            "High-level",
+            "Pseudonatural"
+        ]
+    },
+    {
+        "Designed by": null,
+        "Memory system": null,
+        "Dimensions": null,
+        "Computational class": null,
+        "Reference implementation": null,
+        "Influenced by": null,
+        "File extension(s)": null,
+        "Year created": null,
+        "Paradigms": null,
+        "Language Name": "!Romanian",
+        "URL": "https://esolangs.org/wiki/!Romanian",
+        "Short Description": "!Romanianis a esolang made by Mihai Popa. It's taken from the pseudocode language in many Romanian code books, but altered slightly.",
+        "Categories": [
+            "Languages",
+            "2024",
+            "Unimplemented",
+            "High-level",
+            "Pseudonatural"
+        ]
+    },
+    {
+        "Designed by": "Staticsn0w",
+        "Memory system": null,
+        "Dimensions": null,
+        "Computational class": "Unknown",
+        "Reference implementation": "Unimplemented",
+        "Influenced by": "!!!Batch",
+        "File extension(s)": [
+            ".!",
+            ".!l",
+            ".!c"
+        ],
+        "Year created": "unknown",
+        "Paradigms": null,
+        "Language Name": "!!!",
+        "URL": "https://esolangs.org/wiki/!!!",
+        "Short Description": "!!!is a language based off of the (really awesome) language!!!Batch, but with some extra goodies in the box. !!! consists of some extra features compared to !!!Batch, like a space character (?+?), redone symbols and numbers (forexample 1 would be ?!!-? and ! would be ?!!-+?),\nand a compiler that doesn't just compile to a batch file, it compiles to a .!c file, which i'm working on making executable, but for now it just is a text file. EXECUTABLE FILE: .!cSOURCE FILE: .!LIB: .!l Download for the interpreter will be available later, and when it is up, feel free to edit it and stuff.~staticsn0w",
+        "Categories": [
+            "Languages",
+            "Unknown year",
+            "Unimplemented"
+        ]
+    },
+    {
+        "Designed by": null,
+        "Memory system": null,
+        "Dimensions": null,
+        "Computational class": null,
+        "Reference implementation": null,
+        "Influenced by": null,
+        "File extension(s)": null,
+        "Year created": null,
+        "Paradigms": null,
+        "Language Name": "!!!!",
+        "URL": "https://esolangs.org/wiki/!!!!",
+        "Short Description": "!!!!is an esoteric programming language created byUser:Xi-816. It uses a stack, and a register. There are 5 types of commands:",
+        "Categories": [
+            "Languages",
+            "2023"
+        ]
+    },
+    {
+        "Designed by": "Shubshub",
+        "Memory system": "variables",
+        "Dimensions": "one-dimensional",
+        "Computational class": "Turing complete",
+        "Reference implementation": "!!!Batch/Interpreters,!Py!Batch (MediaFire)",
+        "Influenced by": "Batch",
+        "File extension(s)": [
+            "unknown"
+        ],
+        "Year created": "2012",
+        "Paradigms": [
+            "imperative",
+            "self-modifying"
+        ],
+        "Language Name": "!!!Batch",
+        "URL": "https://esolangs.org/wiki/!!!Batch",
+        "Short Description": "!!!Batchis another derivative of the Batch programming language created byShubshub:D. !!!Batch is an encoding ofBatchwhere each character is in the form of a question mark, followed by some amount of exclamation marks, then an optional marking character, and finally another question mark. Other characters are returned as-is. Since !!!Batch is an encoding of Batch, and Batch isTuring complete, so is !!!Batch.",
+        "Categories": [
+            "Languages",
+            "2012",
+            "Implemented",
+            "Self-modifying",
+            "Turing complete"
+        ]
+    },
+    {
+        "Designed by": "User:Ari",
+        "Memory system": null,
+        "Dimensions": null,
+        "Computational class": "Total",
+        "Reference implementation": "https://replit.com/@lankybox02/brainfeed-interpreter",
+        "Influenced by": null,
+        "File extension(s)": [
+            ".txt"
+        ],
+        "Year created": "2022",
+        "Paradigms": null,
+        "Language Name": "!!brainfeed",
+        "URL": "https://esolangs.org/wiki/!!brainfeed",
+        "Short Description": "!!brainfeed is a simple esoteric programming language created byUser:Ari.",
+        "Categories": [
+            "Languages",
+            "2022",
+            "Total",
+            "Implemented",
+            "Unusable for programming",
+            "Cell-based"
+        ]
+    },
+    {
+        "Designed by": null,
+        "Memory system": null,
+        "Dimensions": null,
+        "Computational class": null,
+        "Reference implementation": null,
+        "Influenced by": null,
+        "File extension(s)": null,
+        "Year created": null,
+        "Paradigms": null,
+        "Language Name": "!!brainfeed++",
+        "URL": "https://esolangs.org/wiki/!!brainfeed%2B%2B",
+        "Short Description": "!!brainfeed++ is an extension of!!brainfeeddesigned byUser:BoundedBeans. It has an extra three queues for data storage. Extension commands are implementation-dependent, and don't have to follow any format inside the quotes. That said, here's an official format for them: Extension author, group, and command name may have periods to signify some sort of hierarchy.\nThe arguments may be surrounded by single quotes to include spaces in them. If single-quoted, a backslash must escape a backslash or single quote, and\\Qrepresents a double quote.\\X[two hexadecimal digits]can encode an arbitrary byte, and these bytes should be UTF-8 in nature (so 8-bit extended ASCII should take up two bytes, and multibyte sequences can work like UTF-8 to make further characters). For example, a turtle-graphics command might be:",
+        "Categories": [
+            "Languages",
+            "2024",
+            "Queue-based",
+            "Cell-based",
+            "Unimplemented",
+            "Turing complete"
+        ]
+    },
+    {
+        "Designed by": null,
+        "Memory system": null,
+        "Dimensions": null,
+        "Computational class": null,
+        "Reference implementation": null,
+        "Influenced by": null,
+        "File extension(s)": null,
+        "Year created": null,
+        "Paradigms": null,
+        "Language Name": "!!Fuck",
+        "URL": "https://esolangs.org/wiki/!!Fuck",
+        "Short Description": "!!Fuckis a clone ofBrainfuckthat uses varying amounts of !'s to indicate commands. It is a member of theTrivialBrainfuckSubstitutionfamily of programming languages.",
+        "Categories": [
+            "Languages",
+            "Brainfuck equivalents",
+            "2020",
+            "Joke languages",
+            "Turing complete",
+            "Turing tarpits",
+            "Low-level",
+            "Implemented"
+        ]
+    },
+    {
+        "Designed by": null,
+        "Memory system": null,
+        "Dimensions": null,
+        "Computational class": null,
+        "Reference implementation": null,
+        "Influenced by": null,
+        "File extension(s)": null,
+        "Year created": null,
+        "Paradigms": null,
+        "Language Name": "!@#$%^&*()_+",
+        "URL": "https://esolangs.org/wiki/!@$%25%5E%26*()%2B",
+        "Short Description": "!@#$%^&*()_+is another funstack-based language(in the broader sense) invented byUser:Conor O'Brienwhere character literals have no delimiter with programs that resemble grawlixes (random symbols, typically on the top row of the keyboard, which replace vulgarism). Notably, it is the first language in the language list of Try It Online.",
+        "Categories": [
+            "Languages",
+            "Stack-based",
+            "Implemented",
+            "Unknown year",
+            "Turing complete"
+        ]
+    },
+    {
+        "Designed by": null,
+        "Memory system": null,
+        "Dimensions": null,
+        "Computational class": null,
+        "Reference implementation": null,
+        "Influenced by": null,
+        "File extension(s)": null,
+        "Year created": null,
+        "Paradigms": null,
+        "Language Name": "!aBF'",
+        "URL": "https://esolangs.org/wiki/!aBF%27",
+        "Short Description": "!aBF'is the language whose name is pronounced \"not a brainfuck derivative\". The language uses 5 commands which manipulate a sole accumulator. The accumulator initially starts at zero. Additionally, new commands can be appended to the end of the program during execution, making loops possible. Output 420: Truth-machine: Replace the?withFfor 1 or remove the?for 0. As an example of this language's weirdness, the 1 case expands to a non-periodic pattern of a's and B's: Truth-machine golfed:",
+        "Categories": [
+            "Languages",
+            "2020",
+            "Implemented",
+            "Unknown computational class",
+            "Usability unknown",
+            "Output only",
+            "Self-modifying"
+        ]
+    },
+    {
+        "Designed by": null,
+        "Memory system": null,
+        "Dimensions": null,
+        "Computational class": null,
+        "Reference implementation": null,
+        "Influenced by": null,
+        "File extension(s)": null,
+        "Year created": null,
+        "Paradigms": null,
+        "Language Name": "!aoQ):",
+        "URL": "https://esolangs.org/wiki/!aoQ):",
+        "Short Description": "!aoQ>: (pronunciation: Not a golfing language) is meant to be a golfing language made byUser:AmNow. !aoQ>: tries to take as many ideas from many different languages as possible.",
+        "Categories": [
+            "2021",
+            "Languages",
+            "Unimplemented",
+            "Stack-based",
+            "Golfing language"
+        ]
+    }
+]
