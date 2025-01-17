@@ -1,11 +1,11 @@
-Language Name,URL
-�􏿾,https://esolangs.org/wiki/Soh_supplementary_private_use_area-b_u%2B10fffe
+LanguageName,URL
+Soh supplementary private use area-b u+10fffe,https://esolangs.org/wiki/Soh_supplementary_private_use_area-b_u%2B10fffe
 §þłĳŧȉǩȃɖəɹ,https://esolangs.org/wiki/%C2%A7%C3%BE%C5%82%C4%B3%C5%A7%C8%89%C7%A9%C8%83%C9%96%C9%99%C9%B9
 ʘ,https://esolangs.org/wiki/%CA%98
-,https://esolangs.org/wiki/0widthnonjoiner
+0widthnonjoiner,https://esolangs.org/wiki/0widthnonjoiner
 ^English,https://esolangs.org/wiki/%5EEnglish
 ?,https://esolangs.org/wiki/%3F
-"??????Infinity bits, Aleph-0 Bytes??????","https://esolangs.org/wiki/%E2%88%9E_bits,_%E2%84%B50_Bytes"
+"∞ bits, ℵ0 Bytes","https://esolangs.org/wiki/%E2%88%9E_bits,_%E2%84%B50_Bytes"
 !,https://esolangs.org/wiki/!
 !한국어,https://esolangs.org/wiki/!%ED%95%9C%EA%B5%AD%EC%96%B4
 !English,https://esolangs.org/wiki/!English
@@ -16,17 +16,17 @@ Language Name,URL
 !!brainfeed,https://esolangs.org/wiki/!!brainfeed
 !!brainfeed++,https://esolangs.org/wiki/!!brainfeed%2B%2B
 !!Fuck,https://esolangs.org/wiki/!!Fuck
-!@#$%^&*()_+,https://esolangs.org/wiki/!@$%25%5E%26*()%2B
+!@$%^&*()+,https://esolangs.org/wiki/!@$%25%5E%26*()%2B
 !aBF',https://esolangs.org/wiki/!aBF%27
 !aoQ):,https://esolangs.org/wiki/!aoQ):
 !I!M!P!O!S!S!I!B!L!E!,https://esolangs.org/wiki/!I!M!P!O!S!S!I!B!L!E!
 !Tautologos,https://esolangs.org/wiki/!Tautologos
-#b,https://esolangs.org/wiki/Sharp_flat
-#hell,https://esolangs.org/wiki/HashHell
+Sharp flat,https://esolangs.org/wiki/Sharp_flat
+HashHell,https://esolangs.org/wiki/HashHell
 $,https://esolangs.org/wiki/$
 $!,https://esolangs.org/wiki/$!
 $+-?,https://esolangs.org/wiki/$%2B-%3F
-$_$,https://esolangs.org/wiki/$_$
+$ $,https://esolangs.org/wiki/$_$
 $3COND,https://esolangs.org/wiki/$3COND
 $tonePits,https://esolangs.org/wiki/$tonePits
 'N-DCNC,https://esolangs.org/wiki/%27N-DCNC
@@ -34,9 +34,9 @@ $tonePits,https://esolangs.org/wiki/$tonePits
 ((?)?)?,https://esolangs.org/wiki/((%3F)%3F)%3F
 "(,!)","https://esolangs.org/wiki/(,!)"
 "(,)","https://esolangs.org/wiki/(,)"
-[ ],https://esolangs.org/wiki/(_)
+( ),https://esolangs.org/wiki/(_)
 (),https://esolangs.org/wiki/()
-():;+-#?!,https://esolangs.org/wiki/Symbols
+Symbols,https://esolangs.org/wiki/Symbols
 ()NEST(),https://esolangs.org/wiki/()NEST()
 ()s,https://esolangs.org/wiki/()s
 (0),https://esolangs.org/wiki/(0)
@@ -46,9 +46,9 @@ $tonePits,https://esolangs.org/wiki/$tonePits
 (SIASL)²,https://esolangs.org/wiki/(SIASL)%C2%B2
 (P™TM™)™,https://esolangs.org/wiki/(P%E2%84%A2TM%E2%84%A2)%E2%84%A2
 ( ͡° ͜ʖ ͡°)fuck,https://esolangs.org/wiki/(_%CD%A1%C2%B0_%CD%9C%CA%96_%CD%A1%C2%B0)fuck
-(0123456789!?.),https://esolangs.org/wiki/(0123456789!
+(0123456789!,https://esolangs.org/wiki/(0123456789!
 ),https://esolangs.org/wiki/)
-*><>,https://esolangs.org/wiki/Starfish
+Starfish,https://esolangs.org/wiki/Starfish
 *brainfuck,https://esolangs.org/wiki/*brainfuck
 *W,https://esolangs.org/wiki/*W
 +-),https://esolangs.org/wiki/%2B-)
@@ -79,12 +79,12 @@ $tonePits,https://esolangs.org/wiki/$tonePits
 .⍸.,https://esolangs.org/wiki/.%E2%8D%B8.
 ///,https://esolangs.org/wiki////
 /path,https://esolangs.org/wiki//path
-:..:,https://esolangs.org/wiki/Colon_period_period_colon
-:],https://esolangs.org/wiki/Robotic_Smiley_Face
+Colon period period colon,https://esolangs.org/wiki/Colon_period_period_colon
+Robotic Smiley Face,https://esolangs.org/wiki/Robotic_Smiley_Face
 /gɹəʊguː/,https://esolangs.org/wiki//g%C9%B9%C9%99%CA%8Agu%CB%90/
 0(nop^),https://esolangs.org/wiki/0(nop%5E)
 01-2C,https://esolangs.org/wiki/01-2C
-01_,https://esolangs.org/wiki/01
+01,https://esolangs.org/wiki/01
 05AB1E,https://esolangs.org/wiki/05AB1E
 0815,https://esolangs.org/wiki/0815
 0bIN,https://esolangs.org/wiki/0bIN
@@ -105,16 +105,16 @@ $tonePits,https://esolangs.org/wiki/$tonePits
 129,https://esolangs.org/wiki/129
 1337,https://esolangs.org/wiki/1337
 1=0,https://esolangs.org/wiki/1%3D0
-1><>,https://esolangs.org/wiki/1Fish
+1Fish,https://esolangs.org/wiki/1Fish
 1argasm,https://esolangs.org/wiki/1argasm
 1cnis,https://esolangs.org/wiki/1cnis
 1line,https://esolangs.org/wiki/1line
 1L,https://esolangs.org/wiki/1L
-1L_a,https://esolangs.org/wiki/1L_a
+1L a,https://esolangs.org/wiki/1L_a
 1mpr0mp2,https://esolangs.org/wiki/1mpr0mp2
 1͏͢,https://esolangs.org/wiki/1%CD%8F%CD%A2
 2-ill,https://esolangs.org/wiki/2-ill
-2/9of an esolang,https://esolangs.org/wiki/2/9_of_an_esolang
+2/9 of an esolang,https://esolangs.org/wiki/2/9_of_an_esolang
 200,https://esolangs.org/wiki/200
 2001: An Esolang Odyssey,https://esolangs.org/wiki/2001:_An_Esolang_Odyssey
 2002-12-14,https://esolangs.org/wiki/2002-12-14
@@ -135,8 +135,8 @@ $tonePits,https://esolangs.org/wiki/$tonePits
 2KWLang,https://esolangs.org/wiki/2KWLang
 2L,https://esolangs.org/wiki/2L
 2Swap,https://esolangs.org/wiki/2Swap
-3 (JS subset),https://esolangs.org/wiki/3
-3 (Stack-based),https://esolangs.org/wiki/3_(islptng)
+3,https://esolangs.org/wiki/3
+3 (islptng),https://esolangs.org/wiki/3_(islptng)
 3.725254969642999e-321,https://esolangs.org/wiki/3.725254969642999e-321
 3018AD,https://esolangs.org/wiki/3018AD
 33,https://esolangs.org/wiki/33
@@ -173,19 +173,19 @@ $tonePits,https://esolangs.org/wiki/$tonePits
 8xn,https://esolangs.org/wiki/8xn
 90,https://esolangs.org/wiki/90
 96,https://esolangs.org/wiki/96
-99,https://esolangs.org/wiki/99_(Esolang)
+99 (Esolang),https://esolangs.org/wiki/99_(Esolang)
 99 bottles of pain,https://esolangs.org/wiki/99_bottles_of_pain
 ...,https://esolangs.org/wiki/...
-:),https://esolangs.org/wiki/Smileyface
-:≠,https://esolangs.org/wiki/Unassignable
+Smileyface,https://esolangs.org/wiki/Smileyface
+Unassignable,https://esolangs.org/wiki/Unassignable
 "=,-&~","https://esolangs.org/wiki/%3D,-%26~"
 =?,https://esolangs.org/wiki/%3D%3F
-<stack>,https://esolangs.org/wiki/LstackG
-<stack>+,https://esolangs.org/wiki/LstackG%2B
-><>,https://esolangs.org/wiki/Fish
-><>\\.:.,https://esolangs.org/wiki/Fish_Chips_and_Mushy_Peas
-><x>,https://esolangs.org/wiki/Dead_fish
-><x±∔>,https://esolangs.org/wiki/Dead_fish_%2B-_%2B.
+LstackG,https://esolangs.org/wiki/LstackG
+LstackG+,https://esolangs.org/wiki/LstackG%2B
+Fish,https://esolangs.org/wiki/Fish
+Fish Chips and Mushy Peas,https://esolangs.org/wiki/Fish_Chips_and_Mushy_Peas
+Dead fish,https://esolangs.org/wiki/Dead_fish
+Dead fish +- +.,https://esolangs.org/wiki/Dead_fish_%2B-_%2B.
 ???,https://esolangs.org/wiki/%3F%3F%3F
 ?!,https://esolangs.org/wiki/%3F!
 ?Q?,https://esolangs.org/wiki/%3FQ%3F
@@ -195,24 +195,24 @@ $tonePits,https://esolangs.org/wiki/$tonePits
 @minor!,https://esolangs.org/wiki/@minor!
 @tention!,https://esolangs.org/wiki/@tention!
 @text,https://esolangs.org/wiki/@text
-[,https://esolangs.org/wiki/Bracket
-"[0,1]","https://esolangs.org/wiki/)0,1("
-[],https://esolangs.org/wiki/Brackets
+Bracket,https://esolangs.org/wiki/Bracket
+")0,1(","https://esolangs.org/wiki/)0,1("
+Brackets,https://esolangs.org/wiki/Brackets
 \,https://esolangs.org/wiki/%5C
 \/,https://esolangs.org/wiki/%5C/
 \BV,https://esolangs.org/wiki/%5CBV
 \ELLOWOS,https://esolangs.org/wiki/%5CELLOWOS
 \\\,https://esolangs.org/wiki/%5C%5C%5C
-],https://esolangs.org/wiki/Right_bracket
+Right bracket,https://esolangs.org/wiki/Right_bracket
 ^,https://esolangs.org/wiki/%5E
 ^!,https://esolangs.org/wiki/%5E!
 ^^ 16h 35014ng 15 th15,https://esolangs.org/wiki/%5E%5E_16h_35014ng_15_th15
-_,https://esolangs.org/wiki/%EF%BC%BF
+＿,https://esolangs.org/wiki/%EF%BC%BF
 `,https://esolangs.org/wiki/%60
 `LML,https://esolangs.org/wiki/%60LML
-{},https://esolangs.org/wiki/%EF%BD%9B%EF%BD%9D
+｛｝,https://esolangs.org/wiki/%EF%BD%9B%EF%BD%9D
 ~,https://esolangs.org/wiki/~
-~#,https://esolangs.org/wiki/~-Hash
+~-Hash,https://esolangs.org/wiki/~-Hash
 ~-~!,https://esolangs.org/wiki/~-~!
 ~ATH,https://esolangs.org/wiki/~ATH
 ~English,https://esolangs.org/wiki/~English
@@ -222,10 +222,10 @@ _,https://esolangs.org/wiki/%EF%BC%BF
 ′,https://esolangs.org/wiki/%E2%80%B2
 ƎↃИAЯT,https://esolangs.org/wiki/%C6%8E%E2%86%83%D0%98A%D0%AFT
 ΙΧΘΥΣ,https://esolangs.org/wiki/%CE%99%CE%A7%CE%98%CE%A5%CE%A3
-μ,https://esolangs.org/wiki/%CE%9C
-μCurse,https://esolangs.org/wiki/%CE%9CCurse
+Μ,https://esolangs.org/wiki/%CE%9C
+ΜCurse,https://esolangs.org/wiki/%CE%9CCurse
 Π₁,https://esolangs.org/wiki/%CE%A0%E2%82%81
-φ,https://esolangs.org/wiki/%CE%A6
+Φ,https://esolangs.org/wiki/%CE%A6
 Тест на терпение,https://esolangs.org/wiki/%D0%A2%D0%B5%D1%81%D1%82_%D0%BD%D0%B0_%D1%82%D0%B5%D1%80%D0%BF%D0%B5%D0%BD%D0%B8%D0%B5
 Юᓂ곧⎔,https://esolangs.org/wiki/%D0%AE%E1%93%82%EA%B3%A7%E2%8E%94
 ערימה,https://esolangs.org/wiki/%D7%A2%D7%A8%D7%99%D7%9E%D7%94
@@ -253,11 +253,11 @@ _,https://esolangs.org/wiki/%EF%BC%BF
 横,https://esolangs.org/wiki/%E6%A8%AA
 大香蕉,https://esolangs.org/wiki/%E5%A4%A7%E9%A6%99%E8%95%89
 啊！,https://esolangs.org/wiki/%E5%95%8A%EF%BC%81
-啊！十十,https://esolangs.org/wiki/%E5%95%8A%EF%BC%81%2B%2B
+啊！++,https://esolangs.org/wiki/%E5%95%8A%EF%BC%81%2B%2B
 嘭！哐！叮！呲！咣！+,https://esolangs.org/wiki/%E5%98%AD%EF%BC%81%E5%93%90%EF%BC%81%E5%8F%AE%EF%BC%81%E5%91%B2%EF%BC%81%E5%92%A3%EF%BC%81%2B
 操脑,https://esolangs.org/wiki/%E6%93%8D%E8%84%91
 日本語,https://esolangs.org/wiki/%E6%97%A5%E6%9C%AC%E8%AA%9E
-现代白话文,https://esolangs.org/wiki/%E4%B8%AD%E6%96%87
+中文,https://esolangs.org/wiki/%E4%B8%AD%E6%96%87
 中文（简体，中国大陆）,https://esolangs.org/wiki/%E4%B8%AD%E6%96%87%EF%BC%88%E7%AE%80%E4%BD%93%EF%BC%8C%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86%EF%BC%89
 脑蛇,https://esolangs.org/wiki/%E8%84%91%E8%9B%87
 一丁丂七丄丅丆万丈三上下丌不与丏丐丑丒专且丕世丗丘丙业丛东丝丞丟丠両丢丣两严並丧丨丩个丫丬中丮丯丰丱串丳临丵丶丷丸丹为主丼丽举丿乀乁乂乃乄久乆乇么义乊之乌乍乎乏,https://esolangs.org/wiki/%E4%B8%80%E4%B8%81%E4%B8%82%E4%B8%83%E4%B8%84%E4%B8%85%E4%B8%86%E4%B8%87%E4%B8%88%E4%B8%89%E4%B8%8A%E4%B8%8B%E4%B8%8C%E4%B8%8D%E4%B8%8E%E4%B8%8F%E4%B8%90%E4%B8%91%E4%B8%92%E4%B8%93%E4%B8%94%E4%B8%95%E4%B8%96%E4%B8%97%E4%B8%98%E4%B8%99%E4%B8%9A%E4%B8%9B%E4%B8%9C%E4%B8%9D%E4%B8%9E%E4%B8%9F%E4%B8%A0%E4%B8%A1%E4%B8%A2%E4%B8%A3%E4%B8%A4%E4%B8%A5%E4%B8%A6%E4%B8%A7%E4%B8%A8%E4%B8%A9%E4%B8%AA%E4%B8%AB%E4%B8%AC%E4%B8%AD%E4%B8%AE%E4%B8%AF%E4%B8%B0%E4%B8%B1%E4%B8%B2%E4%B8%B3%E4%B8%B4%E4%B8%B5%E4%B8%B6%E4%B8%B7%E4%B8%B8%E4%B8%B9%E4%B8%BA%E4%B8%BB%E4%B8%BC%E4%B8%BD%E4%B8%BE%E4%B8%BF%E4%B9%80%E4%B9%81%E4%B9%82%E4%B9%83%E4%B9%84%E4%B9%85%E4%B9%86%E4%B9%87%E4%B9%88%E4%B9%89%E4%B9%8A%E4%B9%8B%E4%B9%8C%E4%B9%8D%E4%B9%8E%E4%B9%8F
@@ -271,7 +271,7 @@ _,https://esolangs.org/wiki/%EF%BC%BF
 菜就多练,https://esolangs.org/wiki/%E8%8F%9C%E5%B0%B1%E5%A4%9A%E7%BB%83
 菜就多练一一,https://esolangs.org/wiki/%E8%8F%9C%E5%B0%B1%E5%A4%9A%E7%BB%83%E4%B8%80%E4%B8%80
 元旦,https://esolangs.org/wiki/%E5%85%83%E6%97%A6
-龘䶛䨻䎱㸞蚮䡶䴞䴝䯬䬛䰕㹚㱎䖘䵈䶁䘔䶑䘓鋱䩳䵷㒪䪉䉥䥸䝟䳮䟑䎘䫱䉷䰯䕈䟐龘䶛䨻䎱㸞蚮䡶䴞䴝䯬䬛䰕㹚㱎䖘䵈䶁䘔䶑䘓鋱䩳䵷㒪䪉䉥䥸䝟䳮䟑䎘䫱䉷䰯䕈䟐䬝䥰龘䰕䘋㽌䇁䵄䵻䬛蟿䆉㖀城龘䶛䨻䎱蚮䡶䴞䴝䯬䬛䰕㹚㱎䖘䵈䶁䘔䶑䘓鋱䩳䵷㒪䪉䉥䥸䝟䳮䟑䎘䫱䉷䰯䕈䟐䬝龘䶛䨻䎱蚮䡶䴞䴝䯬䬛䰕㹚䯬䬛䰕㹚䥸䝟龘䶛䨻蚮䡶䴞䴝䯬䬛䰕㹚㱎䖘饢蘿蘿靄饢靨爛驫寵灣龍贏爨瘸驫嚴戀蔞讀鑭鷚豐髏諳馨顏顬饋饋驕驛餷寵䓠驫煆驫灣爨瘸籮嚴戀鷚鱧髏鬱靈雞懶齲魎燼蠻齲櫞蘿蘿靄饢靨爛贔爨籮饢驫嚴戀蠆讀鑭鸛豐髏諳馨顎顬饋饋驕驏龘䶛䨻䎱㸞蚮,https://esolangs.org/wiki/%E9%94%9F%E6%96%A4%E6%8B%B7%E7%83%AB%E7%83%AB%E7%83%ABfuck
+锟斤拷烫烫烫fuck,https://esolangs.org/wiki/%E9%94%9F%E6%96%A4%E6%8B%B7%E7%83%AB%E7%83%AB%E7%83%ABfuck
 汐撅撅,https://esolangs.org/wiki/%E6%B1%90%E6%92%85%E6%92%85
 只因你太美,https://esolangs.org/wiki/%E5%8F%AA%E5%9B%A0%E4%BD%A0%E5%A4%AA%E7%BE%8E
 死鱼,https://esolangs.org/wiki/%E6%AD%BB%E9%B1%BC
@@ -279,13 +279,14 @@ _,https://esolangs.org/wiki/%EF%BC%BF
 退！退！退！,https://esolangs.org/wiki/%E9%80%80%EF%BC%81%E9%80%80%EF%BC%81%E9%80%80%EF%BC%81
 欢声笑语,https://esolangs.org/wiki/%E6%AC%A2%E5%A3%B0%E7%AC%91%E8%AF%AD
 诗,https://esolangs.org/wiki/%E8%AF%97
-诗,https://esolangs.org/wiki/%E8%AF%97(PSTF)
+诗(PSTF),https://esolangs.org/wiki/%E8%AF%97(PSTF)
 勿忘国耻,https://esolangs.org/wiki/%E5%8B%BF%E5%BF%98%E5%9B%BD%E8%80%BB
+彳亍,https://esolangs.org/wiki/%E5%BD%B3%E4%BA%8D
 한국어,https://esolangs.org/wiki/%ED%95%9C%EA%B5%AD%EC%96%B4
-肏你妈的,https://esolangs.org/wiki/Spoiler%E8%82%8F
-,https://esolangs.org/wiki/%E8%BF%99%E2%98%AA%E4%BB%96%E2%9C%BA%E5%A6%88%E2%9C%BE%E9%83%BD%E2%9C%A3%E5%95%A5%E2%98%BE%E5%AE%8C%E2%99%97%E6%84%8F%E2%99%AE%E5%95%8A
-ᐃᓄᒃᑎᑐᑦ,https://esolangs.org/wiki/Inuktitut
-ᠮᠣᠩᠭ᠋ᠣᠯ ᠬᠡᠯᠡ᠃,https://esolangs.org/wiki/%D0%9C%D0%BE%D0%BD%D0%B3%D0%BE%D0%BB_%D1%85%D1%8D%D0%BB
+Spoiler肏,https://esolangs.org/wiki/Spoiler%E8%82%8F
+这☪他✺妈✾都✣啥☾完♗意♮啊,https://esolangs.org/wiki/%E8%BF%99%E2%98%AA%E4%BB%96%E2%9C%BA%E5%A6%88%E2%9C%BE%E9%83%BD%E2%9C%A3%E5%95%A5%E2%98%BE%E5%AE%8C%E2%99%97%E6%84%8F%E2%99%AE%E5%95%8A
+Inuktitut,https://esolangs.org/wiki/Inuktitut
+Монгол хэл,https://esolangs.org/wiki/%D0%9C%D0%BE%D0%BD%D0%B3%D0%BE%D0%BB_%D1%85%D1%8D%D0%BB
 ◀◀SYNTHESIZE▶▶,https://esolangs.org/wiki/%E2%97%80%E2%97%80SYNTHESIZE%E2%96%B6%E2%96%B6
 ⫸fuck,https://esolangs.org/wiki/%E2%AB%B8fuck
 🔴🕳️,https://esolangs.org/wiki/%F0%9F%94%B4%F0%9F%95%B3%EF%B8%8F
@@ -293,31 +294,31 @@ _,https://esolangs.org/wiki/%EF%BC%BF
 🔒 Encrypted 🔒,https://esolangs.org/wiki/%F0%9F%94%92_Encrypted_%F0%9F%94%92
 🥺,https://esolangs.org/wiki/%F0%9F%A5%BA
 👀,https://esolangs.org/wiki/%F0%9F%91%80
-{,https://esolangs.org/wiki/Left_Curly_Brace_Symbol
+Left Curly Brace Symbol,https://esolangs.org/wiki/Left_Curly_Brace_Symbol
 Собачка,https://esolangs.org/wiki/%D0%A1%D0%BE%D0%B1%D0%B0%D1%87%D0%BA%D0%B0
 ᖴᑌᑎᑎEᒪIᑕ,https://esolangs.org/wiki/%E1%96%B4%E1%91%8C%E1%91%8E%E1%91%8EE%E1%92%AAI%E1%91%95
 ○,https://esolangs.org/wiki/%E2%97%8B
 ⊗,https://esolangs.org/wiki/%E2%8A%97
 Ø,https://esolangs.org/wiki/%C3%98
 (...) IS 2D!!,https://esolangs.org/wiki/(...)_IS_2D!!
-λ⁁,https://esolangs.org/wiki/%CE%9B%E2%81%81
-λλλ‎‎,https://esolangs.org/wiki/%CE%9B%CE%BB%CE%BB
+Λ⁁,https://esolangs.org/wiki/%CE%9B%E2%81%81
+Λλλ,https://esolangs.org/wiki/%CE%9B%CE%BB%CE%BB
 A,https://esolangs.org/wiki/A
 A:;,https://esolangs.org/wiki/A:;
 A?!,https://esolangs.org/wiki/A%3F!
 A?b.,https://esolangs.org/wiki/A%3Fb.
-A𝄪♯,https://esolangs.org/wiki/A_Triple_Sharp
+A Triple Sharp,https://esolangs.org/wiki/A_Triple_Sharp
 A0A0,https://esolangs.org/wiki/A0A0
-a{a},https://esolangs.org/wiki/A_returns_a
+A returns a,https://esolangs.org/wiki/A_returns_a
 AAAAAAAAAAAAAA!!!!,https://esolangs.org/wiki/AAAAAAAAAAAAAA!!!!
 Aardvark,https://esolangs.org/wiki/Aardvark
-Aargh!,https://esolangs.org/wiki/Argh!
+Argh!,https://esolangs.org/wiki/Argh!
 ABC,https://esolangs.org/wiki/ABC
 ABCDE,https://esolangs.org/wiki/ABCDE
 ABCDirection,https://esolangs.org/wiki/ABCDirection
 ABCDirectionE,https://esolangs.org/wiki/ABCDirectionE
 ABCDXYZ,https://esolangs.org/wiki/ABCDXYZ
-abcout,https://esolangs.org/wiki/Abcout
+Abcout,https://esolangs.org/wiki/Abcout
 ABCR,https://esolangs.org/wiki/ABCR
 ABCs,https://esolangs.org/wiki/ABCs
 Abc!?,https://esolangs.org/wiki/Abc!%3F
@@ -353,7 +354,7 @@ AFTL,https://esolangs.org/wiki/AFTL
 AGG,https://esolangs.org/wiki/AGG
 AGSPL,https://esolangs.org/wiki/AGSPL
 Agony,https://esolangs.org/wiki/Agony
-a-gram,https://esolangs.org/wiki/A-gram
+A-gram,https://esolangs.org/wiki/A-gram
 Ahead,https://esolangs.org/wiki/Ahead
 Aheui,https://esolangs.org/wiki/Aheui
 AHHH,https://esolangs.org/wiki/AHHH
@@ -364,14 +365,14 @@ Airline food,https://esolangs.org/wiki/Airline_food
 A IS B,https://esolangs.org/wiki/A_IS_B
 AIV,https://esolangs.org/wiki/AIV
 Ajsone,https://esolangs.org/wiki/Ajsone
-akdrfsbathnede knem,https://esolangs.org/wiki/Akdrfsbathnede_knem
+Akdrfsbathnede knem,https://esolangs.org/wiki/Akdrfsbathnede_knem
 Alacrity,https://esolangs.org/wiki/Alacrity
 ALAGUF,https://esolangs.org/wiki/ALAGUF
 A Language Programmed While Listening to Godspeed You! Black Emperor,https://esolangs.org/wiki/A_Language_Programmed_While_Listening_to_Godspeed_You!_Black_Emperor
 Albanian Laundry Machine,https://esolangs.org/wiki/Albanian_Laundry_Machine
 Alchemy,https://esolangs.org/wiki/Alchemy
 Ale,https://esolangs.org/wiki/Ale
-ALEPH-ZERO,https://esolangs.org/wiki/Aleph-ZERO
+Aleph-ZERO,https://esolangs.org/wiki/Aleph-ZERO
 Alex,https://esolangs.org/wiki/Alex
 Algebraic Programming Language,https://esolangs.org/wiki/Algebraic_Programming_Language
 AlgorE,https://esolangs.org/wiki/AlgorE
@@ -401,7 +402,7 @@ AMiaBF’!?,https://esolangs.org/wiki/AMiaBF%E2%80%99!%3F
 Amicus,https://esolangs.org/wiki/Amicus
 AmogusScript,https://esolangs.org/wiki/AmogusScript
 Among Us,https://esolangs.org/wiki/Among_Us
-AMONGUSISABIGSUSSYBAKAHAHAHAHAHATHISLANGUAGEISREALLYCOOLPLEASEUSEITMYLIFEDEPENDSONITORELSEPLSPLSPLSPLSPLSPLSPLSkahyghdfhmILLDIEIFYOUDONTUSEIT,https://esolangs.org/wiki/AMONGUSISABIGSUSSYBAKAHAHAHAHAHATHISLANGUAGEISREALLYCOOLPLEASEUSEITMYLIFEDEPENDSONITORELSEPLSPLSPLSPLSPLSPLSPLSkahyghdfhm
+AMONGUSISABIGSUSSYBAKAHAHAHAHAHATHISLANGUAGEISREALLYCOOLPLEASEUSEITMYLIFEDEPENDSONITORELSEPLSPLSPLSPLSPLSPLSPLSkahyghdfhm,https://esolangs.org/wiki/AMONGUSISABIGSUSSYBAKAHAHAHAHAHATHISLANGUAGEISREALLYCOOLPLEASEUSEITMYLIFEDEPENDSONITORELSEPLSPLSPLSPLSPLSPLSPLSkahyghdfhm
 Amtu,https://esolangs.org/wiki/Amtu
 Amycus,https://esolangs.org/wiki/Amycus
 Amycus Severus,https://esolangs.org/wiki/Amycus_Severus
@@ -421,7 +422,7 @@ Annihilator,https://esolangs.org/wiki/Annihilator
 Annoying Alice 2D,https://esolangs.org/wiki/Annoying_Alice_2D
 An Odd Rewriting System,https://esolangs.org/wiki/An_Odd_Rewriting_System
 Another Pi Language,https://esolangs.org/wiki/Another_Pi_Language
-anruBfiankc,https://esolangs.org/wiki/AnruBfiankc
+AnruBfiankc,https://esolangs.org/wiki/AnruBfiankc
 Ante,https://esolangs.org/wiki/Ante
 Anti-Array,https://esolangs.org/wiki/Anti-Array
 Antigram,https://esolangs.org/wiki/Antigram
@@ -463,11 +464,11 @@ ASCIIfuck,https://esolangs.org/wiki/ASCIIfuck
 AsciiFunc,https://esolangs.org/wiki/AsciiFunc
 ASCIIORb,https://esolangs.org/wiki/ASCIIORb
 A-SCP-M,https://esolangs.org/wiki/A-SCP-M
-asdf,https://esolangs.org/wiki/Asdf
+Asdf,https://esolangs.org/wiki/Asdf
 Ases,https://esolangs.org/wiki/Ases
 Ashtol,https://esolangs.org/wiki/Ashtol
 A Slow Language,https://esolangs.org/wiki/A_Slow_Language
-asm2bf,https://esolangs.org/wiki/Asm2bf
+Asm2bf,https://esolangs.org/wiki/Asm2bf
 Assemble,https://esolangs.org/wiki/Assemble
 AssemblerFuck,https://esolangs.org/wiki/AssemblerFuck
 AssemblerFuck++,https://esolangs.org/wiki/AssemblerFuck%2B%2B
@@ -488,15 +489,15 @@ AutoMouse,https://esolangs.org/wiki/AutoMouse
 A very minimal esolang with a very few amount of instructions,https://esolangs.org/wiki/A_very_minimal_esolang_with_a_very_few_amount_of_instructions
 AWA5.0,https://esolangs.org/wiki/AWA5.0
 Ax,https://esolangs.org/wiki/Ax
-axo,https://esolangs.org/wiki/Axo
+Axo,https://esolangs.org/wiki/Axo
 Aya,https://esolangs.org/wiki/Aya
-az,https://esolangs.org/wiki/Az
-AzHC,https://esolangs.org/wiki/AzureHeartC
+Az,https://esolangs.org/wiki/Az
+AzureHeartC,https://esolangs.org/wiki/AzureHeartC
 AZZTURBLICHINORTYEUSIACNOSIPTYRUTIEOSUNEMEEETIRMSPLAORRRRRRRRRRRRRRHSIFUGISSFGIUUUUUUUUUUUUGUIGSEIUFGYUSGNYGNXWGNYX123456789012345678901145141919810TROSHPPAOCONALMELANGUAGE,https://esolangs.org/wiki/AZZTURBLICHINORTYEUSIACNOSIPTYRUTIEOSUNEMEEETIRMSPLAORRRRRRRRRRRRRRHSIFUGISSFGIUUUUUUUUUUUUGUIGSEIUFGYUSGNYGNXWGNYX123456789012345678901145141919810TROSHPPAOCONALMELANGUAGE
 B,https://esolangs.org/wiki/B
-B2,https://esolangs.org/wiki/B%5E2
+B^2,https://esolangs.org/wiki/B%5E2
 B2C,https://esolangs.org/wiki/B2C
-baa,https://esolangs.org/wiki/Baa
+Baa,https://esolangs.org/wiki/Baa
 Baba is program,https://esolangs.org/wiki/Baba_is_program
 Babalang,https://esolangs.org/wiki/Babalang
 Back Alley,https://esolangs.org/wiki/Back_Alley
@@ -552,14 +553,16 @@ Befunk,https://esolangs.org/wiki/Befunk
 Behaviour,https://esolangs.org/wiki/Behaviour
 Benul,https://esolangs.org/wiki/Benul
 Beskew,https://esolangs.org/wiki/Beskew
+Bespoke,https://esolangs.org/wiki/Bespoke
 BestFriends.js,https://esolangs.org/wiki/BestFriends.js
-beta-Juliet,https://esolangs.org/wiki/Beta-Juliet_and_Portia
+Beta-Juliet and Portia,https://esolangs.org/wiki/Beta-Juliet_and_Portia
 Betterave,https://esolangs.org/wiki/Betterave
 Betterfunge,https://esolangs.org/wiki/Betterfunge
 Betterlang,https://esolangs.org/wiki/Betterlang
 Betul Betul BetulLang,https://esolangs.org/wiki/Betul_Betul_BetulLang
 Beturing,https://esolangs.org/wiki/Beturing
 Between,https://esolangs.org/wiki/Between
+Beunfunge,https://esolangs.org/wiki/Beunfunge
 BF++,https://esolangs.org/wiki/BF%2B%2B
 BF+BF,https://esolangs.org/wiki/BF%2BBF
 BFasm,https://esolangs.org/wiki/BFasm
@@ -571,7 +574,7 @@ BFM,https://esolangs.org/wiki/BFM
 BF-PDA,https://esolangs.org/wiki/BF-PDA
 BF-RLE,https://esolangs.org/wiki/BF-RLE
 BF-SC,https://esolangs.org/wiki/BF-SC
-bifuck,https://esolangs.org/wiki/Bifuck
+Bifuck,https://esolangs.org/wiki/Bifuck
 Bias,https://esolangs.org/wiki/Bias
 Bidiroop,https://esolangs.org/wiki/Bidiroop
 BigBrain,https://esolangs.org/wiki/BigBrain
@@ -602,7 +605,7 @@ BIT,https://esolangs.org/wiki/BIT
 BitBitJump,https://esolangs.org/wiki/BitBitJump
 Bitbot,https://esolangs.org/wiki/Bitbot
 BitBounce,https://esolangs.org/wiki/BitBounce
-bitch,https://esolangs.org/wiki/Bitch
+Bitch,https://esolangs.org/wiki/Bitch
 BitChanger,https://esolangs.org/wiki/BitChanger
 BitChip,https://esolangs.org/wiki/BitChip
 BitCode/PicCode,https://esolangs.org/wiki/BitCode/PicCode
@@ -624,12 +627,12 @@ BIX Queue Subset,https://esolangs.org/wiki/BIX_Queue_Subset
 BizOffers,https://esolangs.org/wiki/BizOffers
 Blablafuck,https://esolangs.org/wiki/Blablafuck
 Black,https://esolangs.org/wiki/Black
-,https://esolangs.org/wiki/Black_Pentagon
+Black Pentagon,https://esolangs.org/wiki/Black_Pentagon
 Blank,https://esolangs.org/wiki/Blank
 Blarb,https://esolangs.org/wiki/Blarb
 Blind,https://esolangs.org/wiki/Blind
 Blindfolded Arithmetic,https://esolangs.org/wiki/Blindfolded_Arithmetic
-blo,https://esolangs.org/wiki/Blo
+Blo,https://esolangs.org/wiki/Blo
 Blockfunge,https://esolangs.org/wiki/Blockfunge
 Blood32,https://esolangs.org/wiki/Blood32
 Bloop,https://esolangs.org/wiki/Bloop
@@ -649,7 +652,7 @@ Boolshit,https://esolangs.org/wiki/Boolshit
 BoolX,https://esolangs.org/wiki/BoolX
 Boomerlang,https://esolangs.org/wiki/Boomerlang
 BOOMOP,https://esolangs.org/wiki/BOOMOP
-BoPoMoFoDeTeNeLe,https://esolangs.org/wiki/%E3%84%85%E3%84%86%E3%84%87%E3%84%88%E3%84%89%E3%84%8A%E3%84%8B%E3%84%8C
+ㄅㄆㄇㄈㄉㄊㄋㄌ,https://esolangs.org/wiki/%E3%84%85%E3%84%86%E3%84%87%E3%84%88%E3%84%89%E3%84%8A%E3%84%8B%E3%84%8C
 Bottles of beer on the wall,https://esolangs.org/wiki/Bottles_of_beer_on_the_wall
 Bouncy,https://esolangs.org/wiki/Bouncy
 Bouncy Counters,https://esolangs.org/wiki/Bouncy_Counters
@@ -665,48 +668,48 @@ BracketsLang,https://esolangs.org/wiki/BracketsLang
 Brackit,https://esolangs.org/wiki/Brackit
 Braimmental,https://esolangs.org/wiki/Braimmental
 Brain,https://esolangs.org/wiki/Brain
-brain--,https://esolangs.org/wiki/Brain--
+Brain--,https://esolangs.org/wiki/Brain--
 Brain思密达,https://esolangs.org/wiki/Brain%E6%80%9D%E5%AF%86%E8%BE%BE
 Brainalpha,https://esolangs.org/wiki/Brainalpha
-brainappend,https://esolangs.org/wiki/Brainappend
+Brainappend,https://esolangs.org/wiki/Brainappend
 Brainbits,https://esolangs.org/wiki/Brainbits
 Brainbits+,https://esolangs.org/wiki/Brainbits%2B
-brainbool,https://esolangs.org/wiki/Brainbool
+Brainbool,https://esolangs.org/wiki/Brainbool
 Braincells,https://esolangs.org/wiki/Braincells
 Brainchicken,https://esolangs.org/wiki/Brainchicken
 BrainClub,https://esolangs.org/wiki/BrainClub
 Braincopter,https://esolangs.org/wiki/Braincopter
 BrainCurry,https://esolangs.org/wiki/BrainCurry
 BrainCurses,https://esolangs.org/wiki/BrainCurses
-braindamage,https://esolangs.org/wiki/Braindamage
+Braindamage,https://esolangs.org/wiki/Braindamage
 Braindrunk,https://esolangs.org/wiki/Braindrunk
 Braindumbed,https://esolangs.org/wiki/Braindumbed
 BrainEmoji,https://esolangs.org/wiki/BrainEmoji
-Brainf*ck,https://esolangs.org/wiki/Brainf_ck
+Brainf ck,https://esolangs.org/wiki/Brainf_ck
 Brainfact,https://esolangs.org/wiki/Brainfact
-brainfault,https://esolangs.org/wiki/Brainfault
+Brainfault,https://esolangs.org/wiki/Brainfault
 BrainfisHQ9+,https://esolangs.org/wiki/BrainfisHQ9%2B
 Brain-Flak,https://esolangs.org/wiki/Brain-Flak
 Brain-Flāk,https://esolangs.org/wiki/Brain-Fl%C4%81k
-brainFn,https://esolangs.org/wiki/BrainFn
+BrainFn,https://esolangs.org/wiki/BrainFn
 Brainflop,https://esolangs.org/wiki/Brainflop
 Brainfoctal,https://esolangs.org/wiki/Brainfoctal
 Brainfork,https://esolangs.org/wiki/Brainfork
-brainfuckconsole74,https://esolangs.org/wiki/Brainfuckconsole74
-brainfuck,https://esolangs.org/wiki/Brainfuck
-brainfUck,https://esolangs.org/w/index.php?title=BrainfUck&action=edit&redlink=1
+Brainfuckconsole74,https://esolangs.org/wiki/Brainfuckconsole74
+Brainfuck,https://esolangs.org/wiki/Brainfuck
+BrainfUck (page does not exist),https://esolangs.org/w/index.php?title=BrainfUck&action=edit&redlink=1
 BRaInFUCK,https://esolangs.org/wiki/BRaInFUCK
-brainfuck,https://esolangs.org/wiki/You_can_fuck_without_a_brain
-brainfuck,https://esolangs.org/wiki/You_can_brain_without_a_fuck
-brainfuck,https://esolangs.org/wiki/You_can_without_a_brainfuck
-brainfuck2,https://esolangs.org/wiki/Brainfuck2
+You can fuck without a brain,https://esolangs.org/wiki/You_can_fuck_without_a_brain
+You can brain without a fuck,https://esolangs.org/wiki/You_can_brain_without_a_fuck
+You can without a brainfuck,https://esolangs.org/wiki/You_can_without_a_brainfuck
+Brainfuck2,https://esolangs.org/wiki/Brainfuck2
 Brainfuck+,https://esolangs.org/wiki/Brainfuck%2B
 Brainfuck++,https://esolangs.org/wiki/Brainfuck%2B%2B
 Brainfuck+10,https://esolangs.org/wiki/Brainfuck%2B10
 Brainfuck+3,https://esolangs.org/wiki/Brainfuck%2B3
 Brainfuck--,https://esolangs.org/wiki/Brainfuck--
 "Brainfuck(B,R,A,I,N,F,U,C,K)","https://esolangs.org/wiki/Brainfuck(B,R,A,I,N,F,U,C,K)"
-brainfuck 4 humans,https://esolangs.org/wiki/Brainfuck_4_humans
+Brainfuck 4 humans,https://esolangs.org/wiki/Brainfuck_4_humans
 Brainfuck Assembly Language,https://esolangs.org/wiki/Brainfuck_Assembly_Language
 Brainfuck But With Buffer,https://esolangs.org/wiki/Brainfuck_But_With_Buffer
 Brainfuck Encoded Concatenative Calculus,https://esolangs.org/wiki/Brainfuck_Encoded_Concatenative_Calculus
@@ -720,8 +723,8 @@ Brainfuck/w/index.php?title=Talk:Brainfuck/index.php,https://esolangs.org/wiki/B
 BrainFuck+,https://esolangs.org/wiki/BrainFuck%2B
 BrainFuck++,https://esolangs.org/wiki/BrainFuck%2B%2B
 Brainfun,https://esolangs.org/wiki/Brainfun
-brainfunc,https://esolangs.org/wiki/Brainfunc
-brainfunct,https://esolangs.org/wiki/Brainfunct
+Brainfunc,https://esolangs.org/wiki/Brainfunc
+Brainfunct,https://esolangs.org/wiki/Brainfunct
 BrainFunge2,https://esolangs.org/wiki/BrainFunge2
 BrainfXX,https://esolangs.org/wiki/BrainfXX
 Braingolf,https://esolangs.org/wiki/Braingolf
@@ -731,7 +734,7 @@ Brainhype,https://esolangs.org/wiki/Brainhype
 BrainIf,https://esolangs.org/wiki/BrainIf
 BrainInt,https://esolangs.org/wiki/BrainInt
 Brainjuice,https://esolangs.org/wiki/Brainjuice
-brainless,https://esolangs.org/wiki/Brainless
+Brainless,https://esolangs.org/wiki/Brainless
 Brainlisp,https://esolangs.org/wiki/Brainlisp
 Brainloller,https://esolangs.org/wiki/Brainloller
 Brainlove,https://esolangs.org/wiki/Brainlove
@@ -746,13 +749,13 @@ BrainSpace 1.0,https://esolangs.org/wiki/BrainSpace_1.0
 BrainSplited,https://esolangs.org/wiki/BrainSplited
 Brainstack,https://esolangs.org/wiki/Brainstack
 Brainstuck,https://esolangs.org/wiki/Brainstuck
-brainsymbol,https://esolangs.org/wiki/Brainsymbol
+Brainsymbol,https://esolangs.org/wiki/Brainsymbol
 BrainTravel,https://esolangs.org/wiki/BrainTravel
 Braintrust,https://esolangs.org/wiki/Braintrust
 Braintwist,https://esolangs.org/wiki/Braintwist
 Brainwhirl,https://esolangs.org/wiki/Brainwhirl
 BrainZ,https://esolangs.org/wiki/BrainZ
-brain操,https://esolangs.org/wiki/Brain%E6%93%8D
+Brain操,https://esolangs.org/wiki/Brain%E6%93%8D
 Braktif,https://esolangs.org/wiki/Braktif
 Branch,https://esolangs.org/wiki/Branch
 BRASCA,https://esolangs.org/wiki/BRASCA
@@ -761,9 +764,9 @@ Brian & Chuck,https://esolangs.org/wiki/Brian_%26_Chuck
 Broccoli,https://esolangs.org/wiki/Broccoli
 Broccosprout,https://esolangs.org/wiki/Broccosprout
 Broken Calculator,https://esolangs.org/wiki/Broken_Calculator
-Broken_Gdy_Brainfuck,https://esolangs.org/wiki/Broken_Gdy_Brainfuck
+Broken Gdy Brainfuck,https://esolangs.org/wiki/Broken_Gdy_Brainfuck
 Brook,https://esolangs.org/wiki/Brook
-bruh():bruh(),https://esolangs.org/wiki/Bruh():bruh()
+Bruh():bruh(),https://esolangs.org/wiki/Bruh():bruh()
 Bruijndejx,https://esolangs.org/wiki/Bruijndejx
 Bruzzet,https://esolangs.org/wiki/Bruzzet
 BRZRK,https://esolangs.org/wiki/BRZRK
@@ -789,7 +792,7 @@ Burlesque,https://esolangs.org/wiki/Burlesque
 Burro,https://esolangs.org/wiki/Burro
 Bus 581,https://esolangs.org/wiki/Bus_581
 But Is It Art?,https://esolangs.org/wiki/But_Is_It_Art%3F
-butterbrain,https://esolangs.org/wiki/Butterbrain
+Butterbrain,https://esolangs.org/wiki/Butterbrain
 ButWhy,https://esolangs.org/wiki/ButWhy
 BuzzFizz,https://esolangs.org/wiki/BuzzFizz
 ByT,https://esolangs.org/wiki/ByT
@@ -800,12 +803,12 @@ BytePusher,https://esolangs.org/wiki/BytePusher
 Byter,https://esolangs.org/wiki/Byter
 Byte-based Instruction Jumping,https://esolangs.org/wiki/Byte-based_Instruction_Jumping
 Byte Syze,https://esolangs.org/wiki/Byte_Syze
-ↄ,https://esolangs.org/wiki/%E2%86%83
+Ↄ,https://esolangs.org/wiki/%E2%86%83
 C+,https://esolangs.org/wiki/C%2B
 C+++,https://esolangs.org/wiki/C%2B%2B%2B
 C++++,https://esolangs.org/wiki/C%2B%2B%2B%2B
 C@++,https://esolangs.org/wiki/C@%2B%2B
-C±±,https://esolangs.org/wiki/C_Plus_Minus_Plus_Minus
+C Plus Minus Plus Minus,https://esolangs.org/wiki/C_Plus_Minus_Plus_Minus
 Caballo,https://esolangs.org/wiki/Caballo
 Cabra,https://esolangs.org/wiki/Cabra
 Caca,https://esolangs.org/wiki/Caca
@@ -828,7 +831,7 @@ Cantonese,https://esolangs.org/wiki/Cantonese
 CAPscript,https://esolangs.org/wiki/CAPscript
 Capsule,https://esolangs.org/wiki/Capsule
 Capuirequiem,https://esolangs.org/wiki/Capuirequiem
-CAR#,https://esolangs.org/wiki/CAR_sharp
+CAR sharp,https://esolangs.org/wiki/CAR_sharp
 Cardinal,https://esolangs.org/wiki/Cardinal
 Carriage,https://esolangs.org/wiki/Carriage
 CASTLE,https://esolangs.org/wiki/CASTLE
@@ -838,8 +841,8 @@ CatCode,https://esolangs.org/wiki/CatCode
 Categorial,https://esolangs.org/wiki/Categorial
 Cav𝚅,https://esolangs.org/wiki/Cav%F0%9D%9A%85
 CBIASIPOSLESWRAOTTHNRTBTSS.SATLCD,https://esolangs.org/wiki/CBIASIPOSLESWRAOTTHNRTBTSS.SATLCD
-cbrain,https://esolangs.org/wiki/Cbrain
-CC_*,https://esolangs.org/wiki/CC_*
+Cbrain,https://esolangs.org/wiki/Cbrain
+CC *,https://esolangs.org/wiki/CC_*
 CCLOLCODE,https://esolangs.org/wiki/CCLOLCODE
 Cellbrain,https://esolangs.org/wiki/Cellbrain
 Cells,https://esolangs.org/wiki/Cells
@@ -872,7 +875,7 @@ Chef,https://esolangs.org/wiki/Chef
 Chefs Kiss,https://esolangs.org/wiki/Chefs_Kiss
 Chem,https://esolangs.org/wiki/Chem
 Chess Code,https://esolangs.org/wiki/Chess_Code
-chevron,https://esolangs.org/wiki/Chevron
+Chevron,https://esolangs.org/wiki/Chevron
 Cheß,https://esolangs.org/wiki/Che%C3%9F
 Chicken,https://esolangs.org/wiki/Chicken
 Chicken you too beautiful,https://esolangs.org/wiki/Chicken_you_too_beautiful
@@ -903,13 +906,13 @@ CLC-INTERCAL,https://esolangs.org/wiki/CLC-INTERCAL
 ClearBF,https://esolangs.org/wiki/ClearBF
 Clem,https://esolangs.org/wiki/Clem
 CLFCE,https://esolangs.org/wiki/CLFCE
-clickclang,https://esolangs.org/wiki/Clickclang
+Clickclang,https://esolangs.org/wiki/Clickclang
 Clip,https://esolangs.org/wiki/Clip
 Clockwise,https://esolangs.org/wiki/Clockwise
 C-LONG,https://esolangs.org/wiki/C-LONG
 CLooP,https://esolangs.org/wiki/CLooP
-Clue,https://esolangs.org/wiki/Clue_(Keymaker)
-Clue,https://esolangs.org/wiki/Clue_(oklopol)
+Clue (Keymaker),https://esolangs.org/wiki/Clue_(Keymaker)
+Clue (oklopol),https://esolangs.org/wiki/Clue_(oklopol)
 Clunk,https://esolangs.org/wiki/Clunk
 COBOL,https://esolangs.org/wiki/COBOL
 COBOLD,https://esolangs.org/wiki/COBOLD
@@ -918,7 +921,7 @@ Cod,https://esolangs.org/wiki/Cod
 Codan,https://esolangs.org/wiki/Codan
 Codd,https://esolangs.org/wiki/Codd
 CodeFuck,https://esolangs.org/wiki/CodeFuck
-Codz89zchmezctiungxz7c389zs7t78szeoyt,https://esolangs.org/wiki/CodemaoC%2B%2B
+CodemaoC++,https://esolangs.org/wiki/CodemaoC%2B%2B
 Cogc,https://esolangs.org/wiki/Cogc
 Colambda,https://esolangs.org/wiki/Colambda
 Color Scheme,https://esolangs.org/wiki/Color_Scheme
@@ -928,7 +931,7 @@ Comefrom0x10,https://esolangs.org/wiki/Comefrom0x10
 Come Here,https://esolangs.org/wiki/Come_Here
 Commercial,https://esolangs.org/wiki/Commercial
 Common-S3C,https://esolangs.org/wiki/Common-S3C
-comp,https://esolangs.org/wiki/Comp
+Comp,https://esolangs.org/wiki/Comp
 Complack,https://esolangs.org/wiki/Complack
 COMPLEX,https://esolangs.org/wiki/COMPLEX
 Complode,https://esolangs.org/wiki/Complode
@@ -947,7 +950,7 @@ Connery,https://esolangs.org/wiki/Connery
 Constantinople,https://esolangs.org/wiki/Constantinople
 Constructible,https://esolangs.org/wiki/Constructible
 Con-Text,https://esolangs.org/wiki/Con-Text
-context.js,https://esolangs.org/wiki/Context.js
+Context.js,https://esolangs.org/wiki/Context.js
 ContinuousEquation,https://esolangs.org/wiki/ContinuousEquation
 Convergaptor,https://esolangs.org/wiki/Convergaptor
 Conveyor,https://esolangs.org/wiki/Conveyor
@@ -966,14 +969,14 @@ Countdown,https://esolangs.org/wiki/Countdown
 Countercall,https://esolangs.org/wiki/Countercall
 Counterfish,https://esolangs.org/wiki/Counterfish
 Cpy,https://esolangs.org/wiki/Cpy
-cQuents,https://esolangs.org/wiki/CQuents
+CQuents,https://esolangs.org/wiki/CQuents
 Crab,https://esolangs.org/wiki/Crab
 CraftyFunge,https://esolangs.org/wiki/CraftyFunge
 Crainfuck,https://esolangs.org/wiki/Crainfuck
 Cratefuck,https://esolangs.org/wiki/Cratefuck
 CreativeASM,https://esolangs.org/wiki/CreativeASM
 CreativeScript,https://esolangs.org/wiki/CreativeScript
-Cree#,https://esolangs.org/wiki/Cree
+Cree,https://esolangs.org/wiki/Cree
 Crement,https://esolangs.org/wiki/Crement
 Crop,https://esolangs.org/wiki/Crop
 CRTL,https://esolangs.org/wiki/CRTL
@@ -982,7 +985,7 @@ CSL,https://esolangs.org/wiki/CSL
 CSP Spec,https://esolangs.org/wiki/CSP_Spec
 Cscalls,https://esolangs.org/wiki/Cscalls
 Css Script,https://esolangs.org/wiki/Css_Script
-CT,https://esolangs.org/wiki/Bitwise_Cyclic_Tag#BCT_emulation_of_cyclic_tag_systems
+Bitwise Cyclic Tag,https://esolangs.org/wiki/Bitwise_Cyclic_Tag#BCT_emulation_of_cyclic_tag_systems
 CTFuck,https://esolangs.org/wiki/CTFuck
 Cthulhu,https://esolangs.org/wiki/Cthulhu
 Ctonia,https://esolangs.org/wiki/Ctonia
@@ -1002,7 +1005,7 @@ Czure,https://esolangs.org/wiki/Czure
 D--,https://esolangs.org/wiki/D--
 Da0,https://esolangs.org/wiki/Da0
 DAEANAAACP,https://esolangs.org/wiki/DAEANAAACP
-Daffodil/#FLORA#,https://esolangs.org/wiki/Daffodil
+Daffodil,https://esolangs.org/wiki/Daffodil
 Daft,https://esolangs.org/wiki/Daft
 DALIS,https://esolangs.org/wiki/DALIS
 DAMN COVID-19,https://esolangs.org/wiki/DAMN_COVID-19
@@ -1022,13 +1025,13 @@ DBFV!,https://esolangs.org/wiki/DBFV!
 Dbondb,https://esolangs.org/wiki/Dbondb
 DBR,https://esolangs.org/wiki/DBR
 DcScript,https://esolangs.org/wiki/DcScript
-dd/dd,https://esolangs.org/wiki/Dd/dd
+Dd/dd,https://esolangs.org/wiki/Dd/dd
 DDR,https://esolangs.org/wiki/DDR
 Dead,https://esolangs.org/wiki/Dead
 Deadchicken,https://esolangs.org/wiki/Deadchicken
 Deadfish,https://esolangs.org/wiki/Deadfish
 Deadfish++,https://esolangs.org/wiki/Deadfish%2B%2B
-Deadfish[],https://esolangs.org/wiki/Deadfish()
+Deadfish(),https://esolangs.org/wiki/Deadfish()
 Deadfish PDA,https://esolangs.org/wiki/Deadfish_PDA
 Deadfish TM,https://esolangs.org/wiki/Deadfish_TM
 DeadSimple,https://esolangs.org/wiki/DeadSimple
@@ -1048,7 +1051,7 @@ Depend,https://esolangs.org/wiki/Depend
 Dependently Typed Binary Lambda Calculus,https://esolangs.org/wiki/Dependently_Typed_Binary_Lambda_Calculus
 Derpcode,https://esolangs.org/wiki/Derpcode
 Derplang,https://esolangs.org/wiki/Derplang
-design_coder,https://esolangs.org/wiki/Design_coder
+Design coder,https://esolangs.org/wiki/Design_coder
 Desmoslang,https://esolangs.org/wiki/Desmoslang
 Deskin,https://esolangs.org/wiki/Deskin
 Detour,https://esolangs.org/wiki/Detour
@@ -1064,7 +1067,7 @@ Dick,https://esolangs.org/wiki/Dick
 Did I Ask,https://esolangs.org/wiki/Did_I_Ask
 Diexponae,https://esolangs.org/wiki/Diexponae
 Die Deutsche Programmiersprache,https://esolangs.org/wiki/Die_Deutsche_Programmiersprache
-d1ffe7e45e,https://esolangs.org/wiki/D1ffe7e45e
+D1ffe7e45e,https://esolangs.org/wiki/D1ffe7e45e
 Dig,https://esolangs.org/wiki/Dig
 DigFiles,https://esolangs.org/wiki/DigFiles
 DigFill,https://esolangs.org/wiki/DigFill
@@ -1074,7 +1077,7 @@ Dimensifuck,https://esolangs.org/wiki/Dimensifuck
 Dimensional,https://esolangs.org/wiki/Dimensional
 Dimensions,https://esolangs.org/wiki/Dimensions
 DINAC,https://esolangs.org/wiki/DINAC
-dir,https://esolangs.org/wiki/Dir
+Dir,https://esolangs.org/wiki/Dir
 Directional,https://esolangs.org/wiki/Directional
 Dirst,https://esolangs.org/wiki/Dirst
 Dis,https://esolangs.org/wiki/Dis
@@ -1086,24 +1089,24 @@ DIVSPL,https://esolangs.org/wiki/DIVSPL
 Divzeros,https://esolangs.org/wiki/Divzeros
 DJ Qarkegs - Above The Sky,https://esolangs.org/wiki/DJ_Qarkegs_-_Above_The_Sky
 DL,https://esolangs.org/wiki/DL
-DNA#,https://esolangs.org/wiki/DNA-Sharp
+DNA-Sharp,https://esolangs.org/wiki/DNA-Sharp
 D'ni,https://esolangs.org/wiki/D%27ni
 DOBELA,https://esolangs.org/wiki/DOBELA
 DoFor,https://esolangs.org/wiki/DoFor
 DOG,https://esolangs.org/wiki/DOG
 Dog,https://esolangs.org/wiki/Dog
 Dogescript,https://esolangs.org/wiki/Dogescript
-dolfins grace,https://esolangs.org/wiki/Dolfins_grace
-,https://esolangs.org/wiki/Domino_Crisis
+Dolfins grace,https://esolangs.org/wiki/Dolfins_grace
+Domino Crisis,https://esolangs.org/wiki/Domino_Crisis
 DominoScript,https://esolangs.org/wiki/DominoScript
-dongbei,https://esolangs.org/wiki/Dongbei
+Dongbei,https://esolangs.org/wiki/Dongbei
 Doorspace,https://esolangs.org/wiki/Doorspace
 Doreq,https://esolangs.org/wiki/Doreq
 Dorklang,https://esolangs.org/wiki/Dorklang
 Dot,https://esolangs.org/wiki/Dot
-dotcomma,https://esolangs.org/wiki/Dotcomma
-dotfuck,https://esolangs.org/wiki/Dotfuck
-dotlang,https://esolangs.org/wiki/Dotlang
+Dotcomma,https://esolangs.org/wiki/Dotcomma
+Dotfuck,https://esolangs.org/wiki/Dotfuck
+Dotlang,https://esolangs.org/wiki/Dotlang
 DotNetOISC,https://esolangs.org/wiki/DotNetOISC
 DotSF,https://esolangs.org/wiki/DotSF
 Dotter,https://esolangs.org/wiki/Dotter
@@ -1112,21 +1115,21 @@ DoubleFuck,https://esolangs.org/wiki/DoubleFuck
 Double Helix,https://esolangs.org/wiki/Double_Helix
 DoWhileFuck,https://esolangs.org/wiki/DoWhileFuck
 Down the Mountain,https://esolangs.org/wiki/Down_the_Mountain
-do-code,https://esolangs.org/wiki/Do-code
+Do-code,https://esolangs.org/wiki/Do-code
 DQ,https://esolangs.org/wiki/DQ
 Drainfuck,https://esolangs.org/wiki/Drainfuck
 Dreadow,https://esolangs.org/wiki/Dreadow
 Drift,https://esolangs.org/wiki/Drift
 DriftLang,https://esolangs.org/wiki/DriftLang
 Drive-In Window,https://esolangs.org/wiki/Drive-In_Window
-Drive-In_Window_extended,https://esolangs.org/wiki/Drive-In_Window_extended
+Drive-In Window extended,https://esolangs.org/wiki/Drive-In_Window_extended
 Drive-In Window JSON,https://esolangs.org/wiki/Drive-In_Window_JSON
 Drive-In Window TC,https://esolangs.org/wiki/Drive-In_Window_TC
 DROL,https://esolangs.org/wiki/DROL
 Drunkscript,https://esolangs.org/wiki/Drunkscript
 DStack,https://esolangs.org/wiki/DStack
-dual tape,https://esolangs.org/wiki/Dual_tape
-dual tape ez,https://esolangs.org/wiki/Dual_tape_ez
+Dual tape,https://esolangs.org/wiki/Dual_tape
+Dual tape ez,https://esolangs.org/wiki/Dual_tape_ez
 DubDubMachine,https://esolangs.org/wiki/DubDubMachine
 D.U.C.K.,https://esolangs.org/wiki/D.U.C.K.
 Duck Duck Goose,https://esolangs.org/wiki/Duck_Duck_Goose
@@ -1151,8 +1154,8 @@ ECL,https://esolangs.org/wiki/ECL
 Edge,https://esolangs.org/wiki/Edge
 Edition,https://esolangs.org/wiki/Edition
 Eek!,https://esolangs.org/wiki/Eek!
-ef,https://esolangs.org/wiki/Ef
-efghij,https://esolangs.org/wiki/Efghij
+Ef,https://esolangs.org/wiki/Ef
+Efghij,https://esolangs.org/wiki/Efghij
 Egaharjb,https://esolangs.org/wiki/Egaharjb
 Egel,https://esolangs.org/wiki/Egel
 EGL,https://esolangs.org/wiki/EGL
@@ -1160,7 +1163,7 @@ EGSHEL,https://esolangs.org/wiki/EGSHEL
 EHTML,https://esolangs.org/wiki/EHTML
 EINE,https://esolangs.org/wiki/EINE
 ELANG,https://esolangs.org/wiki/ELANG
-"ELang(Not ↑, but 易语言)",https://esolangs.org/wiki/ELang
+ELang,https://esolangs.org/wiki/ELang
 ELBOG,https://esolangs.org/wiki/ELBOG
 Electra,https://esolangs.org/wiki/Electra
 Electric BitFunk,https://esolangs.org/wiki/Electric_BitFunk
@@ -1168,16 +1171,16 @@ Element,https://esolangs.org/wiki/Element
 ElemScript,https://esolangs.org/wiki/ElemScript
 Elevated Parser,https://esolangs.org/wiki/Elevated_Parser
 Elevator,https://esolangs.org/wiki/Elevator
-elfroh,https://esolangs.org/wiki/Elfroh
+Elfroh,https://esolangs.org/wiki/Elfroh
 Elog,https://esolangs.org/wiki/Elog
 Emanator,https://esolangs.org/wiki/Emanator
-emit,https://esolangs.org/wiki/Emit
+Emit,https://esolangs.org/wiki/Emit
 Emmental,https://esolangs.org/wiki/Emmental
 Emo,https://esolangs.org/wiki/Emo
 Emojicode,https://esolangs.org/wiki/Emojicode
 EmojiLang,https://esolangs.org/wiki/EmojiLang
-EmojiLang,https://esolangs.org/wiki/EmojiLang_(Mihai_Popa)
-EmojiLang(MHPP) in Chinese,https://esolangs.org/wiki/EmojiLang_in_Chinese
+EmojiLang (Mihai Popa),https://esolangs.org/wiki/EmojiLang_(Mihai_Popa)
+EmojiLang in Chinese,https://esolangs.org/wiki/EmojiLang_in_Chinese
 Emoji-gramming,https://esolangs.org/wiki/Emoji-gramming
 EmojiWee,https://esolangs.org/wiki/EmojiWee
 Emotebatch,https://esolangs.org/wiki/Emotebatch
@@ -1189,7 +1192,7 @@ EncryptFuck,https://esolangs.org/wiki/EncryptFuck
 Ende,https://esolangs.org/wiki/Ende
 Enema,https://esolangs.org/wiki/Enema
 English,https://esolangs.org/wiki/English
-enGLish,https://esolangs.org/wiki/EnGLish
+EnGLish,https://esolangs.org/wiki/EnGLish
 English+,https://esolangs.org/wiki/English%2B
 Enigma-2D,https://esolangs.org/wiki/Enigma-2D
 Eniuq,https://esolangs.org/wiki/Eniuq
@@ -1221,7 +1224,7 @@ EsoPy Framework,https://esolangs.org/wiki/EsoPy_Framework
 Espro,https://esolangs.org/wiki/Espro
 Estrita,https://esolangs.org/wiki/Estrita
 ETA,https://esolangs.org/wiki/ETA
-eTalk,https://esolangs.org/wiki/ETalk
+ETalk,https://esolangs.org/wiki/ETalk
 ETAS,https://esolangs.org/wiki/ETAS
 Etcha,https://esolangs.org/wiki/Etcha
 Euclid,https://esolangs.org/wiki/Euclid
@@ -1229,13 +1232,13 @@ Eul,https://esolangs.org/wiki/Eul
 Eval,https://esolangs.org/wiki/Eval
 Everett,https://esolangs.org/wiki/Everett
 Everyonelang,https://esolangs.org/wiki/Everyonelang
-evil,https://esolangs.org/wiki/Evil
-eWagon,https://esolangs.org/wiki/EWagon
-ewpl,https://esolangs.org/wiki/Ewpl
+Evil,https://esolangs.org/wiki/Evil
+EWagon,https://esolangs.org/wiki/EWagon
+Ewpl,https://esolangs.org/wiki/Ewpl
 Exalang,https://esolangs.org/wiki/Exalang
 Examinable Invocation Vector,https://esolangs.org/wiki/Examinable_Invocation_Vector
 ExampleFuck,https://esolangs.org/wiki/ExampleFuck
-excela,https://esolangs.org/wiki/Excela
+Excela,https://esolangs.org/wiki/Excela
 Excellang,https://esolangs.org/wiki/Excellang
 Excellerated Short-Term Memory Loss,https://esolangs.org/wiki/Excellerated_Short-Term_Memory_Loss
 EXCON,https://esolangs.org/wiki/EXCON
@@ -1282,7 +1285,7 @@ FatFinger,https://esolangs.org/wiki/FatFinger
 F ck you,https://esolangs.org/wiki/F_ck_you
 Fear,https://esolangs.org/wiki/Fear
 Feed the Chaos,https://esolangs.org/wiki/Feed_the_Chaos
-ferNANDo,https://esolangs.org/wiki/FerNANDo
+FerNANDo,https://esolangs.org/wiki/FerNANDo
 Ferntape,https://esolangs.org/wiki/Ferntape
 Fetlang,https://esolangs.org/wiki/Fetlang
 FFM/FFB,https://esolangs.org/wiki/FFM/FFB
@@ -1307,7 +1310,7 @@ Fission,https://esolangs.org/wiki/Fission
 Fit,https://esolangs.org/wiki/Fit
 FizzLang,https://esolangs.org/wiki/FizzLang
 FJ,https://esolangs.org/wiki/FJ
-flag,https://esolangs.org/wiki/Flag
+Flag,https://esolangs.org/wiki/Flag
 Flasmi,https://esolangs.org/wiki/Flasmi
 Flatland,https://esolangs.org/wiki/Flatland
 Flatline,https://esolangs.org/wiki/Flatline
@@ -1323,7 +1326,7 @@ FLOLCODE,https://esolangs.org/wiki/FLOLCODE
 Flooding Waterfall Model,https://esolangs.org/wiki/Flooding_Waterfall_Model
 Floof,https://esolangs.org/wiki/Floof
 Floor,https://esolangs.org/wiki/Floor
-flow_chart,https://esolangs.org/wiki/Flow_chart
+Flow chart,https://esolangs.org/wiki/Flow_chart
 Flow of Holes,https://esolangs.org/wiki/Flow_of_Holes
 Flow Uncontrolled,https://esolangs.org/wiki/Flow_Uncontrolled
 Fluffle Puff,https://esolangs.org/wiki/Fluffle_Puff
@@ -1344,7 +1347,7 @@ Fool,https://esolangs.org/wiki/Fool
 Footsteps,https://esolangs.org/wiki/Footsteps
 Forbin,https://esolangs.org/wiki/Forbin
 Foreach,https://esolangs.org/wiki/Foreach
-foresolang,https://esolangs.org/wiki/Foresolang
+Foresolang,https://esolangs.org/wiki/Foresolang
 Forest,https://esolangs.org/wiki/Forest
 Forget,https://esolangs.org/wiki/Forget
 Formula,https://esolangs.org/wiki/Formula
@@ -1378,7 +1381,7 @@ Fromage,https://esolangs.org/wiki/Fromage
 FROM HERE TO THERE,https://esolangs.org/wiki/FROM_HERE_TO_THERE
 FThue,https://esolangs.org/wiki/FThue
 FU,https://esolangs.org/wiki/FU
-Fuck,https://esolangs.org/wiki/SpoilerFuck
+SpoilerFuck,https://esolangs.org/wiki/SpoilerFuck
 Fuck4,https://esolangs.org/wiki/Fuck4
 FuckBrain,https://esolangs.org/wiki/FuckBrain
 Fuckhard,https://esolangs.org/wiki/Fuckhard
@@ -1399,7 +1402,7 @@ Functional Struct Language,https://esolangs.org/wiki/Functional_Struct_Language
 Functional(),https://esolangs.org/wiki/Functional()
 Functionality,https://esolangs.org/wiki/Functionality
 FunctionsFTW,https://esolangs.org/wiki/FunctionsFTW
-function x(y),https://esolangs.org/wiki/Function_x(y)
+Function x(y),https://esolangs.org/wiki/Function_x(y)
 Functress,https://esolangs.org/wiki/Functress
 Fungeball,https://esolangs.org/wiki/Fungeball
 Fünke,https://esolangs.org/wiki/F%C3%BCnke
@@ -1418,16 +1421,16 @@ Gammaplex,https://esolangs.org/wiki/Gammaplex
 GangLang,https://esolangs.org/wiki/GangLang
 Gato,https://esolangs.org/wiki/Gato
 Gaot++,https://esolangs.org/wiki/Gaot%2B%2B
-G_arD^EN CorUtY@rD,https://esolangs.org/wiki/G_arD%5EEN_CorUtY@rD
+G arD^EN CorUtY@rD,https://esolangs.org/wiki/G_arD%5EEN_CorUtY@rD
 GASOIL,https://esolangs.org/wiki/GASOIL
 Gate,https://esolangs.org/wiki/Gate
 GAXT,https://esolangs.org/wiki/GAXT
 Gbagbo,https://esolangs.org/wiki/Gbagbo
-Gb_gates RISC,https://esolangs.org/wiki/Gb_gates_RISC
-Gdy_Brainfuck,https://esolangs.org/wiki/Gdy_Brainfuck
+Gb gates RISC,https://esolangs.org/wiki/Gb_gates_RISC
+Gdy Brainfuck,https://esolangs.org/wiki/Gdy_Brainfuck
 Gearbox,https://esolangs.org/wiki/Gearbox
-gecho,https://esolangs.org/wiki/Gecho
-gecko,https://esolangs.org/wiki/Gecko
+Gecho,https://esolangs.org/wiki/Gecho
+Gecko,https://esolangs.org/wiki/Gecko
 Gemooy,https://esolangs.org/wiki/Gemooy
 Genera Tag,https://esolangs.org/wiki/Genera_Tag
 General Compute Coprocessor,https://esolangs.org/wiki/General_Compute_Coprocessor
@@ -1439,13 +1442,13 @@ Genome,https://esolangs.org/wiki/Genome
 Geo,https://esolangs.org/wiki/Geo
 Geolang,https://esolangs.org/wiki/Geolang
 Geom,https://esolangs.org/wiki/Geom
-Geom++,https://esolangs.org/wiki/Geompp
+Geompp,https://esolangs.org/wiki/Geompp
 Ger,https://esolangs.org/wiki/Ger
 Get there,https://esolangs.org/wiki/Get_there
 GetWhen,https://esolangs.org/wiki/GetWhen
 Genesis,https://esolangs.org/wiki/Genesis
 GHost CPU,https://esolangs.org/wiki/GHost_CPU
-Gibberish,https://esolangs.org/wiki/Gibberish_(programming_language)
+Gibberish (programming language),https://esolangs.org/wiki/Gibberish_(programming_language)
 Gibberish/JavaScript,https://esolangs.org/wiki/Gibberish/JavaScript
 GibMeRol,https://esolangs.org/wiki/GibMeRol
 Glass,https://esolangs.org/wiki/Glass
@@ -1494,7 +1497,7 @@ Grass,https://esolangs.org/wiki/Grass
 Gravity,https://esolangs.org/wiki/Gravity
 Grawlix,https://esolangs.org/wiki/Grawlix
 Gray Snail,https://esolangs.org/wiki/Gray_Snail
-greenBerry,https://esolangs.org/wiki/GreenBerry
+GreenBerry,https://esolangs.org/wiki/GreenBerry
 Gregorovich,https://esolangs.org/wiki/Gregorovich
 Grid,https://esolangs.org/wiki/Grid
 GridJSON,https://esolangs.org/wiki/GridJSON
@@ -1517,7 +1520,7 @@ Gt++fy,https://esolangs.org/wiki/Gt%2B%2Bfy
 GuLang,https://esolangs.org/wiki/GuLang
 Gulp,https://esolangs.org/wiki/Gulp
 Gummy Bear,https://esolangs.org/wiki/Gummy_Bear
-h,https://esolangs.org/wiki/H
+H,https://esolangs.org/wiki/H
 H̱,https://esolangs.org/wiki/H%CC%B1
 Hack VM,https://esolangs.org/wiki/Hack_VM
 Haifu,https://esolangs.org/wiki/Haifu
@@ -1550,7 +1553,7 @@ Hatemath,https://esolangs.org/wiki/Hatemath
 Hatter,https://esolangs.org/wiki/Hatter
 Hat Trick,https://esolangs.org/wiki/Hat_Trick
 Haxell,https://esolangs.org/wiki/Haxell
-hcbf,https://esolangs.org/wiki/Hcbf
+Hcbf,https://esolangs.org/wiki/Hcbf
 HeacunQ9+×,https://esolangs.org/wiki/HeacunQ9%2B%C3%97
 Headass,https://esolangs.org/wiki/Headass
 Headsecks,https://esolangs.org/wiki/Headsecks
@@ -1578,7 +1581,7 @@ Hexagon says jump to line a if cell b is n and increment cell b by c if cell b e
 Hexar,https://esolangs.org/wiki/Hexar
 Hexcellent,https://esolangs.org/wiki/Hexcellent
 Hexdump,https://esolangs.org/wiki/Hexdump
-hexish,https://esolangs.org/wiki/Hexish
+Hexish,https://esolangs.org/wiki/Hexish
 Hexomnia,https://esolangs.org/wiki/Hexomnia
 Hexsp,https://esolangs.org/wiki/Hexsp
 Hexssembly,https://esolangs.org/wiki/Hexssembly
@@ -1590,7 +1593,7 @@ Highways,https://esolangs.org/wiki/Highways
 Hippopotomonstrosesquipedalian,https://esolangs.org/wiki/Hippopotomonstrosesquipedalian
 Hito,https://esolangs.org/wiki/Hito
 Hive,https://esolangs.org/wiki/Hive
-hny021,https://esolangs.org/wiki/Hny021
+Hny021,https://esolangs.org/wiki/Hny021
 Hollow,https://esolangs.org/wiki/Hollow
 Home Row,https://esolangs.org/wiki/Home_Row
 Homespring,https://esolangs.org/wiki/Homespring
@@ -1613,7 +1616,7 @@ Hunter,https://esolangs.org/wiki/Hunter
 Hurgusburgus,https://esolangs.org/wiki/Hurgusburgus
 Husk,https://esolangs.org/wiki/Husk
 HWorld,https://esolangs.org/wiki/HWorld
-hydra,https://esolangs.org/wiki/Hydra
+Hydra,https://esolangs.org/wiki/Hydra
 HydraLoop,https://esolangs.org/wiki/HydraLoop
 Hyperamicus,https://esolangs.org/wiki/Hyperamicus
 Hyperamycus,https://esolangs.org/wiki/Hyperamycus
@@ -1624,17 +1627,17 @@ Hyper Set Language,https://esolangs.org/wiki/Hyper_Set_Language
 HZCode,https://esolangs.org/wiki/HZCode
 HZ3funge,https://esolangs.org/wiki/HZ3funge
 HZfunge,https://esolangs.org/wiki/HZfunge
-iag,https://esolangs.org/wiki/Iag
+Iag,https://esolangs.org/wiki/Iag
 I am selfish,https://esolangs.org/wiki/I_am_selfish
 IBSA,https://esolangs.org/wiki/IBSA
 I cannot understand that.,https://esolangs.org/wiki/I_cannot_understand_that.
 ICBINB,https://esolangs.org/wiki/ICBINB
 Ice box,https://esolangs.org/wiki/Ice_box
-IceBox,https://esolangs.org/wiki/Icebox
+Icebox,https://esolangs.org/wiki/Icebox
 ICFP,https://esolangs.org/wiki/ICFP
 Ichi,https://esolangs.org/wiki/Ichi
 I/D machine,https://esolangs.org/wiki/I/D_machine
-ideadfish,https://esolangs.org/wiki/Ideadfish
+Ideadfish,https://esolangs.org/wiki/Ideadfish
 IDIJ,https://esolangs.org/wiki/IDIJ
 Idiot,https://esolangs.org/wiki/Idiot
 IDTM,https://esolangs.org/wiki/IDTM
@@ -1642,7 +1645,7 @@ IDKHIW,https://esolangs.org/wiki/IDKHIW
 Iexp,https://esolangs.org/wiki/Iexp
 Iframe,https://esolangs.org/wiki/Iframe
 "I fuck, you fuck","https://esolangs.org/wiki/I_fuck,_you_fuck"
-ifunge,https://esolangs.org/wiki/Ifunge
+Ifunge,https://esolangs.org/wiki/Ifunge
 IG,https://esolangs.org/wiki/IG
 Ignition,https://esolangs.org/wiki/Ignition
 IGNORED,https://esolangs.org/wiki/IGNORED
@@ -1650,7 +1653,7 @@ IINC,https://esolangs.org/wiki/IINC
 ILLGOL,https://esolangs.org/wiki/ILLGOL
 ImageFuck,https://esolangs.org/wiki/ImageFuck
 ImagePath,https://esolangs.org/wiki/ImagePath
-imeight,https://esolangs.org/wiki/Imeight
+Imeight,https://esolangs.org/wiki/Imeight
 Immi,https://esolangs.org/wiki/Immi
 Impera,https://esolangs.org/wiki/Impera
 Imperator,https://esolangs.org/wiki/Imperator
@@ -1667,20 +1670,20 @@ INCJ,https://esolangs.org/wiki/INCJ
 IncLoop,https://esolangs.org/wiki/IncLoop
 Incrementing machine,https://esolangs.org/wiki/Incrementing_machine
 Indent,https://esolangs.org/wiki/Indent
-index.html,https://esolangs.org/wiki/Index.html
+Index.html,https://esolangs.org/wiki/Index.html
 Indicode,https://esolangs.org/wiki/Indicode
 Indifferent,https://esolangs.org/wiki/Indifferent
 Indirect,https://esolangs.org/wiki/Indirect
 Indurate,https://esolangs.org/wiki/Indurate
 InfChessPro,https://esolangs.org/wiki/InfChessPro
 Infilisp,https://esolangs.org/wiki/Infilisp
-infinifuck,https://esolangs.org/wiki/Infinifuck
+Infinifuck,https://esolangs.org/wiki/Infinifuck
 Infinite Goto,https://esolangs.org/wiki/Infinite_Goto
 Infinite Vector,https://esolangs.org/wiki/Infinite_Vector
 InfiniTick,https://esolangs.org/wiki/InfiniTick
 InfiniTUM,https://esolangs.org/wiki/InfiniTUM
 Informal,https://esolangs.org/wiki/Informal
-INF>xO,https://esolangs.org/wiki/INF)xO
+INF)xO,https://esolangs.org/wiki/INF)xO
 Init,https://esolangs.org/wiki/Init
 Inject,https://esolangs.org/wiki/Inject
 Inline,https://esolangs.org/wiki/Inline
@@ -1688,7 +1691,7 @@ Inse,https://esolangs.org/wiki/Inse
 Insomnia,https://esolangs.org/wiki/Insomnia
 InSpace,https://esolangs.org/wiki/InSpace
 InstructionPointerBF,https://esolangs.org/wiki/InstructionPointerBF
-int**,https://esolangs.org/wiki/Int**
+Int**,https://esolangs.org/wiki/Int**
 Integ,https://esolangs.org/wiki/Integ
 Integer,https://esolangs.org/wiki/Integer
 Integral,https://esolangs.org/wiki/Integral
@@ -1708,29 +1711,29 @@ Inverted,https://esolangs.org/wiki/Inverted
 Inverted Logic,https://esolangs.org/wiki/Inverted_Logic
 I-ok,https://esolangs.org/wiki/I-ok
 IOFuck,https://esolangs.org/wiki/IOFuck
-ios_sync_with_stdio(false);,https://esolangs.org/wiki/Ios_sync_with_stdio(false);
+Ios sync with stdio(false);,https://esolangs.org/wiki/Ios_sync_with_stdio(false);
 Iota,https://esolangs.org/wiki/Iota
 IOTA-C0,https://esolangs.org/wiki/IOTA-C0
 IP,https://esolangs.org/wiki/IP
-ɪpãɸɯ̯ɕk,https://esolangs.org/wiki/IPAfuck
-IPD,https://esolangs.org/wiki/%2B/-
+IPAfuck,https://esolangs.org/wiki/IPAfuck
++/-,https://esolangs.org/wiki/%2B/-
 IRC,https://esolangs.org/wiki/IRC
 IRCIS,https://esolangs.org/wiki/IRCIS
 Iris,https://esolangs.org/wiki/Iris
 Ironlang,https://esolangs.org/wiki/Ironlang
 ISCOM,https://esolangs.org/wiki/ISCOM
 ISEW2C,https://esolangs.org/wiki/ISEW2C
-is it,https://esolangs.org/wiki/Is_it
+Is it,https://esolangs.org/wiki/Is_it
 Island,https://esolangs.org/wiki/Island
 Isomorphism,https://esolangs.org/wiki/Isomorphism
 Isthmus Cyclicus Crypticus,https://esolangs.org/wiki/Isthmus_Cyclicus_Crypticus
 Istoriya,https://esolangs.org/wiki/Istoriya
-itflabtijtslwi,https://esolangs.org/wiki/Itflabtijtslwi
+Itflabtijtslwi,https://esolangs.org/wiki/Itflabtijtslwi
 IThinkMyComputerIsDrunk,https://esolangs.org/wiki/IThinkMyComputerIsDrunk
 It's 3D!,https://esolangs.org/wiki/It%27s_3D!
 It's not a mistake it's an esolang,https://esolangs.org/wiki/It%27s_not_a_mistake_it%27s_an_esolang
 IWANNADIE,https://esolangs.org/wiki/IWANNADIE
-ix,https://esolangs.org/wiki/Ix
+Ix,https://esolangs.org/wiki/Ix
 Ixux,https://esolangs.org/wiki/Ixux
 J--,https://esolangs.org/wiki/J--
 JamogusLamogusAmogus,https://esolangs.org/wiki/JamogusLamogusAmogus
@@ -1775,7 +1778,7 @@ Karma,https://esolangs.org/wiki/Karma
 Kava,https://esolangs.org/wiki/Kava
 Kawa,https://esolangs.org/wiki/Kawa
 Kayak,https://esolangs.org/wiki/Kayak
-KEA-stream,https://esolangs.org/wiki/KS
+KS,https://esolangs.org/wiki/KS
 Keg,https://esolangs.org/wiki/Keg
 Kelxquoia,https://esolangs.org/wiki/Kelxquoia
 KEMURI,https://esolangs.org/wiki/KEMURI
@@ -1802,7 +1805,7 @@ KonamiCode,https://esolangs.org/wiki/KonamiCode
 Koyaanisqatsi,https://esolangs.org/wiki/Koyaanisqatsi
 K-on Fuck,https://esolangs.org/wiki/K-on_Fuck
 KRONKSCRIPT,https://esolangs.org/wiki/KRONKSCRIPT
-kvikkalkul,https://esolangs.org/wiki/Kvikkalkul
+Kvikkalkul,https://esolangs.org/wiki/Kvikkalkul
 Kwert,https://esolangs.org/wiki/Kwert
 Labra,https://esolangs.org/wiki/Labra
 Labyrinth,https://esolangs.org/wiki/Labyrinth
@@ -1834,17 +1837,17 @@ Lazy K,https://esolangs.org/wiki/Lazy_K
 LCCBED,https://esolangs.org/wiki/LCCBED
 LCode,https://esolangs.org/wiki/LCode
 LDPL,https://esolangs.org/wiki/LDPL
-l33t,https://esolangs.org/wiki/L33t
+L33t,https://esolangs.org/wiki/L33t
 Leftoutside,https://esolangs.org/wiki/Leftoutside
 Left-Right March,https://esolangs.org/wiki/Left-Right_March
 LFSR CPU,https://esolangs.org/wiki/LFSR_CPU
 Legasm,https://esolangs.org/wiki/Legasm
 Legend,https://esolangs.org/wiki/Legend
-legit,https://esolangs.org/wiki/Legit
+Legit,https://esolangs.org/wiki/Legit
 Length,https://esolangs.org/wiki/Length
 Lengthwise,https://esolangs.org/wiki/Lengthwise
 Lenta,https://esolangs.org/wiki/Lenta
-lenum,https://esolangs.org/wiki/Lenum
+Lenum,https://esolangs.org/wiki/Lenum
 Leszek,https://esolangs.org/wiki/Leszek
 Lete,https://esolangs.org/wiki/Lete
 Letterbox,https://esolangs.org/wiki/Letterbox
@@ -1878,7 +1881,7 @@ ListScript,https://esolangs.org/wiki/ListScript
 LLL,https://esolangs.org/wiki/LLL
 LMCode,https://esolangs.org/wiki/LMCode
 LNUSP,https://esolangs.org/wiki/LNUSP
-lnlang,https://esolangs.org/wiki/Lnlang
+Lnlang,https://esolangs.org/wiki/Lnlang
 Loadstring,https://esolangs.org/wiki/Loadstring
 LOCK,https://esolangs.org/wiki/LOCK
 Logical,https://esolangs.org/wiki/Logical
@@ -1888,7 +1891,7 @@ Logicode,https://esolangs.org/wiki/Logicode
 Logig,https://esolangs.org/wiki/Logig
 Logik,https://esolangs.org/wiki/Logik
 Logimat,https://esolangs.org/wiki/Logimat
-logOS,https://esolangs.org/wiki/LogOS
+LogOS,https://esolangs.org/wiki/LogOS
 Logstack,https://esolangs.org/wiki/Logstack
 LOLA,https://esolangs.org/wiki/LOLA
 LOLCODE,https://esolangs.org/wiki/LOLCODE
@@ -1910,7 +1913,7 @@ LRONETWO,https://esolangs.org/wiki/LRONETWO
 LS Basic,https://esolangs.org/wiki/LS_Basic
 Luafuck,https://esolangs.org/wiki/Luafuck
 Luigi,https://esolangs.org/wiki/Luigi
-Luke's_Box_Programming,https://esolangs.org/wiki/Luke%27s_Box_Programming
+Luke's Box Programming,https://esolangs.org/wiki/Luke%27s_Box_Programming
 Ly,https://esolangs.org/wiki/Ly
 Lython,https://esolangs.org/wiki/Lython
 M0,https://esolangs.org/wiki/M0
@@ -1933,12 +1936,12 @@ Mang,https://esolangs.org/wiki/Mang
 MangularJS,https://esolangs.org/wiki/MangularJS
 Manufactoria,https://esolangs.org/wiki/Manufactoria
 Mapfuck,https://esolangs.org/wiki/Mapfuck
-Mapfuck_2_turring_boogaloo,https://esolangs.org/wiki/Mapfuck_2_turring_boogaloo
+Mapfuck 2 turring boogaloo,https://esolangs.org/wiki/Mapfuck_2_turring_boogaloo
 Marbelous,https://esolangs.org/wiki/Marbelous
 Marbles,https://esolangs.org/wiki/Marbles
 Mariofuck,https://esolangs.org/wiki/Mariofuck
 MarioLANG,https://esolangs.org/wiki/MarioLANG
-Mark and Markcode,https://esolangs.org/wiki/Mark
+Mark,https://esolangs.org/wiki/Mark
 Marz,https://esolangs.org/wiki/Marz
 Mascarpone,https://esolangs.org/wiki/Mascarpone
 Mascarpone Joust,https://esolangs.org/wiki/Mascarpone_Joust
@@ -1947,7 +1950,7 @@ MashedPotatoes,https://esolangs.org/wiki/MashedPotatoes
 MASL,https://esolangs.org/wiki/MASL
 Mastermind,https://esolangs.org/wiki/Mastermind
 Matag,https://esolangs.org/wiki/Matag
-match,https://esolangs.org/wiki/Match
+Match,https://esolangs.org/wiki/Match
 Math&Matrix,https://esolangs.org/wiki/Math%26Matrix
 MATL,https://esolangs.org/wiki/MATL
 Matrexp,https://esolangs.org/wiki/Matrexp
@@ -1972,12 +1975,12 @@ Melody,https://esolangs.org/wiki/Melody
 Memfractal,https://esolangs.org/wiki/Memfractal
 Memfuck,https://esolangs.org/wiki/Memfuck
 MEMORYLEEK,https://esolangs.org/wiki/MEMORYLEEK
-memPanic,https://esolangs.org/wiki/MemPanic
+MemPanic,https://esolangs.org/wiki/MemPanic
 Mendeleev,https://esolangs.org/wiki/Mendeleev
 Meow (Martsadas),https://esolangs.org/wiki/Meow_(Martsadas)
 Meow (None1),https://esolangs.org/wiki/Meow_(None1)
 Meowlang,https://esolangs.org/wiki/Meowlang
-mep,https://esolangs.org/wiki/Mep
+Mep,https://esolangs.org/wiki/Mep
 Mepytaruon,https://esolangs.org/wiki/Mepytaruon
 Meq,https://esolangs.org/wiki/Meq
 Messenger,https://esolangs.org/wiki/Messenger
@@ -1996,9 +1999,9 @@ Migol,https://esolangs.org/wiki/Migol
 MiLambda,https://esolangs.org/wiki/MiLambda
 Mimsy,https://esolangs.org/wiki/Mimsy
 Minaac,https://esolangs.org/wiki/Minaac
-minasm,https://esolangs.org/wiki/Minasm
-mindfunc,https://esolangs.org/wiki/Mindfunc
-mindscrew,https://esolangs.orghttps://esolangs.org/w/index.php?title=Mindscrew&oldid=52877
+Minasm,https://esolangs.org/wiki/Minasm
+Mindfunc,https://esolangs.org/wiki/Mindfunc
+,https://esolangs.orghttps://esolangs.org/w/index.php?title=Mindscrew&oldid=52877
 MindScuffed,https://esolangs.org/wiki/MindScuffed
 MindVomit,https://esolangs.org/wiki/MindVomit
 MineFriff,https://esolangs.org/wiki/MineFriff
@@ -2022,7 +2025,7 @@ Minimized BF,https://esolangs.org/wiki/Minimized_BF
 MiniPig,https://esolangs.org/wiki/MiniPig
 MinISCule,https://esolangs.org/wiki/MinISCule
 MiniStringFuck,https://esolangs.org/wiki/MiniStringFuck
-miniUSPL,https://esolangs.org/wiki/MiniUSPL
+MiniUSPL,https://esolangs.org/wiki/MiniUSPL
 Minks,https://esolangs.org/wiki/Minks
 Minskyfuck,https://esolangs.org/wiki/Minskyfuck
 Minsky Swap,https://esolangs.org/wiki/Minsky_Swap
@@ -2034,7 +2037,7 @@ MIX,https://esolangs.org/wiki/MIX
 MIX (Knuth),https://esolangs.org/wiki/MIX_(Knuth)
 MKBL-LN,https://esolangs.org/wiki/MKBL-LN
 MLang,https://esolangs.org/wiki/MLang
-mLang,https://esolangs.org/wiki/MLang_(Mihai_Popa)
+MLang (Mihai Popa),https://esolangs.org/wiki/MLang_(Mihai_Popa)
 MMIX,https://esolangs.org/wiki/MMIX
 Mmmm(),https://esolangs.org/wiki/Mmmm()
 Мне с тобою так повезло,https://esolangs.org/wiki/%D0%9C%D0%BD%D0%B5_%D1%81_%D1%82%D0%BE%D0%B1%D0%BE%D1%8E_%D1%82%D0%B0%D0%BA_%D0%BF%D0%BE%D0%B2%D0%B5%D0%B7%D0%BB%D0%BE
@@ -2052,7 +2055,7 @@ Monolog,https://esolangs.org/wiki/Monolog
 MoonScript,https://esolangs.org/wiki/MoonScript
 MoreMathRPN,https://esolangs.org/wiki/MoreMathRPN
 Mornington Crescent,https://esolangs.org/wiki/Mornington_Crescent
-morse code,https://esolangs.org/wiki/Morse_code
+Morse code,https://esolangs.org/wiki/Morse_code
 Mostawesomeprogramminglanguage,https://esolangs.org/wiki/Mostawesomeprogramminglanguage
 Motherf,https://esolangs.org/wiki/Motherf
 Motorway,https://esolangs.org/wiki/Motorway
@@ -2087,8 +2090,8 @@ Nabd,https://esolangs.org/wiki/Nabd
 Nairb,https://esolangs.org/wiki/Nairb
 Nandarin,https://esolangs.org/wiki/Nandarin
 Nandypants,https://esolangs.org/wiki/Nandypants
-naz,https://esolangs.org/wiki/Naz
-"N Bits, N2N-1Bytes","https://esolangs.org/wiki/N_Bits,_N2%5E(N-1)_Bytes"
+Naz,https://esolangs.org/wiki/Naz
+"N Bits, N2^(N-1) Bytes","https://esolangs.org/wiki/N_Bits,_N2%5E(N-1)_Bytes"
 NDBall,https://esolangs.org/wiki/NDBall
 NDBall Extended,https://esolangs.org/wiki/NDBall_Extended
 Neat,https://esolangs.org/wiki/Neat
@@ -2117,21 +2120,21 @@ Nhohnhehr,https://esolangs.org/wiki/Nhohnhehr
 Ni,https://esolangs.org/wiki/Ni
 Niblet,https://esolangs.org/wiki/Niblet
 NICE,https://esolangs.org/wiki/NICE
-,https://esolangs.org/wiki/Nice
+Nice,https://esolangs.org/wiki/Nice
 Nietzsche,https://esolangs.org/wiki/Nietzsche
 Night Shift,https://esolangs.org/wiki/Night_Shift
 Nightmare,https://esolangs.org/wiki/Nightmare
 Nine,https://esolangs.org/wiki/Nine
-nndstojmp,https://esolangs.org/wiki/Nndstojmp
+Nndstojmp,https://esolangs.org/wiki/Nndstojmp
 NNYRLD,https://esolangs.org/wiki/NNYRLD
 Nock,https://esolangs.org/wiki/Nock
 NoCode,https://esolangs.org/wiki/NoCode
 NoComment,https://esolangs.org/wiki/NoComment
 NoError,https://esolangs.org/wiki/NoError
-nohtyP,https://esolangs.org/wiki/NohtyP
-nOisE,https://esolangs.org/wiki/NOisE
+NohtyP,https://esolangs.org/wiki/NohtyP
+NOisE,https://esolangs.org/wiki/NOisE
 Noisett,https://esolangs.org/wiki/Noisett
-noit o' mnain worb,https://esolangs.org/wiki/Noit_o%27_mnain_worb
+Noit o' mnain worb,https://esolangs.org/wiki/Noit_o%27_mnain_worb
 "No Literals, Gotos Only, Final Destination!","https://esolangs.org/wiki/No_Literals,_Gotos_Only,_Final_Destination!"
 Nomad,https://esolangs.org/wiki/Nomad
 Nondescript,https://esolangs.org/wiki/Nondescript
@@ -2139,24 +2142,24 @@ NONE,https://esolangs.org/wiki/NONE
 Nonsense Query List,https://esolangs.org/wiki/Nonsense_Query_List
 Noobinary,https://esolangs.org/wiki/Noobinary
 Noodle Soup,https://esolangs.org/wiki/Noodle_Soup
-nope,https://esolangs.org/wiki/Nope
+Nope,https://esolangs.org/wiki/Nope
 NOR,https://esolangs.org/wiki/NOR
 NoRAL,https://esolangs.org/wiki/NoRAL
 Norfuck,https://esolangs.org/wiki/Norfuck
-normalcalc,https://esolangs.org/wiki/Normalcalc
+Normalcalc,https://esolangs.org/wiki/Normalcalc
 Nors,https://esolangs.org/wiki/Nors
 NOP (esolang),https://esolangs.org/wiki/NOP_(esolang)
 Nope!,https://esolangs.org/wiki/Nope!
 Nopfunge,https://esolangs.org/wiki/Nopfunge
 NOPQ,https://esolangs.org/wiki/NOPQ
-Normal 4ME,https://esolangs.org/wiki/4ME#Normal_4ME
+4ME,https://esolangs.org/wiki/4ME#Normal_4ME
 Nopstacle,https://esolangs.org/wiki/Nopstacle
 NOTE,https://esolangs.org/wiki/NOTE
 Nothing,https://esolangs.org/wiki/Nothing
 Not Python,https://esolangs.org/wiki/Not_Python
-notsopureVelato,https://esolangs.org/wiki/NotsopureVelato
+NotsopureVelato,https://esolangs.org/wiki/NotsopureVelato
 Not The Main Worb,https://esolangs.org/wiki/Not_The_Main_Worb
-nouse,https://esolangs.org/wiki/Nouse
+Nouse,https://esolangs.org/wiki/Nouse
 Novice,https://esolangs.org/wiki/Novice
 Nqubl,https://esolangs.org/wiki/Nqubl
 N Refine,https://esolangs.org/wiki/N_Refine
@@ -2166,7 +2169,7 @@ NSFW,https://esolangs.org/wiki/NSFW
 NTCM,https://esolangs.org/wiki/NTCM
 Nu,https://esolangs.org/wiki/Nu
 NucleotideBF (nBF),https://esolangs.org/wiki/NucleotideBF_(nBF)
-,https://esolangs.org/wiki/Nuigurumiato
+Nuigurumiato,https://esolangs.org/wiki/Nuigurumiato
 NULL,https://esolangs.org/wiki/NULL
 Nulla,https://esolangs.org/wiki/Nulla
 NULL-NONE NOTHING,https://esolangs.org/wiki/NULL-NONE_NOTHING
@@ -2185,8 +2188,8 @@ NumLang,https://esolangs.org/wiki/NumLang
 Numobin,https://esolangs.org/wiki/Numobin
 NUMPAD,https://esolangs.org/wiki/NUMPAD
 NumSym,https://esolangs.org/wiki/NumSym
-nya~,https://esolangs.org/wiki/Nya~
-nya~rgs,https://esolangs.org/wiki/Nya~rgs
+Nya~,https://esolangs.org/wiki/Nya~
+Nya~rgs,https://esolangs.org/wiki/Nya~rgs
 Nyarlathotep,https://esolangs.org/wiki/Nyarlathotep
 NyaScript,https://esolangs.org/wiki/NyaScript
 Nybblang,https://esolangs.org/wiki/Nybblang
@@ -2200,7 +2203,7 @@ Obfuna,https://esolangs.org/wiki/Obfuna
 Obfuscated,https://esolangs.org/wiki/Obfuscated
 Obfuscated Tiny C,https://esolangs.org/wiki/Obfuscated_Tiny_C
 Object oriented Lambda Calculus,https://esolangs.org/wiki/Object_oriented_Lambda_Calculus
-Object,https://esolangs.org/wiki/Object_(programming_language)
+Object (programming language),https://esolangs.org/wiki/Object_(programming_language)
 Object disoriented,https://esolangs.org/wiki/Object_disoriented
 Object oriented thue,https://esolangs.org/wiki/Object_oriented_thue
 ObjectPar,https://esolangs.org/wiki/ObjectPar
@@ -2234,16 +2237,16 @@ Omicron,https://esolangs.org/wiki/Omicron
 Omnis Clocha Clochabilis in Clocherio Clochando Clochans Clochativo Clochare facit Clochabiliter Clochantes,https://esolangs.org/wiki/Omnis_Clocha_Clochabilis_in_Clocherio_Clochando_Clochans_Clochativo_Clochare_facit_Clochabiliter_Clochantes
 One-Instruction Cyclic Tag,https://esolangs.org/wiki/One-Instruction_Cyclic_Tag
 OneFuck,https://esolangs.org/wiki/OneFuck
-,https://esolangs.org/wiki/ONE_WAY
+ONE WAY,https://esolangs.org/wiki/ONE_WAY
 Onione,https://esolangs.org/wiki/Onione
 ONLY 4 COMMANDS,https://esolangs.org/wiki/ONLY_4_COMMANDS
 Onlynumber,https://esolangs.org/wiki/Onlynumber
 On/Off,https://esolangs.org/wiki/On/Off
-onoz,https://esolangs.org/wiki/Onoz
+Onoz,https://esolangs.org/wiki/Onoz
 ON THE WAY TO WHO KNOWS WHERE,https://esolangs.org/wiki/ON_THE_WAY_TO_WHO_KNOWS_WHERE
-O_o,https://esolangs.org/wiki/O_o
+O o,https://esolangs.org/wiki/O_o
 Oof!,https://esolangs.org/wiki/Oof!
-ooh,https://esolangs.org/wiki/Ooh
+Ooh,https://esolangs.org/wiki/Ooh
 Ook!+,https://esolangs.org/wiki/Ook!%2B
 OOLANG,https://esolangs.org/wiki/OOLANG
 OOTPL,https://esolangs.org/wiki/OOTPL
@@ -2254,7 +2257,7 @@ OpenStreetCode,https://esolangs.org/wiki/OpenStreetCode
 Operation,https://esolangs.org/wiki/Operation
 Opf,https://esolangs.org/wiki/Opf
 Optimism,https://esolangs.org/wiki/Optimism
-or,https://esolangs.org/wiki/Or
+Or,https://esolangs.org/wiki/Or
 Or++,https://esolangs.org/wiki/Or%2B%2B
 Ora,https://esolangs.org/wiki/Ora
 Oracle,https://esolangs.org/wiki/Oracle
@@ -2267,7 +2270,7 @@ OrthINTERCAL,https://esolangs.org/wiki/OrthINTERCAL
 Orthogonal,https://esolangs.org/wiki/Orthogonal
 OSE,https://esolangs.org/wiki/OSE
 O.S.M,https://esolangs.org/wiki/O.S.M
-osmarkscalculator,https://esolangs.org/wiki/Osmarkscalculator
+Osmarkscalculator,https://esolangs.org/wiki/Osmarkscalculator
 Ouroboros,https://esolangs.org/wiki/Ouroboros
 Output,https://esolangs.org/wiki/Output
 OutputF,https://esolangs.org/wiki/OutputF
@@ -2290,7 +2293,7 @@ Paintfuck+,https://esolangs.org/wiki/Paintfuck%2B
 Paintfuck++,https://esolangs.org/wiki/Paintfuck%2B%2B
 Pair,https://esolangs.org/wiki/Pair
 Pairpointing,https://esolangs.org/wiki/Pairpointing
-pairs,https://esolangs.org/wiki/Pairs
+Pairs,https://esolangs.org/wiki/Pairs
 Palace,https://esolangs.org/wiki/Palace
 Palette,https://esolangs.org/wiki/Palette
 Pancake Stack,https://esolangs.org/wiki/Pancake_Stack
@@ -2312,9 +2315,9 @@ Path,https://esolangs.org/wiki/Path
 PATH,https://esolangs.org/wiki/PATH
 Patternfuck,https://esolangs.org/wiki/Patternfuck
 Pavia,https://esolangs.org/wiki/Pavia
-pax,https://esolangs.org/wiki/Pax
-pb,https://esolangs.org/wiki/Pb
-pbrain,https://esolangs.org/wiki/Pbrain
+Pax,https://esolangs.org/wiki/Pax
+Pb,https://esolangs.org/wiki/Pb
+Pbrain,https://esolangs.org/wiki/Pbrain
 PDA-er,https://esolangs.org/wiki/PDA-er
 PDAsephone,https://esolangs.org/wiki/PDAsephone
 PDAsephtwo,https://esolangs.org/wiki/PDAsephtwo
@@ -2362,17 +2365,17 @@ Pizza Delivery,https://esolangs.org/wiki/Pizza_Delivery
 Platts,https://esolangs.org/wiki/Platts
 Please Porige Hot,https://esolangs.org/wiki/Please_Porige_Hot
 PL/MIX,https://esolangs.org/wiki/PL/MIX
-plts,https://esolangs.org/wiki/Plts
+Plts,https://esolangs.org/wiki/Plts
 Plurple,https://esolangs.org/wiki/Plurple
-PlusIntMinus,https://esolangs.org/wiki/PlusOrMinus#PlusIntMinus
-PlusIntOutput,https://esolangs.org/wiki/PlusOrOutput#PlusIntOutput
+PlusOrMinus,https://esolangs.org/wiki/PlusOrMinus#PlusIntMinus
+PlusOrOutput,https://esolangs.org/wiki/PlusOrOutput#PlusIntOutput
 Pluso,https://esolangs.org/wiki/Pluso
 PlusOrMinus,https://esolangs.org/wiki/PlusOrMinus
 PlusOrOutput,https://esolangs.org/wiki/PlusOrOutput
 PNID,https://esolangs.org/wiki/PNID
 PocketBF,https://esolangs.org/wiki/PocketBF
 PocketFuck,https://esolangs.org/wiki/PocketFuck
-Poetic,https://esolangs.org/wiki/Poetic_(esolang)
+Poetic (esolang),https://esolangs.org/wiki/Poetic_(esolang)
 Poetic (Mihai Popa),https://esolangs.org/wiki/Poetic_(Mihai_Popa)
 POGA-INTERCAL,https://esolangs.org/wiki/POGA-INTERCAL
 PoGo,https://esolangs.org/wiki/PoGo
@@ -2396,16 +2399,16 @@ P0pCrn,https://esolangs.org/wiki/P0pCrn
 PopFuck,https://esolangs.org/wiki/PopFuck
 Pops Are Overrated,https://esolangs.org/wiki/Pops_Are_Overrated
 Portable Minsky Machine Notation,https://esolangs.org/wiki/Portable_Minsky_Machine_Notation
-Portia,https://esolangs.org/wiki/Beta-Juliet_and_Portia
+Beta-Juliet and Portia,https://esolangs.org/wiki/Beta-Juliet_and_Portia
 Ports,https://esolangs.org/wiki/Ports
 Portsy,https://esolangs.org/wiki/Portsy
 Posset,https://esolangs.org/wiki/Posset
 Post correspondence problem,https://esolangs.org/wiki/Post_correspondence_problem
 Posthumousfuck,https://esolangs.org/wiki/Posthumousfuck
 PostScriptum,https://esolangs.org/wiki/PostScriptum
-potatoscript,https://esolangs.org/wiki/Potatoscript
+Potatoscript,https://esolangs.org/wiki/Potatoscript
 Powerlist,https://esolangs.org/wiki/Powerlist
-pP,https://esolangs.org/wiki/PP
+PP,https://esolangs.org/wiki/PP
 PPAP++,https://esolangs.org/wiki/PPAP%2B%2B
 Praise Unto XHUL,https://esolangs.org/wiki/Praise_Unto_XHUL
 Precognition,https://esolangs.org/wiki/Precognition
@@ -2419,7 +2422,7 @@ PRG,https://esolangs.org/wiki/PRG
 PriLogic,https://esolangs.org/wiki/PriLogic
 Prime Notary,https://esolangs.org/wiki/Prime_Notary
 Print,https://esolangs.org/wiki/Print
-pRINT,https://esolangs.org/wiki/PRINT
+PRINT,https://esolangs.org/wiki/PRINT
 Print Function Deluxe,https://esolangs.org/wiki/Print_Function_Deluxe
 PRNGP2,https://esolangs.org/wiki/PRNGP2
 Probablyfuck,https://esolangs.org/wiki/Probablyfuck
@@ -2455,7 +2458,7 @@ Py256,https://esolangs.org/wiki/Py256
 PyChr,https://esolangs.org/wiki/PyChr
 PyFuck (kuangkzh),https://esolangs.org/wiki/PyFuck_(kuangkzh)
 PyFuck (ShirAko),https://esolangs.org/wiki/PyFuck_(ShirAko)
-pyhton [sic],https://esolangs.org/wiki/Pyhton_(sic)
+Pyhton (sic),https://esolangs.org/wiki/Pyhton_(sic)
 Pyramid Scheme,https://esolangs.org/wiki/Pyramid_Scheme
 PYSP,https://esolangs.org/wiki/PYSP
 Pyth,https://esolangs.org/wiki/Pyth
@@ -2508,7 +2511,7 @@ Ragaraja,https://esolangs.org/wiki/Ragaraja
 RAGE!!!,https://esolangs.org/wiki/RAGE!!!
 Rail,https://esolangs.org/wiki/Rail
 Rain,https://esolangs.org/wiki/Rain
-rainbow,https://esolangs.org/wiki/Rainbow
+Rainbow,https://esolangs.org/wiki/Rainbow
 Ral,https://esolangs.org/wiki/Ral
 RAM0,https://esolangs.org/wiki/RAM0
 RAMDISP,https://esolangs.org/wiki/RAMDISP
@@ -2518,9 +2521,9 @@ RANDo,https://esolangs.org/wiki/RANDo
 Random,https://esolangs.org/wiki/Random
 Random-ass Turing Complete Language,https://esolangs.org/wiki/Random-ass_Turing_Complete_Language
 Random Malbolge,https://esolangs.org/wiki/Random_Malbolge
-rao,https://esolangs.org/wiki/Rao
+Rao,https://esolangs.org/wiki/Rao
 RapLan,https://esolangs.org/wiki/RapLan
-rarVM,https://esolangs.org/wiki/RarVM
+RarVM,https://esolangs.org/wiki/RarVM
 RASEL,https://esolangs.org/wiki/RASEL
 Rasen,https://esolangs.org/wiki/Rasen
 Rattle,https://esolangs.org/wiki/Rattle
@@ -2555,15 +2558,15 @@ RegRep,https://esolangs.org/wiki/RegRep
 REG.TYPE = STR TRUE,https://esolangs.org/wiki/REG.TYPE_%3D_STR_TRUE
 REGXY,https://esolangs.org/wiki/REGXY
 Rеlаng,https://esolangs.org/wiki/R%D0%B5l%D0%B0ng
-reMorse,https://esolangs.org/wiki/ReMorse
-rename,https://esolangs.org/wiki/Rename
+ReMorse,https://esolangs.org/wiki/ReMorse
+Rename,https://esolangs.org/wiki/Rename
 Renumbering,https://esolangs.org/wiki/Renumbering
 Repetition Legitimizes,https://esolangs.org/wiki/Repetition_Legitimizes
 Replace,https://esolangs.org/wiki/Replace
 Replacefuck,https://esolangs.org/wiki/Replacefuck
 Reprog,https://esolangs.org/wiki/Reprog
 Reset,https://esolangs.org/wiki/Reset
-rEsKrIb!lo,https://esolangs.org/wiki/REsKrIb!lo
+REsKrIb!lo,https://esolangs.org/wiki/REsKrIb!lo
 Reso,https://esolangs.org/wiki/Reso
 RESOL,https://esolangs.org/wiki/RESOL
 Resource,https://esolangs.org/wiki/Resource
@@ -2573,7 +2576,7 @@ Restricted chicken,https://esolangs.org/wiki/Restricted_chicken
 ReThue,https://esolangs.org/wiki/ReThue
 Retina,https://esolangs.org/wiki/Retina
 RETURN,https://esolangs.org/wiki/RETURN
-return()->0,https://esolangs.org/wiki/Return()zero
+Return()zero,https://esolangs.org/wiki/Return()zero
 Rev,https://esolangs.org/wiki/Rev
 Revapp,https://esolangs.org/wiki/Revapp
 Revaver,https://esolangs.org/wiki/Revaver
@@ -2585,7 +2588,7 @@ Reversible-2D,https://esolangs.org/wiki/Reversible-2D
 Reversible Brainfuck,https://esolangs.org/wiki/Reversible_Brainfuck
 Revomer,https://esolangs.org/wiki/Revomer
 REXS,https://esolangs.org/wiki/REXS
-rflct,https://esolangs.org/wiki/Rflct
+Rflct,https://esolangs.org/wiki/Rflct
 RFOL,https://esolangs.org/wiki/RFOL
 RGB4D,https://esolangs.org/wiki/RGB4D
 Rhoam,https://esolangs.org/wiki/Rhoam
@@ -2602,14 +2605,14 @@ Ririsu,https://esolangs.org/wiki/Ririsu
 RISBF,https://esolangs.org/wiki/RISBF
 RifL,https://esolangs.org/wiki/RifL
 RiLOLCODE,https://esolangs.org/wiki/RiLOLCODE
-rLS,https://esolangs.org/wiki/RLS
+RLS,https://esolangs.org/wiki/RLS
 RNA,https://esolangs.org/wiki/RNA
 Roadrunner,https://esolangs.org/wiki/Roadrunner
 Rockstar,https://esolangs.org/wiki/Rockstar
 Roco,https://esolangs.org/wiki/Roco
 Rogex,https://esolangs.org/wiki/Rogex
 Roko,https://esolangs.org/wiki/Roko
-romanF,https://esolangs.org/wiki/RomanF
+RomanF,https://esolangs.org/wiki/RomanF
 Rook,https://esolangs.org/wiki/Rook
 ROOP,https://esolangs.org/wiki/ROOP
 Rotary,https://esolangs.org/wiki/Rotary
@@ -2631,7 +2634,7 @@ Rubic,https://esolangs.org/wiki/Rubic
 Ruck,https://esolangs.org/wiki/Ruck
 Ruckfish,https://esolangs.org/wiki/Ruckfish
 Rui,https://esolangs.org/wiki/Rui
-Rule Table,https://esolangs.org/wiki/RuleLoader
+RuleLoader,https://esolangs.org/wiki/RuleLoader
 RUM,https://esolangs.org/wiki/RUM
 RunR,https://esolangs.org/wiki/RunR
 RWLR,https://esolangs.org/wiki/RWLR
@@ -2645,6 +2648,7 @@ Sally,https://esolangs.org/wiki/Sally
 Sammich,https://esolangs.org/wiki/Sammich
 Sansism,https://esolangs.org/wiki/Sansism
 SANTA,https://esolangs.org/wiki/SANTA
+Sapphire,https://esolangs.org/wiki/Sapphire
 SARTRE,https://esolangs.org/wiki/SARTRE
 Sashleyfuck,https://esolangs.org/wiki/Sashleyfuck
 SAS,https://esolangs.org/wiki/SAS
@@ -2688,7 +2692,7 @@ Selector,https://esolangs.org/wiki/Selector
 SELENE.,https://esolangs.org/wiki/SELENE.
 Self%ify,https://esolangs.org/wiki/Self%25ify
 Self-modifying Brainfuck,https://esolangs.org/wiki/Self-modifying_Brainfuck
-Self-modifying Brainfuck#,https://esolangs.org/wiki/Self-modifying_Brainfuck_Sharp
+Self-modifying Brainfuck Sharp,https://esolangs.org/wiki/Self-modifying_Brainfuck_Sharp
 Self-modifying Puzzlang,https://esolangs.org/wiki/Self-modifying_Puzzlang
 Self-modifying Turing machine,https://esolangs.org/wiki/Self-modifying_Turing_machine
 Self-Referencing Brainfuck,https://esolangs.org/wiki/Self-Referencing_Brainfuck
@@ -2726,7 +2730,7 @@ Shitlang,https://esolangs.org/wiki/Shitlang
 SHITS,https://esolangs.org/wiki/SHITS
 Shoopuf,https://esolangs.org/wiki/Shoopuf
 ShortO,https://esolangs.org/wiki/ShortO
-shortstack,https://esolangs.org/wiki/Shortstack
+Shortstack,https://esolangs.org/wiki/Shortstack
 Shove,https://esolangs.org/wiki/Shove
 SHRUB,https://esolangs.org/wiki/SHRUB
 Shuffle,https://esolangs.org/wiki/Shuffle
@@ -2745,7 +2749,7 @@ Simpler Subskin,https://esolangs.org/wiki/Simpler_Subskin
 Simplify,https://esolangs.org/wiki/Simplify
 Simoji,https://esolangs.org/wiki/Simoji
 Single Four,https://esolangs.org/wiki/Single_Four
-sitelen ilo,https://esolangs.org/wiki/Sitelen_ilo
+Sitelen ilo,https://esolangs.org/wiki/Sitelen_ilo
 Siterip,https://esolangs.org/wiki/Siterip
 Skastic,https://esolangs.org/wiki/Skastic
 Skinny pig,https://esolangs.org/wiki/Skinny_pig
@@ -2753,24 +2757,24 @@ SKM Calculus,https://esolangs.org/wiki/SKM_Calculus
 SKNPR Calculus,https://esolangs.org/wiki/SKNPR_Calculus
 SKR,https://esolangs.org/wiki/SKR
 Skull,https://esolangs.org/wiki/Skull
-Skull+,https://esolangs.org/wiki/Skull_plus
+Skull plus,https://esolangs.org/wiki/Skull_plus
 Slam,https://esolangs.org/wiki/Slam
-Slash-01,https://esolangs.org/wiki/User:Melab/Esoteric_Languages/Language_Number_One
+User:Melab/Esoteric Languages/Language Number One,https://esolangs.org/wiki/User:Melab/Esoteric_Languages/Language_Number_One
 Slim,https://esolangs.org/wiki/Slim
 SLet,https://esolangs.org/wiki/SLet
 Slot,https://esolangs.org/wiki/Slot
 Smaller,https://esolangs.org/wiki/Smaller
 Smallfuck,https://esolangs.org/wiki/Smallfuck
-small s.c.r.i.p.t.,https://esolangs.org/wiki/Small_s.c.r.i.p.t.
+Small s.c.r.i.p.t.,https://esolangs.org/wiki/Small_s.c.r.i.p.t.
 SMATIMU,https://esolangs.org/wiki/SMATIMU
 SMATINY,https://esolangs.org/wiki/SMATINY
 Smellcode,https://esolangs.org/wiki/Smellcode
 SMETANA,https://esolangs.org/wiki/SMETANA
 SMIL,https://esolangs.org/wiki/SMIL
-smile,https://esolangs.org/wiki/Smile
+Smile,https://esolangs.org/wiki/Smile
 Smilefuck,https://esolangs.org/wiki/Smilefuck
 SMITH,https://esolangs.org/wiki/SMITH
-SMITH#,https://esolangs.org/wiki/SMITH_sharp
+SMITH sharp,https://esolangs.org/wiki/SMITH_sharp
 SMITHb,https://esolangs.org/wiki/SMITHb
 Smooth transition to a second term,https://esolangs.org/wiki/Smooth_transition_to_a_second_term
 Smu,https://esolangs.org/wiki/Smu
@@ -2794,9 +2798,9 @@ So is your face.,https://esolangs.org/wiki/So_is_your_face.
 Sokolang,https://esolangs.org/wiki/Sokolang
 Solo,https://esolangs.org/wiki/Solo
 Something,https://esolangs.org/wiki/Something
-something positive,https://esolangs.org/wiki/Something_positive
+Something positive,https://esolangs.org/wiki/Something_positive
 Somnypna,https://esolangs.org/wiki/Somnypna
-sona,https://esolangs.org/wiki/Sona
+Sona,https://esolangs.org/wiki/Sona
 Sonata,https://esolangs.org/wiki/Sonata
 SON-OF-UNBABTIZED,https://esolangs.org/wiki/SON-OF-UNBABTIZED
 "Sorry, Marvin!","https://esolangs.org/wiki/Sorry,_Marvin!"
@@ -2839,7 +2843,7 @@ Squishy2K,https://esolangs.org/wiki/Squishy2K
 SR,https://esolangs.org/wiki/SR
 SRL++,https://esolangs.org/wiki/SRL%2B%2B
 SRlang,https://esolangs.org/wiki/SRlang
-SS,https://esolangs.org/wiki/SS_(CatLooks)
+SS (CatLooks),https://esolangs.org/wiki/SS_(CatLooks)
 SSBPL,https://esolangs.org/wiki/SSBPL
 Stable,https://esolangs.org/wiki/Stable
 Stacks,https://esolangs.org/wiki/Stacks
@@ -2873,12 +2877,12 @@ Starstuff,https://esolangs.org/wiki/Starstuff
 Stasis,https://esolangs.org/wiki/Stasis
 State and Main,https://esolangs.org/wiki/State_and_Main
 StateFlip,https://esolangs.org/wiki/StateFlip
-sTBF,https://esolangs.org/wiki/STBF
+STBF,https://esolangs.org/wiki/STBF
 Stck,https://esolangs.org/wiki/Stck
 Stlang,https://esolangs.org/wiki/Stlang
 Stlisp,https://esolangs.org/wiki/Stlisp
 STOD,https://esolangs.org/wiki/STOD
-stones,https://esolangs.org/wiki/Stones
+Stones,https://esolangs.org/wiki/Stones
 Stopnotstop,https://esolangs.org/wiki/Stopnotstop
 Stopwatch,https://esolangs.org/wiki/Stopwatch
 Strato,https://esolangs.org/wiki/Strato
@@ -2910,7 +2914,7 @@ Subtractpocalypse,https://esolangs.org/wiki/Subtractpocalypse
 Suffolk,https://esolangs.org/wiki/Suffolk
 Sugueziume,https://esolangs.org/wiki/Sugueziume
 Suich,https://esolangs.org/wiki/Suich
-suicide,https://esolangs.org/wiki/Suicide
+Suicide,https://esolangs.org/wiki/Suicide
 SUL,https://esolangs.org/wiki/SUL
 Sultan's daughter,https://esolangs.org/wiki/Sultan%27s_daughter
 SumaMoito,https://esolangs.org/wiki/SumaMoito
@@ -2923,14 +2927,14 @@ Supertape,https://esolangs.org/wiki/Supertape
 Suptiftam,https://esolangs.org/wiki/Suptiftam
 Surface,https://esolangs.org/wiki/Surface
 Surtic,https://esolangs.org/wiki/Surtic
-sus,https://esolangs.org/wiki/Sus
+Sus,https://esolangs.org/wiki/Sus
 SusLang,https://esolangs.org/wiki/SusLang
 SussyLang,https://esolangs.org/wiki/SussyLang
 SUTRAGNEZOl,https://esolangs.org/wiki/SUTRAGNEZOl
 Suxesol,https://esolangs.org/wiki/Suxesol
 Suzy,https://esolangs.org/wiki/Suzy
 SVM,https://esolangs.org/wiki/SVM
-swapfuck,https://esolangs.org/wiki/Swapfuck
+Swapfuck,https://esolangs.org/wiki/Swapfuck
 Swirly,https://esolangs.org/wiki/Swirly
 SwitchCase,https://esolangs.org/wiki/SwitchCase
 Switchy,https://esolangs.org/wiki/Switchy
@@ -2971,9 +2975,9 @@ Targs,https://esolangs.org/wiki/Targs
 Tarot,https://esolangs.org/wiki/Tarot
 Tarski,https://esolangs.org/wiki/Tarski
 Tetrastack,https://esolangs.org/wiki/Tetrastack
-TAU.掏-阿尔法-宇普西龙（ταυ）,https://esolangs.org/wiki/Tau-Alpha-Upsilon
+Tau-Alpha-Upsilon,https://esolangs.org/wiki/Tau-Alpha-Upsilon
 Taxi,https://esolangs.org/wiki/Taxi
-tbf,https://esolangs.org/wiki/Tbf
+Tbf,https://esolangs.org/wiki/Tbf
 TBTBFS,https://esolangs.org/wiki/TBTBFS
 Techno,https://esolangs.org/wiki/Techno
 Tech Support Scam,https://esolangs.org/wiki/Tech_Support_Scam
@@ -2996,7 +3000,7 @@ TextGarbage,https://esolangs.org/wiki/TextGarbage
 TFLite,https://esolangs.org/wiki/TFLite
 Tg,https://esolangs.org/wiki/Tg
 Th,https://esolangs.org/wiki/Th
-thaM,https://esolangs.org/wiki/ThaM
+ThaM,https://esolangs.org/wiki/ThaM
 That=this,https://esolangs.org/wiki/That%3Dthis
 The Amnesiac From Minsk,https://esolangs.org/wiki/The_Amnesiac_From_Minsk
 The Genetic Computer,https://esolangs.org/wiki/The_Genetic_Computer
@@ -3011,7 +3015,7 @@ Theseus,https://esolangs.org/wiki/Theseus
 TheSingularity,https://esolangs.org/wiki/TheSingularity
 TheSquare,https://esolangs.org/wiki/TheSquare
 The Subtyping Machine,https://esolangs.org/wiki/The_Subtyping_Machine
-thETA,https://esolangs.org/wiki/ThETA
+ThETA,https://esolangs.org/wiki/ThETA
 The Temporary Stack,https://esolangs.org/wiki/The_Temporary_Stack
 The Waterfall Model,https://esolangs.org/wiki/The_Waterfall_Model
 "Thief, Police and the Building","https://esolangs.org/wiki/Thief,_Police_and_the_Building"
@@ -3023,7 +3027,7 @@ This esolang is not a push-down automata,https://esolangs.org/wiki/This_esolang_
 This=That,https://esolangs.org/wiki/This%3DThat
 This=That 2.0,https://esolangs.org/wiki/This%3DThat_2.0
 Thonklang,https://esolangs.org/wiki/Thonklang
-thotpatrol,https://esolangs.org/wiki/Thotpatrol
+Thotpatrol,https://esolangs.org/wiki/Thotpatrol
 THRAT,https://esolangs.org/wiki/THRAT
 Threaded INTERCAL,https://esolangs.org/wiki/Threaded_INTERCAL
 ThreadFuck,https://esolangs.org/wiki/ThreadFuck
@@ -3042,17 +3046,17 @@ Tic Tac Toe,https://esolangs.org/wiki/Tic_Tac_Toe
 Tic Tac Toe Grow,https://esolangs.org/wiki/Tic_Tac_Toe_Grow
 Tier,https://esolangs.org/wiki/Tier
 Tiltedc,https://esolangs.org/wiki/Tiltedc
-timefuck,https://esolangs.org/wiki/Timefuck
+Timefuck,https://esolangs.org/wiki/Timefuck
 Time Out,https://esolangs.org/wiki/Time_Out
 Timers,https://esolangs.org/wiki/Timers
 TimeWaste,https://esolangs.org/wiki/TimeWaste
 TinCan,https://esolangs.org/wiki/TinCan
 Tiny,https://esolangs.org/wiki/Tiny
-tinyBF,https://esolangs.org/wiki/TinyBF
+TinyBF,https://esolangs.org/wiki/TinyBF
 TinyF,https://esolangs.org/wiki/TinyF
 Tip,https://esolangs.org/wiki/Tip
 TISolang,https://esolangs.org/wiki/TISolang
-,https://esolangs.org/wiki/TlhIngan
+TlhIngan,https://esolangs.org/wiki/TlhIngan
 TLOWScript,https://esolangs.org/wiki/TLOWScript
 TLWNN,https://esolangs.org/wiki/TLWNN
 TMCB,https://esolangs.org/wiki/TMCB
@@ -3062,7 +3066,7 @@ Tock,https://esolangs.org/wiki/Tock
 TOD,https://esolangs.org/wiki/TOD
 Todo,https://esolangs.org/wiki/Todo
 Toi,https://esolangs.org/wiki/Toi
-toki pi ilo nanpa,https://esolangs.org/wiki/Toki_pi_ilo_nanpa
+Toki pi ilo nanpa,https://esolangs.org/wiki/Toki_pi_ilo_nanpa
 Tome,https://esolangs.org/wiki/Tome
 Tonoco,https://esolangs.org/wiki/Tonoco
 Too Many Variables!,https://esolangs.org/wiki/Too_Many_Variables!
@@ -3070,7 +3074,7 @@ Topaz,https://esolangs.org/wiki/Topaz
 Topline,https://esolangs.org/wiki/Topline
 Topsy Turvy,https://esolangs.org/wiki/Topsy_Turvy
 Tory,https://esolangs.org/wiki/Tory
-ToTheTopRightCorner,https://esolangs.org/wiki/To_The_Top_Right_Corner
+To The Top Right Corner,https://esolangs.org/wiki/To_The_Top_Right_Corner
 Tower,https://esolangs.org/wiki/Tower
 TPL,https://esolangs.org/wiki/TPL
 TPLHBPTBOTEW,https://esolangs.org/wiki/TPLHBPTBOTEW
@@ -3092,7 +3096,7 @@ TRAVEL 33,https://esolangs.org/wiki/TRAVEL_33
 Treadnil,https://esolangs.org/wiki/Treadnil
 Tree,https://esolangs.org/wiki/Tree
 Treesolang,https://esolangs.org/wiki/Treesolang
-TREE THREE,https://esolangs.org/wiki/TREE(3)
+TREE(3),https://esolangs.org/wiki/TREE(3)
 Tri,https://esolangs.org/wiki/Tri
 Triad,https://esolangs.org/wiki/Triad
 Trianguish,https://esolangs.org/wiki/Trianguish
@@ -3114,14 +3118,14 @@ Troupe,https://esolangs.org/wiki/Troupe
 Tru,https://esolangs.org/wiki/Tru
 True,https://esolangs.org/wiki/True
 TrumpScript,https://esolangs.org/wiki/TrumpScript
-Truth Machine,https://esolangs.org/wiki/Truth_Machine_(language)
+Truth Machine (language),https://esolangs.org/wiki/Truth_Machine_(language)
 Tsaf,https://esolangs.org/wiki/Tsaf
 Tsb,https://esolangs.org/wiki/Tsb
 TScript,https://esolangs.org/wiki/TScript
 Tsept,https://esolangs.org/wiki/Tsept
 Tttt,https://esolangs.org/wiki/Tttt
 Ttttt,https://esolangs.org/wiki/Ttttt
-tuplary,https://esolangs.org/wiki/Tuplary
+Tuplary,https://esolangs.org/wiki/Tuplary
 Tupilled,https://esolangs.org/wiki/Tupilled
 Turimg,https://esolangs.org/wiki/Turimg
 Turinf machine,https://esolangs.org/wiki/Turinf_machine
@@ -3165,7 +3169,7 @@ UCanCode,https://esolangs.org/wiki/UCanCode
 UCHSHOPPLWANPAATILIA,https://esolangs.org/wiki/UCHSHOPPLWANPAATILIA
 Udage,https://esolangs.org/wiki/Udage
 Ueck,https://esolangs.org/wiki/Ueck
-uf,https://esolangs.org/wiki/Uf
+Uf,https://esolangs.org/wiki/Uf
 UFSA,https://esolangs.org/wiki/UFSA
 UGGA,https://esolangs.org/wiki/UGGA
 Uhidklol,https://esolangs.org/wiki/Uhidklol
@@ -3212,7 +3216,7 @@ User:Language,https://esolangs.org/wiki/User:Language
 UserNo,https://esolangs.org/wiki/UserNo
 UTC+8,https://esolangs.org/wiki/UTC%2B8
 Utopia Divine,https://esolangs.org/wiki/Utopia_Divine
-UwU,https://esolangs.org/wiki/UwU:_A_cute_esolang
+UwU: A cute esolang,https://esolangs.org/wiki/UwU:_A_cute_esolang
 Uxntal,https://esolangs.org/wiki/Uxntal
 Uyjhmn n,https://esolangs.org/wiki/Uyjhmn_n
 Uzumaki,https://esolangs.org/wiki/Uzumaki
@@ -3220,10 +3224,10 @@ V (DJMcMayhem),https://esolangs.org/wiki/V_(DJMcMayhem)
 V (FMota),https://esolangs.org/wiki/V_(FMota)
 V++,https://esolangs.org/wiki/V%2B%2B
 V--,https://esolangs.org/wiki/V--
-v³,https://esolangs.org/wiki/V%C2%B3
+V³,https://esolangs.org/wiki/V%C2%B3
 V3i,https://esolangs.org/wiki/V3i
 Vandevelo,https://esolangs.org/wiki/Vandevelo
-var'aq,https://esolangs.org/wiki/Var%27aq
+Var'aq,https://esolangs.org/wiki/Var%27aq
 Variambda,https://esolangs.org/wiki/Variambda
 Varigen,https://esolangs.org/wiki/Varigen
 Varnand,https://esolangs.org/wiki/Varnand
@@ -3241,7 +3245,7 @@ Vertical,https://esolangs.org/wiki/Vertical
 Vertica Smile,https://esolangs.org/wiki/Vertica_Smile
 VES++,https://esolangs.org/wiki/VES%2B%2B
 Vessel,https://esolangs.org/wiki/Vessel
-vfl,https://esolangs.org/wiki/Vfl
+Vfl,https://esolangs.org/wiki/Vfl
 Vigil,https://esolangs.org/wiki/Vigil
 Viktor's amazing 4-bit processor,https://esolangs.org/wiki/Viktor%27s_amazing_4-bit_processor
 Villmark,https://esolangs.org/wiki/Villmark
@@ -3250,18 +3254,18 @@ Virage,https://esolangs.org/wiki/Virage
 Virgo,https://esolangs.org/wiki/Virgo
 Visify,https://esolangs.org/wiki/Visify
 Vitsy,https://esolangs.org/wiki/Vitsy
-vizh,https://esolangs.org/wiki/Vizh
+Vizh,https://esolangs.org/wiki/Vizh
 VL,https://esolangs.org/wiki/VL
 Voclex,https://esolangs.org/wiki/Voclex
 Void,https://esolangs.org/wiki/Void
 Von Neumann's 29-state cellular automaton,https://esolangs.org/wiki/Von_Neumann%27s_29-state_cellular_automaton
-vowels,https://esolangs.org/wiki/Vowels
+Vowels,https://esolangs.org/wiki/Vowels
 Vowels (2017),https://esolangs.org/wiki/Vowels_(2017)
 Vrejvax,https://esolangs.org/wiki/Vrejvax
 VTFF,https://esolangs.org/wiki/VTFF
 VTL,https://esolangs.org/wiki/VTL
 Vurl,https://esolangs.org/wiki/Vurl
-vv,https://esolangs.org/wiki/V%5Ev
+V^v,https://esolangs.org/wiki/V%5Ev
 Vyxal,https://esolangs.org/wiki/Vyxal
 W,https://esolangs.org/wiki/W
 W (Viktor T. Toth),https://esolangs.org/wiki/W_(Viktor_T._Toth)
@@ -3269,7 +3273,7 @@ Waduzitdo,https://esolangs.org/wiki/Waduzitdo
 Wagon,https://esolangs.org/wiki/Wagon
 Wait,https://esolangs.org/wiki/Wait
 Wake,https://esolangs.org/wiki/Wake
-walls,https://esolangs.org/wiki/Walls
+Walls,https://esolangs.org/wiki/Walls
 WALP,https://esolangs.org/wiki/WALP
 WARP,https://esolangs.org/wiki/WARP
 Wasaya,https://esolangs.org/wiki/Wasaya
@@ -3298,14 +3302,14 @@ Whenever,https://esolangs.org/wiki/Whenever
 When The,https://esolangs.org/wiki/When_The
 When the Imposter is Sus,https://esolangs.org/wiki/When_the_Imposter_is_Sus
 Where,https://esolangs.org/wiki/Where
-While(true){,https://esolangs.org/wiki/While(true)
+While(true),https://esolangs.org/wiki/While(true)
 WhimsiCode,https://esolangs.org/wiki/WhimsiCode
 Whirl,https://esolangs.org/wiki/Whirl
 Whitespace,https://esolangs.org/wiki/Whitespace
 Why Does This Towel Smell Different Each Time I Use It,https://esolangs.org/wiki/Why_Does_This_Towel_Smell_Different_Each_Time_I_Use_It
 Who,https://esolangs.org/wiki/Who
 Wierd,https://esolangs.org/wiki/Wierd
-Wigner's Fuckbuddy Is A (|Top> + |Bottom>)/√2,https://esolangs.org/wiki/Wigner%27s_Fuckbuddy_Is_A_Superposition_of_Top_And_Bottom
+Wigner's Fuckbuddy Is A Superposition of Top And Bottom,https://esolangs.org/wiki/Wigner%27s_Fuckbuddy_Is_A_Superposition_of_Top_And_Bottom
 Wiki,https://esolangs.org/wiki/Wiki
 Wiki Cyclic Tag,https://esolangs.org/wiki/Wiki_Cyclic_Tag
 Wikiplia,https://esolangs.org/wiki/Wikiplia
@@ -3327,7 +3331,7 @@ Wordless,https://esolangs.org/wiki/Wordless
 Wordy,https://esolangs.org/wiki/Wordy
 Wrapping Rhoam,https://esolangs.org/wiki/Wrapping_Rhoam
 Writeover,https://esolangs.org/wiki/Writeover
-wsad,https://esolangs.org/wiki/Wsad
+Wsad,https://esolangs.org/wiki/Wsad
 WsFuck,https://esolangs.org/wiki/WsFuck
 WTFCode,https://esolangs.org/wiki/WTFCode
 WTFZOMFG,https://esolangs.org/wiki/WTFZOMFG
@@ -3339,7 +3343,7 @@ X,https://esolangs.org/wiki/X
 X++,https://esolangs.org/wiki/X%2B%2B
 XAH,https://esolangs.org/wiki/XAH
 XBF,https://esolangs.org/wiki/XBF
-x-D,https://esolangs.org/wiki/X-D
+X-D,https://esolangs.org/wiki/X-D
 Xdi8 aho fHL mA,https://esolangs.org/wiki/Xdi8_aho_fHL_mA
 XENBLN,https://esolangs.org/wiki/XENBLN
 XERO,https://esolangs.org/wiki/XERO
