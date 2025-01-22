@@ -13,10 +13,11 @@ class EsolangScraper:
 
     def __init__(self, debug=False):
         self.data_dir = 'data'
+        self.file_name = 'esolangs'
         os.makedirs(self.data_dir, exist_ok=True)
 
-        self.links_file = os.path.join(self.data_dir, 'esolangs_languages_links.csv')
-        self.output_file = os.path.join(self.data_dir, 'esolangs_languages_data.json')
+        self.links_file = os.path.join(self.data_dir, self.file_name + '-links.csv')
+        self.output_file = os.path.join(self.data_dir, self.file_name + '-data.json')
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36'
         }
@@ -165,15 +166,14 @@ class EsolangScraper:
 
         return categories
 
-    def scrape_languages(self):
+    def scrape_languages(self, limit=None):
         languages_links = self.load_languages_links()
         languages_data = []
 
-        test_limit = 0 # Remove this to scrape all languages
         for index, row in languages_links:
-            if test_limit == 20:
+            if limit and index >= limit:
                 break
-            test_limit += 1
+            index += 1
 
             language_name = row['LanguageName']
             language_url = row['URL']
@@ -200,10 +200,6 @@ class EsolangScraper:
         self.save_data_to_json(languages_data)
 
     def extract_information(self, language_html_content, pattern_key):
-        """
-        Extracts information (alias or developer) based on the provided pattern_key.
-        Supports case-insensitive search and returns the next word after the pattern.
-        """
         body_content = language_html_content.find(id="bodyContent")
         if body_content:
             text = body_content.get_text()
