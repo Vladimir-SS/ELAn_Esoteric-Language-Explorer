@@ -14,7 +14,7 @@ def sanitize_uri(value):
     """
     Percent-encodes invalid characters in a URI fragment.
     """
-    return quote(value, safe="")
+    return quote(str(value).encode('utf-8'), safe="")
 
 def create_individual(graph, class_uri, individual_uri):
     graph.add((individual_uri, rdflib.RDF.type, class_uri))
