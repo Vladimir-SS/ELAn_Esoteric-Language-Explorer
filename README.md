@@ -84,8 +84,7 @@
 <details>
   <summary>Server</summary>
   <ul>
-    <!-- Flask> -->
-    <li><a href="https://flask.palletsprojects.com/en/stable/">Flask</a></li>
+    <li><a href="https://fastapi.tiangolo.com/">FastAPI</a></li>
   </ul>
 </details>
 
@@ -143,7 +142,8 @@ Install the necessary tools for the project:
 
 1. [Node.js](https://nodejs.org/) (required)
 2. [Python](https://www.python.org/) (required)
-3. [Docker](https://www.docker.com/) (optional)
+3. [Apache Jena Fuseki](https://jena.apache.org/download/) (required)
+4. [Docker](https://www.docker.com/) (optional)
 
 <!-- Running Tests -->
 <!-- ### :test_tube: Running Tests
@@ -175,8 +175,8 @@ Install dependencies
 # Install frontend dependencies
 cd frontend/ ; npm install ; cd ..
 
-# Install backend dependencies
-cd backend/ ; pip install -r requirements.txt ; cd ..
+# Install backend dependencies (the third command fixes the error with packages not being found)
+cd backend/ ; pip install -r requirements.txt ; pip install -e . ; cd ..
 ```
 
 Start the application
@@ -186,7 +186,7 @@ Start the application
 cd frontend/ ; npm run dev
 
 # Start the backend
-cd backend/ ; python app.py
+cd backend/ ; fastapi dev main.py
 ```
 
 Start using application using Docker
@@ -194,9 +194,11 @@ Start using application using Docker
 ```bash
 docker-compose up --detach
 
-# Restart the backend-flask container to apply server changes
-docker-compose restart backend-flask
+# Restart the backend-fastapi container to apply server changes
+docker-compose restart backend-fastapi
 ```
+
+> **⚠️ Note:** For the backend API to work, you need to have Apache Jena Fuseki running on `http://localhost:3030` with a dataset named `Esolangs`.
 
 <!-- Deployment -->
 ### :triangular_flag_on_post: Deployment

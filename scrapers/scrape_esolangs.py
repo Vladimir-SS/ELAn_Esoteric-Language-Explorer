@@ -22,22 +22,28 @@ class EsolangScraper:
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36'
         }
 
+        user_pattern = r"(User:\S+|[\w\s]+)"
+
         self.PATTERNS = {
             "Alias": [
                 r"the title of this article is also called ([^.]+)",
                 r"the correct title is actually ([^.]+)",
             ],
             "DesignedBy": [ # To do: Consider modifying patterns.
-                r"developed by (\S+)",
-                r"made by (\S+)",
-                r"invented by (\S+)",
-                r"implemented by (\S+)",
-                r"created by (\S+)", # Example of miss interpreted data: "created by Bradley Sadowsky (User:BradleySadowsky)" returns only "Bradley"
+                rf"developed by {user_pattern}",
+                rf"made by {user_pattern}",
+                rf"invented by {user_pattern}",
+                rf"implemented by {user_pattern}",
+                rf"devised by {user_pattern}",
+                rf"created by {user_pattern}", # Example of miss interpreted data: "created by Bradley Sadowsky (User:BradleySadowsky)" returns only "Bradley"
                 r"by (User:\S+)", # This might find wrong results in particular cases
             ],
             "InfluencedBy": [
                 r"inspired by (\S+)",
                 r"based on (\S+)", # Example of miss interpreted data: "Tree(3) is a language based on Chinese and Korean.", does not refer to an esolang in this case
+            ],
+            "YearCreated": [
+                r"in (\d{4})"
             ],
         }
 

@@ -11,7 +11,7 @@ services:
     volumes:
       - "./frontend:/app:delegated"
       - /app/node_modules/
-  backend-flask:
+  backend-fastapi:
     image: backend
     build:
       context: ./backend

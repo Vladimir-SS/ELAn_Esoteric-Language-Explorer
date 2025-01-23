@@ -11,8 +11,8 @@ export default defineConfig({
 
   server: {
     proxy: {
-      '/api': 'http://backend-flask:5000',
-      '/static': 'http://backend-flask:5000',
+      '/api': 'http://backend-fastapi:5000',
+      '/static': 'http://backend-fastapi:5000',
     },
   },
 })
