@@ -1,17 +1,17 @@
 from typing import List, Dict
 from fastapi import FastAPI, HTTPException
 from src import SPARQLClient
-from src import ESOLANG_QUERY, ESOLANG_NAME_QUERY
+from src import ESOLANGS_NAME_LIST_QUERY, create_esolang_name_query
 
 app = FastAPI()
 
 sparql_client = SPARQLClient("http://host.docker.internal:3030/Esolangs/sparql") # Change to "http://localhost:3030/Esolangs/sparql" if not using Docker
 
-@app.get("/")
+@app.get("/api/esolangs", response_model=List[str])
 def get_esolangs():
     """Fetch all esolangs from the SPARQL endpoint."""
     try:
-        result = sparql_client.query(ESOLANG_NAME_QUERY)
+        result = sparql_client.query(ESOLANGS_NAME_LIST_QUERY)
         if not result:
             raise HTTPException(status_code=404, detail="No esolangs found.")
         esolangs = [esolang["name"]["value"] for esolang in result]
@@ -19,25 +19,25 @@ def get_esolangs():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.get("/esolangs", response_model=List[Dict])
-async def get_esolangs():
-    """Fetch all esolangs from the SPARQL endpoint."""
+@app.get("/api/esolangs/{esolang_name}", response_model=Dict)
+async def get_esolang(esolang_name: str):
+    """Fetch details of a specific esolang from the SPARQL endpoint."""
     try:
-        result = sparql_client.query(ESOLANG_QUERY)
+        result = sparql_client.query(create_esolang_name_query(esolang_name))
         if not result:
-            raise HTTPException(status_code=404, detail="No esolangs found.")
+            raise HTTPException(status_code=404, detail="No data found.")
 
-        esolangs = [
-            {
-                "esolang": esolang["esolang"]["value"],
-                "yearCreated": esolang["yearCreated"]["value"],
-                "url": esolang["url"]["value"],
-                "shortDescription": esolang["shortDescription"]["value"]
-            }
-            for esolang in result
-        ]
+        esolang = {
+            "name": esolang_name,
+            "yearCreated": result[0]["yearCreated"]["value"],
+            "url": result[0]["url"]["value"],
+            "shortDescription": result[0]["shortDescription"]["value"],
+            "alias": result[0]["alias"]["value"] if "alias" in result[0] else None,
+            "designedBy": result[0]["designedBy"]["value"] if "designedBy" in result[0] else None,
+            "categories": [category["category"]["value"] for category in result] if "category" in result[0] else None
+        }
 
-        return esolangs
+        return esolang
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
