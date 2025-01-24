@@ -1,6 +1,19 @@
 import json
 import re
 
+def is_null_indicator(value, null_indicators):
+    return value.lower() in null_indicators
+
+def remove_null_indicators(data, null_indicators):
+    for key, value in data.items():
+        if key == 'LanguageName':
+            continue  # Skip LanguageName
+
+        if isinstance(value, list):
+            data[key] = [v for v in value if not is_null_indicator(v, null_indicators)]
+        elif isinstance(value, str) and is_null_indicator(value, null_indicators):
+            data[key] = None
+
 def clean_year(year):
     if year and isinstance(year, str):
         if 'unknown' in year.lower():
@@ -37,6 +50,8 @@ def clean_data(input_file, output_file):
         data = json.load(json_file)
 
     for language in data:
+        remove_null_indicators(language, ['unknown', 'none', 'n/a' , ''])
+
         if 'YearCreated' in language:
             language['YearCreated'] = clean_year(language['YearCreated'])
 

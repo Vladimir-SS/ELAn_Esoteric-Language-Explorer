@@ -224,6 +224,73 @@ class EsolangScraper:
                     logging.info(f"Found {field}: {value}")
                     language_info[field] = value
 
+    def extract_wikitables_with_headers(self, language_html_content) -> list[dict[str, any]]:
+        tables_with_headers = []
+        all_tables = language_html_content.find_all('table', class_='wikitable')
+
+        for table in all_tables:
+            header_text = None
+            for previous_sibling in table.find_previous_siblings():
+                if previous_sibling.name in ['h2', 'h3', 'h4']:
+                    span = previous_sibling.find('span', class_='mw-headline')
+                    if span:
+                        header_text = span.text.strip()
+                        break
+
+            rows = table.find_all('tr')
+            table_headers = [th.get_text(strip=True) for th in rows[0].find_all('th')] if rows else []
+
+            table_data = []
+            for row in rows[1:]:  # Skip the header row
+                cells = row.find_all(['td', 'th'])
+                row_data = {table_headers[i]: cells[i].get_text(strip=True) if i < len(cells) else None
+                            for i in range(len(table_headers))}
+                table_data.append(row_data)
+
+            tables_with_headers.append({
+                "Header": header_text,
+                "TableHeaders": table_headers,
+                "Rows": table_data
+            })
+
+            logging.info(f"Extracted table: '{header_text}' with {len(table_data)} rows and columns: {table_headers}.")
+
+        return tables_with_headers
+
+    def check_for_tables(self, limit=None):
+        languages_links = self.load_languages_links()
+        tables_data = {}
+
+        for index, row in languages_links:
+            if limit and index >= limit:
+                break
+            index += 1
+
+            language_name = row['LanguageName']
+            logging.info(f"Scraping tables for {language_name}...")
+
+            html_content = self.load_html_content(row['URL'])
+            if not html_content:
+                continue
+
+            tables = self.extract_wikitables_with_headers(html_content)
+            if tables:
+                logging.info(f"Found {len(tables)} tables for {language_name}.")
+                tables_data[language_name] = [
+                    {
+                        "Header": table["Header"],
+                        "TableHeaders": table["TableHeaders"],
+                        "Rows": table["Rows"],
+                    }
+                    for table in tables
+                ]
+
+        output_file = os.path.join(self.data_dir, "esolangs_tables.json")
+        with open(output_file, 'w', encoding='utf-8') as json_file:
+            json.dump(tables_data, json_file, ensure_ascii=False, indent=4)
+        logging.info(f"All tables data saved to '{output_file}'.")
+
 
 scraper = EsolangScraper()
-scraper.scrape_languages()
+# scraper.scrape_languages()
+scraper.check_for_tables()
