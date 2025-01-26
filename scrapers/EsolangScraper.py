@@ -35,14 +35,18 @@ class EsolangScraper:
                 rf"invented by {user_pattern}",
                 rf"implemented by {user_pattern}",
                 rf"devised by {user_pattern}",
-                rf"created by {user_pattern}", # Example of miss interpreted data: "created by Bradley Sadowsky (User:BradleySadowsky)" returns only "Bradley"
+                rf"designed by {user_pattern}",
+                rf"created by {user_pattern}",
+                rf"discovered by {user_pattern}",
                 r"by (User:\S+)", # This might find wrong results in particular cases
             ],
             "InfluencedBy": [
                 r"inspired by (\S+)",
+                r"clone of (\S+)",
                 r"based on (\S+)", # Example of miss interpreted data: "Tree(3) is a language based on Chinese and Korean.", does not refer to an esolang in this case
             ],
             "YearCreated": [
+                r"created in (\d{4})",
                 r"in (\d{4})"
             ],
         }
@@ -289,8 +293,3 @@ class EsolangScraper:
         with open(output_file, 'w', encoding='utf-8') as json_file:
             json.dump(tables_data, json_file, ensure_ascii=False, indent=4)
         logging.info(f"All tables data saved to '{output_file}'.")
-
-
-scraper = EsolangScraper()
-# scraper.scrape_languages()
-scraper.check_for_tables()
