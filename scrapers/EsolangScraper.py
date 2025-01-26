@@ -205,7 +205,7 @@ class EsolangScraper:
             self.fill_missing_fields(html_content, language_info)
 
             languages_data.append(language_info)
-            time.sleep(0.5)
+            # time.sleep(0.5)
 
         self.save_data_to_json(languages_data)
 

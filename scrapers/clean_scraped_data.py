@@ -1,5 +1,6 @@
 import json
 import re
+from urllib.parse import urlparse, unquote
 
 def is_null_indicator(value, null_indicators):
     return value.lower() in null_indicators
@@ -17,7 +18,7 @@ def remove_null_indicators(data, null_indicators):
 def clean_year(year):
     if year and isinstance(year, str):
         if 'unknown' in year.lower():
-            return None  # Set to None if 'unknown'
+            return None
         if '-' in year: # some languages have a range of years (e.g., '2023-2024')
             return year.split('-')[0]
         if not year.isdigit():
@@ -45,11 +46,24 @@ def search_for_year_category(language):
             language['YearCreated'] = year_found
             language['Categories'] = [cat for cat in categories if cat != year_found]
 
+def extract_lang_name_from_url(url):
+    try:
+        path = urlparse(url).path
+        if path:
+            return unquote(path.split('/')[-1])
+    except Exception:
+        print(f"Error extracting language name from URL: {url}")
+    return None
+
 def clean_data(input_file, output_file):
     with open(input_file, 'r', encoding='utf-8') as json_file:
         data = json.load(json_file)
 
     for language in data:
+        if str(language['LanguageName']) == 'nan': # Esolangs 'None' and 'NULL' names were converted to 'nan' in the JSON
+            language['LanguageName'] = extract_lang_name_from_url(language['URL'])
+            print(f"Extracted language name: {language['LanguageName']}")
+
         remove_null_indicators(language, ['unknown', 'none', 'n/a' , ''])
 
         if 'YearCreated' in language:
