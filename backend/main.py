@@ -29,15 +29,45 @@ async def get_esolang(esolang_name: str):
 
         esolang = {
             "name": esolang_name,
-            "yearCreated": result[0]["yearCreated"]["value"],
-            "url": result[0]["url"]["value"],
-            "shortDescription": result[0]["shortDescription"]["value"],
-            "alias": result[0]["alias"]["value"] if "alias" in result[0] else None,
-            "designedBy": result[0]["designedBy"]["value"] if "designedBy" in result[0] else None,
-            "categories": [category["category"]["value"] for category in result] if "category" in result[0] else None
+            "url": None,
+            "yearCreated": None,
+            "shortDescription": None,
+            "alias": None,
+            "designedBy": None,
+            "categories": set(),
+            "influencedBy": set(),
+            "influenced": set(),
+            "fileExtensions": set()
         }
 
+        for item in result:
+            if not esolang["url"] and "url" in item:
+                esolang["url"] = item["url"]["value"]
+            if not esolang["yearCreated"] and "yearCreated" in item:
+                esolang["yearCreated"] = item["yearCreated"]["value"]
+            if not esolang["shortDescription"] and "shortDescription" in item:
+                esolang["shortDescription"] = item["shortDescription"]["value"]
+            if not esolang["alias"] and "alias" in item:
+                esolang["alias"] = item["alias"]["value"]
+            if not esolang["designedBy"] and "designedBy" in item:
+                esolang["designedBy"] = item["designedBy"]["value"]
+
+            if "category" in item:
+                esolang["categories"].add(item["category"]["value"])
+            if "influencedBy" in item:
+                esolang["influencedBy"].add(item["influencedBy"]["value"])
+            if "influenced" in item:
+                esolang["influenced"].add(item["influenced"]["value"])
+            if "fileExtensions" in item:
+                esolang["fileExtensions"].add(item["fileExtensions"]["value"])
+
+        esolang["categories"] = list(esolang["categories"])
+        esolang["influencedBy"] = list(esolang["influencedBy"])
+        esolang["influenced"] = list(esolang["influenced"])
+        esolang["fileExtensions"] = list(esolang["fileExtensions"])
+
         return esolang
+
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

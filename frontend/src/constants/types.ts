@@ -20,5 +20,8 @@ export type Esolang = {
     yearCreated: number | null;
     designedBy: string | null;
     shortDescription: string | null;
+    influencedBy: string[] | null;
+    influenced: string[] | null;
     categories: string[] | null;
+    fileExtensions: string[] | null;
 };

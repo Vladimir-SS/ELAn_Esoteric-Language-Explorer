@@ -42,7 +42,7 @@ const EsolangsList: React.FC = () => {
                 {languages.length > 0 ? (
                     languages.map((language, index) => (
                         <div className="language-item" key={index}>
-                            <Link to={`/esolangs/${decodeURIComponent(language)}`} className="language-link">
+                            <Link to={`/esolangs/${language}`} className="language-link">
                                 {decodeURIComponent(language)}
                             </Link>
                         </div>

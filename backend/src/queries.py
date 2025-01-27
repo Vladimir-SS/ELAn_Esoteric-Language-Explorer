@@ -1,11 +1,11 @@
 PREFIXES = """
-PREFIX esolang: <https://no-domain.sadly/ontology/esoteric_languages#>
+PREFIX esolang: <http://localhost:5173/esolangs/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 """
 
 ESOLANGS_NAME_LIST_QUERY = PREFIXES + """
-SELECT (STRAFTER(STR(?esolang), "#") AS ?name)
+SELECT (STRAFTER(STR(?esolang), "http://localhost:5173/esolangs/") AS ?name)
 WHERE {
   ?esolang rdf:type esolang:EsotericLanguage .
 }
@@ -13,16 +13,22 @@ WHERE {
 
 def create_esolang_name_query(esolang_name: str | None) -> str:
     query = PREFIXES + """
-      SELECT ?esolang ?yearCreated ?url ?shortDescription
+      SELECT ?esolang ?yearCreated ?url ?shortDescription ?alias ?designedBy ?influencedBy ?influenced ?category ?fileExtensions
       WHERE {
         ?esolang rdf:type esolang:EsotericLanguage .
-        ?esolang esolang:yearCreated ?yearCreated .
         ?esolang esolang:url ?url .
-        ?esolang esolang:shortDescription ?shortDescription .
+        OPTIONAL { ?esolang esolang:yearCreated ?yearCreated . }
+        OPTIONAL { ?esolang esolang:shortDescription ?shortDescription . }
+        OPTIONAL { ?esolang esolang:alias ?alias . }
+        OPTIONAL { ?esolang esolang:designedBy ?designedBy . }
+        OPTIONAL { ?esolang esolang:influencedBy ?influencedBy . }
+        OPTIONAL { ?esolang esolang:influenced ?influenced . }
+        OPTIONAL { ?esolang esolang:hasCategory ?category . }
+        OPTIONAL { ?esolang esolang:fileExtensions ?fileExtensions . }
       """
     if esolang_name:
         query += f"""
-        FILTER (STRAFTER(STR(?esolang), "#") = "{esolang_name}")
+        FILTER (STRAFTER(STR(?esolang), "http://localhost:5173/esolangs/") = "{esolang_name}")
         """
     query += "}"
 
