@@ -2,7 +2,7 @@ import requests
 import os
 import logging
 from urllib.parse import quote
-import pandas as pd
+from DataHandler import DataHandler
 
 class MediaWikiAPI:
     BASE_URL = "https://esolangs.org"
@@ -14,6 +14,8 @@ class MediaWikiAPI:
         os.makedirs(self.data_dir, exist_ok=True)
 
         self.links_file = os.path.join(self.data_dir, self.file_name + '-links.csv')
+
+        self.data_handler = DataHandler()
 
         logging_level = logging.DEBUG if debug else logging.INFO
         logging.basicConfig(level=logging_level, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -107,20 +109,11 @@ class MediaWikiAPI:
         logging.info(f"Fetched {len(languages)} languages under {category}.")
         return languages
 
-
-    def save_links_to_csv(self, data):
-        """
-        Save the list of languages and URLs to a CSV file.
-        """
-        df = pd.DataFrame(data, columns=["LanguageName", "URL"])
-        df.to_csv(self.links_file, index=False, encoding='utf-8')
-        logging.info(f"Data saved to '{self.links_file}'.")
-
 if __name__ == "__main__":
     media_wiki = MediaWikiAPI(debug=True)
 
     # languages = media_wiki.collect_languages()
-    # media_wiki.save_links_to_csv(languages)
+    # media_wiki.data_handler.save_to_csv(languages, media_wiki.links_file, columns=["LanguageName", "URL"])
     # logging.info(f"Collected {len(languages)} languages.")
 
     categories = media_wiki.fetch_all_categories()

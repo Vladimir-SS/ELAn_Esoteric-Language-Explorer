@@ -1,11 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-import json
-import time
 import os
 import re
 import logging
+from DataHandler import DataHandler
 
 class EsolangScraper:
     BASE_URL = "https://esolangs.org"
@@ -21,6 +20,8 @@ class EsolangScraper:
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36'
         }
+
+        self.data_handler = DataHandler()
 
         user_pattern = r"(User:\S+|[\w\s]+)"
 
@@ -54,17 +55,6 @@ class EsolangScraper:
         logging_level = logging.DEBUG if debug else logging.INFO
         logging.basicConfig(level=logging_level, format="%(asctime)s - %(levelname)s - %(message)s") # For additional info: %(filename)s:%(lineno)d
 
-    def save_links_to_csv(self, data):
-        df = pd.DataFrame(data, columns=["LanguageName", "URL"])
-        df.to_csv(self.links_file, index=False, encoding='utf-8')
-        logging.info(f"Data saved to '{self.links_file}'.")
-
-
-    def save_data_to_json(self, data):
-        with open(self.output_file, 'w', encoding='utf-8') as json_file:
-            json.dump(data, json_file, ensure_ascii=False, indent=4)
-        logging.info(f"Data saved to '{self.output_file}'.")
-
     def load_html_content(self, url):
         try:
             response = requests.get(url, headers=self.headers)
@@ -96,7 +86,7 @@ class EsolangScraper:
                 full_url = f"{self.BASE_URL}{language_url}"
                 language_links.append([language_name, full_url])
 
-        self.save_links_to_csv(language_links)
+        self.data_handler.save_to_csv(language_links, self.links_file, columns=["LanguageName", "URL"])
         logging.info(f"Scraped {len(language_links)} languages.")
 
     def load_languages_links(self):
@@ -207,7 +197,7 @@ class EsolangScraper:
             languages_data.append(language_info)
             # time.sleep(0.5)
 
-        self.save_data_to_json(languages_data)
+        self.data_handler.save_to_json(languages_data, self.output_file)
 
     def extract_information(self, language_html_content, pattern_key):
         body_content = language_html_content.find(id="bodyContent")
@@ -290,6 +280,4 @@ class EsolangScraper:
                 ]
 
         output_file = os.path.join(self.data_dir, "esolangs_tables.json")
-        with open(output_file, 'w', encoding='utf-8') as json_file:
-            json.dump(tables_data, json_file, ensure_ascii=False, indent=4)
-        logging.info(f"All tables data saved to '{output_file}'.")
+        self.data_handler.save_to_json(tables_data, output_file)
