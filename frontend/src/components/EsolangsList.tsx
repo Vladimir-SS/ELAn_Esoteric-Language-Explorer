@@ -27,28 +27,38 @@ const EsolangsList: React.FC = () => {
     }, []);
 
     if (loading) {
-        return <div>Loading languages...</div>;
+        return <div className="text-center mt-5">Loading...</div>;
     }
 
-    if (error) {
-        return <div>Error: {error}</div>;
+    if (error || !languages) {
+        return <div className="alert alert-danger text-center mt-5">{error ?? "Language not found"}</div>;
     }
 
     return (
-        <div>
-            <h1>Esoteric Language List</h1>
+        <div className="container mt-4">
+            <h1 className="mb-4">Esoteric Language List ({languages.length} languages)</h1>
 
-            <div className="language-grid">
+            <div className="row d-flex flex-wrap justify-content-start g-3">
                 {languages.length > 0 ? (
                     languages.map((language, index) => (
-                        <div className="language-item" key={index}>
-                            <Link to={`/esolangs/${language}`} className="language-link">
-                                {decodeURIComponent(language)}
-                            </Link>
+                        <div className="col-auto" key={index}>
+                            <div className="card">
+                                <div className="card-body">
+                                    <h5 className="card-title">
+                                        <Link to={`/esolangs/${language}`} className="stretched-link">
+                                            {decodeURIComponent(language)}
+                                        </Link>
+                                    </h5>
+                                </div>
+                            </div>
                         </div>
                     ))
                 ) : (
-                    <div>No languages match the selected filters</div>
+                    <div className="col-12">
+                        <div className="alert alert-info" role="alert">
+                            No languages match the selected filters.
+                        </div>
+                    </div>
                 )}
             </div>
         </div>
