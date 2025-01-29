@@ -2,24 +2,48 @@ import rdflib
 import json
 from urllib.parse import quote
 
-g = rdflib.Graph()
+graph = rdflib.Graph()
 base_uri = "http://localhost:5173/esolangs/"
 ESOLANG = rdflib.Namespace(base_uri)
 OWL = rdflib.OWL
 XSD = rdflib.XSD
 
-g.bind("esolang", ESOLANG)
+graph.bind("esolang", ESOLANG)
+
 
 def sanitize_uri(value):
     """
     Percent-encodes invalid characters in a URI fragment.
     """
-    return quote(str(value).encode('utf-8'), safe="")
+    return quote(str(value).encode("utf-8"), safe="")
+
+
+def add_uri_relation(graph, subject_uri, relationship_type_name, values, create_individuals=False):
+    """
+    Adds relationships to the graph, where both subject and object are URIs. Handles both single values and lists.
+    """
+    relationship_type = ESOLANG[relationship_type_name]
+    if create_individuals:
+        indiv_name = ESOLANG[relationship_type_name[3:]]  # Remove 'has' prefix
+
+    if isinstance(values, list):
+        for value in values:
+            object_uri = ESOLANG[sanitize_uri(value)]
+            if object_uri:
+                graph.add((subject_uri, relationship_type, object_uri))
+                create_individuals and create_individual(graph, indiv_name, object_uri)
+    elif values:
+        object_uri = ESOLANG[sanitize_uri(values)]
+        if object_uri:
+            graph.add((subject_uri, relationship_type, object_uri))
+            create_individuals and create_individual(graph, indiv_name, object_uri)
+
 
 def create_individual(graph, class_uri, individual_uri):
     graph.add((individual_uri, rdflib.RDF.type, class_uri))
 
-with open("./data/esolangs-cleaned.json", 'r', encoding='utf-8') as f:
+
+with open("./data/esolangs-cleaned.json", "r", encoding="utf-8") as f:
     json_data = json.load(f)
 
 for item in json_data:
@@ -32,57 +56,40 @@ for item in json_data:
 
     language_uri = ESOLANG[sanitized_language_name]
 
-    g.add((language_uri, rdflib.RDF.type, ESOLANG.EsotericLanguage))
+    graph.add((language_uri, rdflib.RDF.type, ESOLANG.EsotericLanguage))
 
     if item.get("YearCreated"):
-        g.add((language_uri, ESOLANG.yearCreated, rdflib.Literal(item["YearCreated"], datatype=XSD.gYear)))
+        graph.add((language_uri, ESOLANG.yearCreated, rdflib.Literal(item["YearCreated"], datatype=XSD.gYear)))
 
     if item.get("URL"):
-        g.add((language_uri, ESOLANG.url, rdflib.URIRef(item["URL"])))
+        graph.add((language_uri, ESOLANG.url, rdflib.URIRef(item["URL"])))
 
     if item.get("DesignedBy"):
-        g.add((language_uri, ESOLANG.designedBy, rdflib.Literal(item["DesignedBy"], datatype=XSD.string)))
+        graph.add((language_uri, ESOLANG.designedBy, rdflib.Literal(item["DesignedBy"], datatype=XSD.string)))
 
     if item.get("Alias"):
-        g.add((language_uri, ESOLANG.alias, rdflib.Literal(item["Alias"], datatype=XSD.string)))
+        graph.add((language_uri, ESOLANG.alias, rdflib.Literal(item["Alias"], datatype=XSD.string)))
 
     if item.get("InfluencedBy"):
-            influenced_by = item["InfluencedBy"] if isinstance(item["InfluencedBy"], list) else []
-            for influenced in influenced_by:
-                influenced_uri = ESOLANG[sanitize_uri(influenced)]
-                if influenced_uri:
-                    g.add((language_uri, ESOLANG.influencedBy, influenced_uri))
+        add_uri_relation(graph, language_uri, "influencedBy", item["InfluencedBy"])
 
     if item.get("Influenced"):
-        influenced = item["Influenced"] if isinstance(item["Influenced"], list) else []
-        for influence in influenced:
-            influence_uri = ESOLANG[sanitize_uri(influence)]
-            if influence_uri:
-                g.add((language_uri, ESOLANG.influenced, influence_uri))
+        add_uri_relation(graph, language_uri, "influenced", item["Influenced"])
 
     if item.get("ShortDescription"):
-        g.add((language_uri, ESOLANG.shortDescription, rdflib.Literal(item["ShortDescription"], datatype=XSD.string)))
+        graph.add((language_uri, ESOLANG.shortDescription, rdflib.Literal(item["ShortDescription"], datatype=XSD.string)))
 
     if item.get("Categories"):
-        for category in item["Categories"]:
-            category_uri = ESOLANG[sanitize_uri(category)]
-            if category_uri:
-                g.add((language_uri, ESOLANG.hasCategory, category_uri))
-                create_individual(g, ESOLANG.Category, category_uri)
+        add_uri_relation(graph, language_uri, "hasCategory", item["Categories"], True)
 
     if item.get("Paradigms"):
-        paradigms = item["Paradigms"].split(";") if isinstance(item["Paradigms"], str) else []
-        for paradigm in paradigms:
-            paradigm_uri = ESOLANG[paradigm.strip()]
-            if paradigm_uri:
-                g.add((language_uri, ESOLANG.hasParadigm, paradigm_uri))
-                create_individual(g, ESOLANG.Paradigm, paradigm_uri)
+        add_uri_relation(graph, language_uri, "hasParadigm", item["Paradigms"], True)
 
     if item.get("FileExtensions"):
         file_extensions = item["FileExtensions"] if isinstance(item["FileExtensions"], list) else []
         for extension in file_extensions:
-            g.add((language_uri, ESOLANG.fileExtension, rdflib.Literal(extension, datatype=XSD.string)))
+            graph.add((language_uri, ESOLANG.fileExtension, rdflib.Literal(extension, datatype=XSD.string)))
 
 output_file = "./data/esolangs-ontology.rdf"
-g.serialize(output_file, format="xml")
+graph.serialize(output_file, format="xml")
 print(f"Ontology populated and saved as '{output_file}'")

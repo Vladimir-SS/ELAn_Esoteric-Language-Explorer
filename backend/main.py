@@ -34,6 +34,7 @@ async def get_esolang(esolang_name: str):
             "shortDescription": None,
             "alias": None,
             "designedBy": None,
+            "paradigms" : set(),
             "categories": set(),
             "influencedBy": set(),
             "influenced": set(),
@@ -51,16 +52,18 @@ async def get_esolang(esolang_name: str):
                 esolang["alias"] = item["alias"]["value"]
             if not esolang["designedBy"] and "designedBy" in item:
                 esolang["designedBy"] = item["designedBy"]["value"]
-
+            if "paradigm" in item:
+                esolang["paradigms"].add(item["paradigm"]["value"])
             if "category" in item:
                 esolang["categories"].add(item["category"]["value"])
             if "influencedBy" in item:
                 esolang["influencedBy"].add(item["influencedBy"]["value"])
             if "influenced" in item:
                 esolang["influenced"].add(item["influenced"]["value"])
-            if "fileExtensions" in item:
-                esolang["fileExtensions"].add(item["fileExtensions"]["value"])
+            if "fileExtension" in item:
+                esolang["fileExtensions"].add(item["fileExtension"]["value"])
 
+        esolang["paradigms"] = list(esolang["paradigms"])
         esolang["categories"] = list(esolang["categories"])
         esolang["influencedBy"] = list(esolang["influencedBy"])
         esolang["influenced"] = list(esolang["influenced"])
