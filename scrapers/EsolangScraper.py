@@ -135,7 +135,7 @@ class EsolangScraper:
             "Dialects": "Dialects", # No change
             "Type system": "TypeSystem",
         }
-        array_content_fields = ["Paradigm(s)", "Type system", "Dialects", "Influenced by", "Influenced", "Computational class"]
+        array_content_fields = ["Paradigm(s)", "Type system", "Dialects", "Influenced by", "Influenced", "Computational class", "Dimensions", "Memory system"]
 
         language_info = {new_key: None for new_key in rename_mapping.values()}
 

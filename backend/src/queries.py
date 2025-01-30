@@ -12,8 +12,10 @@ WHERE {
 """
 
 def create_esolang_name_query(esolang_name: str | None) -> str:
-    query = PREFIXES + """
-      SELECT ?esolang ?yearCreated ?url ?shortDescription ?alias ?designedBy ?paradigm ?influencedBy ?influenced ?category ?fileExtension
+    query = (
+        PREFIXES
+        + """
+      SELECT ?esolang ?yearCreated ?url ?shortDescription ?alias ?designedBy ?paradigm ?influencedBy ?influenced ?category ?fileExtension ?computationalClass ?typeSystem ?dialect ?dimension ?memorySystem
       WHERE {
         ?esolang rdf:type esolang:EsotericLanguage .
         ?esolang esolang:url ?url .
@@ -26,7 +28,13 @@ def create_esolang_name_query(esolang_name: str | None) -> str:
         OPTIONAL { ?esolang esolang:influenced ?influenced . }
         OPTIONAL { ?esolang esolang:hasCategory ?category . }
         OPTIONAL { ?esolang esolang:fileExtension ?fileExtension . }
+        OPTIONAL { ?esolang esolang:hasComputationalClass ?computationalClass . }
+        OPTIONAL { ?esolang esolang:hasTypeSystem ?typeSystem . }
+        OPTIONAL { ?esolang esolang:hasDialect ?dialect . }
+        OPTIONAL { ?esolang esolang:hasDimension ?dimension . }
+        OPTIONAL { ?esolang esolang:hasMemorySystem ?memorySystem . }
       """
+    )
 
     if esolang_name:
         query += f"""

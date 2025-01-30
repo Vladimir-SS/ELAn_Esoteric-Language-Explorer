@@ -32,7 +32,8 @@ def clean_year(year):
                 return None
     return year
 
-def search_for_year_category(language):
+
+def extract_year_from_categories(language):
     if 'Categories' in language:
         categories = language['Categories']
         year_found = None
@@ -46,6 +47,7 @@ def search_for_year_category(language):
             language['YearCreated'] = year_found
             language['Categories'] = [cat for cat in categories if cat != year_found]
 
+
 def extract_lang_name_from_url(url):
     try:
         path = urlparse(url).path
@@ -54,6 +56,47 @@ def extract_lang_name_from_url(url):
     except Exception:
         print(f"Error extracting language name from URL: {url}")
     return None
+
+def extract_attribute_from_categories(language, attribute, keyword, replace_word=""):
+    items = set(language.get(attribute) or [])
+    new_categories = []
+
+    for category in language["Categories"]:
+        if keyword in category.lower():
+            new_item = category.replace(replace_word, "").strip()
+            if new_item.lower() not in (item.lower() for item in items):
+                items.add(new_item)
+        else:
+            new_categories.append(category)
+
+    if items:
+        language[attribute] = list(items)
+    language["Categories"] = new_categories
+
+def extract_memory_system_from_categories(language):
+    memory_systems = language.get("MemorySystem") or []
+    new_categories = []
+
+    for category in language["Categories"][:]:
+        if "based" in category.lower():
+            memory_sys_type = category.replace("based", "").strip().lower()
+            if memory_sys_type not in "".join(memory_systems).lower():
+                memory_systems.append(category)
+        else:
+            new_categories.append(category)
+
+    if memory_systems:
+        language["MemorySystem"] = memory_systems
+    language["Categories"] = new_categories
+
+
+def clean_categories(language):
+    computational_classes = set(language.get("ComputationalClass") or [])
+    categories = set(language.get("Categories") or [])
+
+    common = computational_classes.intersection(categories)
+    language["Categories"] = list(categories - common)
+
 
 def clean_data(input_file, output_file):
     with open(input_file, 'r', encoding='utf-8') as json_file:
@@ -70,7 +113,11 @@ def clean_data(input_file, output_file):
             language['YearCreated'] = clean_year(language['YearCreated'])
 
         if 'Categories' in language:
-            search_for_year_category(language)
+            extract_year_from_categories(language)
+            extract_attribute_from_categories(language, "Paradigms", "paradigm", "paradigm")
+            extract_attribute_from_categories(language, "Dimensions", "dimensional", "languages")
+            extract_memory_system_from_categories(language)
+            clean_categories(language)
 
     with open(output_file, 'w', encoding='utf-8') as json_file:
         json.dump(data, json_file, ensure_ascii=False, indent=4)

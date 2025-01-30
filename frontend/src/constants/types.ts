@@ -20,9 +20,14 @@ export type Esolang = {
     yearCreated: number | null;
     designedBy: string | null;
     shortDescription: string | null;
+    dimensions: string[] | null;
+    memorySystem: string[] | null;
     paradigms: string[] | null;
     influencedBy: string[] | null;
     influenced: string[] | null;
     categories: string[] | null;
     fileExtensions: string[] | null;
+    computationalClasses: string[] | null;
+    typeSystems: string[] | null;
+    dialects: string[] | null;
 };

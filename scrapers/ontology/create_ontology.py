@@ -22,9 +22,6 @@ subcategories = [
     ESOLANG["Paradigm"],
 ]
 
-def is_subcategory(category_uri):
-    return category_uri in subcategories
-
 with open("./data/esolangs-cleaned.json", "r", encoding="utf-8") as f:
     json_data = json.load(f)
 
@@ -34,6 +31,14 @@ for subcategory in subcategories:
 add_property_metadata(graph, ESOLANG.url, "url",
                       "Links to the official URL of the esolang.",
                       ESOLANG.EsotericLanguage, XSD.anyURI)
+
+add_property_metadata(graph, ESOLANG.yearCreated, "yearCreated",
+                        "Indicates the year an esolang was created.",
+                        ESOLANG.EsotericLanguage, XSD.gYear)
+
+add_property_metadata(graph, ESOLANG.alias, "alias",
+                        "Indicates an alias for an esolang.",
+                        ESOLANG.EsotericLanguage, XSD.string)
 
 add_property_metadata(graph, ESOLANG.designedBy, "designedBy",
                       "Indicates the person who designed an esolang.",
@@ -47,6 +52,10 @@ add_property_metadata(graph, ESOLANG.influencedBy, "influencedBy",
                         "Indicates the esoteric languages that influenced an esolang.",
                         ESOLANG.EsotericLanguage, ESOLANG.EsotericLanguage)
 
+add_property_metadata(graph, ESOLANG.influenced, "influenced",
+                        "Indicates the esoteric languages influenced by an esolang.",
+                        ESOLANG.EsotericLanguage, ESOLANG.EsotericLanguage)
+
 add_property_metadata(graph, ESOLANG.hasCategory, "hasCategory",
                       "Links an esolang to its category.",
                       ESOLANG.EsotericLanguage, ESOLANG.Category)
@@ -54,6 +63,32 @@ add_property_metadata(graph, ESOLANG.hasCategory, "hasCategory",
 add_property_metadata(graph, ESOLANG.hasParadigm, "hasParadigm",
                       "Links an esolang to its programming paradigm.",
                       ESOLANG.EsotericLanguage, ESOLANG.Paradigm)
+
+add_property_metadata(graph, ESOLANG.hasComputationalClass, "hasComputationalClass",
+                        "Links an esolang to its computational class.",
+                        ESOLANG.EsotericLanguage, ESOLANG.ComputationalClass)
+
+add_property_metadata(graph, ESOLANG.hasMemorySystem, "hasMemorySystem",
+                        "Links an esolang to its memory system.",
+                        ESOLANG.EsotericLanguage, ESOLANG.MemorySystem)
+
+add_property_metadata(graph, ESOLANG.hasDimension, "hasDimension",
+                        "Links an esolang to its dimension.",
+                        ESOLANG.EsotericLanguage, ESOLANG.Dimension)
+
+add_property_metadata(graph, ESOLANG.hasTypeSystem, "hasTypeSystem",
+                        "Links an esolang to its type system.",
+                        ESOLANG.EsotericLanguage, ESOLANG.TypeSystem)
+
+add_property_metadata(graph, ESOLANG.hasDialect, "hasDialect",
+                        "Links an esolang to its dialect.",
+                        ESOLANG.EsotericLanguage, ESOLANG.Dialect)
+
+add_property_metadata(graph, ESOLANG.fileExtension, "fileExtension",
+                        "Indicates the file extension used by an esolang.",
+                        ESOLANG.EsotericLanguage, XSD.string)
+
+
 
 graph.add((ESOLANG.influenced, OWL.inverseOf, ESOLANG.influencedBy))
 
@@ -109,8 +144,7 @@ for item in json_data:
         add_relationships(graph, language_uri, "hasDimension", item["Dimensions"], True)
 
     if item.get("Categories"):
-        general_categories = [category for category in item["Categories"] if not is_subcategory(ESOLANG[sanitize_uri(category)])]
-        add_relationships(graph, language_uri, "hasCategory", general_categories, True)
+        add_relationships(graph, language_uri, "hasCategory", item["Categories"], True)
 
     if item.get("FileExtensions"):
         file_extensions = item["FileExtensions"] if isinstance(item["FileExtensions"], list) else []
