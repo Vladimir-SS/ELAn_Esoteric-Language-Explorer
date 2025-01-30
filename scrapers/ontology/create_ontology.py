@@ -1,82 +1,61 @@
 import rdflib
 import json
-from urllib.parse import quote
+from utils import (
+    sanitize_uri, add_relationships, create_individual,
+    add_property_metadata, create_sub_class_of
+)
 
 graph = rdflib.Graph()
 base_uri = "http://localhost:5173/esolangs/"
-ESOLANG = rdflib.Namespace(base_uri)
+
 OWL = rdflib.OWL
 XSD = rdflib.XSD
+ESOLANG = rdflib.Namespace(base_uri)
+FOAF = rdflib.Namespace("http://xmlns.com/foaf/0.1/")
 
 graph.bind("esolang", ESOLANG)
 
+subcategories = [
+    ESOLANG["ComputationalClass"],
+    ESOLANG["MemorySystem"],
+    ESOLANG["Dimension"],
+    ESOLANG["Paradigm"],
+]
 
-def sanitize_uri(value):
-    """
-    Percent-encodes invalid characters in a URI fragment.
-    """
-    return quote(str(value).encode("utf-8"), safe="")
-
-
-def add_relationships(graph, subject_uri, relationship_type_name, values, create_individuals=False):
-    """
-    Adds semantic relationships between a specified subject and one or more object URIs in an RDF graph.
-    Optionally creates individual entities for each object URI.
-    """
-    relationship_type = ESOLANG[relationship_type_name]
-    if create_individuals:
-        class_uri = ESOLANG[relationship_type_name[3:]]  # Remove 'has' prefix
-
-    if isinstance(values, list):
-        for value in values:
-            object_uri = ESOLANG[sanitize_uri(value)]
-            if object_uri:
-                graph.add((subject_uri, relationship_type, object_uri))
-                create_individuals and create_individual(graph, class_uri, object_uri)
-    elif values:
-        object_uri = ESOLANG[sanitize_uri(values)]
-        if object_uri:
-            graph.add((subject_uri, relationship_type, object_uri))
-            create_individuals and create_individual(graph, class_uri, object_uri)
-
-
-def create_individual(graph, class_uri, individual_uri):
-    graph.add((individual_uri, rdflib.RDF.type, class_uri))
-
-
-def define_subcategories(graph):
-    category_uri = ESOLANG["Category"]
-    computational_class_uri = ESOLANG["ComputationalClass"]
-    memory_system_uri = ESOLANG["MemorySystem"]
-    dimension_uri = ESOLANG["Dimension"]
-    paradigm_uri = ESOLANG["Paradigm"]
-
-    # Define each as a subclass of Category
-    graph.add((computational_class_uri, rdflib.RDFS.subClassOf, category_uri))
-    graph.add((memory_system_uri, rdflib.RDFS.subClassOf, category_uri))
-    graph.add((dimension_uri, rdflib.RDFS.subClassOf, category_uri))
-    graph.add((paradigm_uri, rdflib.RDFS.subClassOf, category_uri))
-
-
-def is_instance_of_subcategory(graph, category_uri, superclass_uri):
-    """
-    Check if category_uri is an instance of any subclass of superclass_uri.
-    """
-    query = """
-    ASK WHERE {
-        ?category_uri rdf:type ?subclass .
-        ?subclass rdfs:subClassOf* ?superclass_uri .
-    }
-    """
-
-    result = graph.query(query, initBindings={"category_uri": category_uri, "superclass_uri": superclass_uri})
-
-    return bool(result)
+def is_subcategory(category_uri):
+    return category_uri in subcategories
 
 with open("./data/esolangs-cleaned.json", "r", encoding="utf-8") as f:
     json_data = json.load(f)
 
-define_subcategories(graph)
+for subcategory in subcategories:
+    create_sub_class_of(graph, subcategory, ESOLANG.Category)
+
+add_property_metadata(graph, ESOLANG.url, "url",
+                      "Links to the official URL of the esolang.",
+                      ESOLANG.EsotericLanguage, XSD.anyURI)
+
+add_property_metadata(graph, ESOLANG.designedBy, "designedBy",
+                      "Indicates the person who designed an esolang.",
+                      ESOLANG.EsotericLanguage, FOAF.Person)
+
+add_property_metadata(graph, ESOLANG.shortDescription, "shortDescription",
+                      "A brief description of the esolang.",
+                      ESOLANG.EsotericLanguage, XSD.string)
+
+add_property_metadata(graph, ESOLANG.influencedBy, "influencedBy",
+                        "Indicates the esoteric languages that influenced an esolang.",
+                        ESOLANG.EsotericLanguage, ESOLANG.EsotericLanguage)
+
+add_property_metadata(graph, ESOLANG.hasCategory, "hasCategory",
+                      "Links an esolang to its category.",
+                      ESOLANG.EsotericLanguage, ESOLANG.Category)
+
+add_property_metadata(graph, ESOLANG.hasParadigm, "hasParadigm",
+                      "Links an esolang to its programming paradigm.",
+                      ESOLANG.EsotericLanguage, ESOLANG.Paradigm)
+
+graph.add((ESOLANG.influenced, OWL.inverseOf, ESOLANG.influencedBy))
 
 for item in json_data:
     language_name = item["LanguageName"]
@@ -130,7 +109,7 @@ for item in json_data:
         add_relationships(graph, language_uri, "hasDimension", item["Dimensions"], True)
 
     if item.get("Categories"):
-        general_categories = [category for category in item["Categories"] if not is_instance_of_subcategory(graph, ESOLANG[sanitize_uri(category)], ESOLANG.Category)]
+        general_categories = [category for category in item["Categories"] if not is_subcategory(ESOLANG[sanitize_uri(category)])]
         add_relationships(graph, language_uri, "hasCategory", general_categories, True)
 
     if item.get("FileExtensions"):
