@@ -110,6 +110,16 @@ class EsolangScraper:
 
         return ' '.join(description)
 
+    def extract_extensions_from_html(self, cell):
+        code_tags = cell.find_all('code')
+        extensions = []
+
+        for tag in code_tags:
+            text = tag.get_text()
+            extensions += re.findall(r'\.\w+', text)
+
+        return extensions
+
     def extract_language_data_table(self, language_html_content):
         rename_mapping = {
             "Paradigm(s)": "Paradigms",
@@ -125,7 +135,7 @@ class EsolangScraper:
             "Dialects": "Dialects", # No change
             "Type system": "TypeSystem",
         }
-        array_content_fields = ["Paradigm(s)", "File extension(s)", "Type system", "Dialects", "Influenced by", "Influenced", "Computational class"]
+        array_content_fields = ["Paradigm(s)", "Type system", "Dialects", "Influenced by", "Influenced", "Computational class"]
 
         language_info = {new_key: None for new_key in rename_mapping.values()}
 
@@ -149,6 +159,9 @@ class EsolangScraper:
                             content = cell.get_text(strip=True)
                             if matched_header in array_content_fields:
                                 content = [value.strip() for value in content.split(',')]
+
+                            if matched_header == "File extension(s)":
+                                content = self.extract_extensions_from_html(cell)
 
                             language_info[rename_mapping[matched_header]] = content
 
