@@ -57,12 +57,12 @@ def extract_lang_name_from_url(url):
         print(f"Error extracting language name from URL: {url}")
     return None
 
-def extract_attribute_from_categories(language, attribute, keyword, replace_word=""):
+def extract_attribute_from_categories(language, attribute, keywords, replace_word=""):
     items = set(language.get(attribute) or [])
     new_categories = []
 
     for category in language["Categories"]:
-        if keyword in category.lower():
+        if any(keyword.lower() in category.lower() for keyword in keywords):
             new_item = category.replace(replace_word, "").strip()
             if new_item.lower() not in (item.lower() for item in items):
                 items.add(new_item)
@@ -79,7 +79,7 @@ def extract_memory_system_from_categories(language):
 
     for category in language["Categories"][:]:
         if "based" in category.lower():
-            memory_sys_type = category.replace("based", "").strip().lower()
+            memory_sys_type = category.replace("-based", "").strip().lower()
             if memory_sys_type not in "".join(memory_systems).lower():
                 memory_systems.append(category)
         else:
@@ -114,8 +114,8 @@ def clean_data(input_file, output_file):
 
         if 'Categories' in language:
             extract_year_from_categories(language)
-            extract_attribute_from_categories(language, "Paradigms", "paradigm", "paradigm")
-            extract_attribute_from_categories(language, "Dimensions", "dimensional", "languages")
+            extract_attribute_from_categories(language, "Paradigms", ["paradigm", "modifying"], "paradigm")
+            extract_attribute_from_categories(language, "Dimensions", ["dimensional"], "languages")
             extract_memory_system_from_categories(language)
             clean_categories(language)
 
