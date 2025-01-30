@@ -2,6 +2,7 @@ from typing import List, Dict
 from fastapi import FastAPI, HTTPException
 from src import SPARQLClient
 from src import ESOLANGS_NAME_LIST_QUERY, create_esolang_name_query
+import urllib.parse
 
 app = FastAPI()
 
@@ -23,7 +24,8 @@ def get_esolangs():
 async def get_esolang(esolang_name: str):
     """Fetch details of a specific esolang from the SPARQL endpoint."""
     try:
-        result = sparql_client.query(create_esolang_name_query(esolang_name))
+        encoded_esolang_name = urllib.parse.quote(esolang_name)
+        result = sparql_client.query(create_esolang_name_query(encoded_esolang_name))
         if not result:
             raise HTTPException(status_code=404, detail="No data found.")
 

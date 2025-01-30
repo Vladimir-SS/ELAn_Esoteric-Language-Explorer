@@ -13,7 +13,7 @@ const EsolangDetails: React.FC = () => {
     const fetchLanguage = async () => {
       try {
         console.log(name);
-        const encodedName = encodeURIComponent(encodeURIComponent(name ?? ""));
+        const encodedName = encodeURIComponent(name ?? "");
         console.log(encodedName);
         const response = await fetch(`/api/esolangs/${encodedName}`);
         if (!response.ok) {
