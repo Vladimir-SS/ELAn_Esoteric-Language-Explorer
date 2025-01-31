@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import FiltersPanel from "./FiltersPanel";
 
 const EsolangsList: React.FC = () => {
     const [languages, setLanguages] = useState<string[]>([]);
@@ -26,6 +27,10 @@ const EsolangsList: React.FC = () => {
         fetchLanguages();
     }, []);
 
+    const onEsolangsChanged = (data: string[]) => {
+        setLanguages(data);
+    }
+
     if (loading) {
         return <div className="text-center mt-5">Loading...</div>;
     }
@@ -37,7 +42,7 @@ const EsolangsList: React.FC = () => {
     return (
         <div className="container mt-4">
             <h1 className="mb-4">Esoteric Language List ({languages.length} languages)</h1>
-
+            <FiltersPanel onEsolangsChanged={onEsolangsChanged}/>
             <div className="row d-flex flex-wrap justify-content-start g-3">
                 {languages.length > 0 ? (
                     languages.map((language, index) => (
