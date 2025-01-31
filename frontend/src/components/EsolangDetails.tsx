@@ -56,7 +56,7 @@ const EsolangDetails: React.FC = () => {
             <strong>Data collected from:</strong>{" "}
             {language.url ? (
               <a href={language.url} className="link-primary">
-                {decodeURIComponent(language.url)}
+                {decodeURIComponent(language.url).split("/").pop()}
               </a>
             ) : (
               "N/A"
@@ -89,7 +89,7 @@ const EsolangDetails: React.FC = () => {
               <strong>Paradigms:</strong>{" "}
               {language.paradigms.map((paradigm, index) => (
                 <a key={index} href={paradigm} className="link-primary me-2">
-                  {decodeURIComponent(paradigm)}
+                  {decodeURIComponent(paradigm).split("/").pop()}
                 </a>
               ))}
             </p>
@@ -104,7 +104,7 @@ const EsolangDetails: React.FC = () => {
                   href={influencedBy}
                   className="link-primary me-2"
                 >
-                  {decodeURIComponent(influencedBy)}
+                  {decodeURIComponent(influencedBy).split("/").pop()}
                 </a>
               ))}
             </p>
@@ -115,7 +115,7 @@ const EsolangDetails: React.FC = () => {
               <strong>Influenced:</strong>{" "}
               {language.influenced.map((influenced, index) => (
                 <a key={index} href={influenced} className="link-primary me-2">
-                  {decodeURIComponent(influenced)}
+                  {decodeURIComponent(influenced).split("/").pop()}
                 </a>
               ))}
             </p>
@@ -139,7 +139,7 @@ const EsolangDetails: React.FC = () => {
                       href={computationalClass}
                       className="link-primary me-2"
                     >
-                      {decodeURIComponent(computationalClass)}
+                      {decodeURIComponent(computationalClass).split("/").pop()}
                     </a>
                   )
                 )}
@@ -151,7 +151,7 @@ const EsolangDetails: React.FC = () => {
               <strong>Type Systems:</strong>{" "}
               {language.typeSystems.map((typeSystem, index) => (
                 <a key={index} href={typeSystem} className="link-primary me-2">
-                  {decodeURIComponent(typeSystem)}
+                  {decodeURIComponent(typeSystem).split("/").pop()}
                 </a>
               ))}
             </p>
@@ -162,7 +162,7 @@ const EsolangDetails: React.FC = () => {
               <strong>Dialects:</strong>{" "}
               {language.dialects.map((dialect, index) => (
                 <a key={index} href={dialect} className="link-primary me-2">
-                  {decodeURIComponent(dialect)}
+                  {decodeURIComponent(dialect).split("/").pop()}
                 </a>
               ))}
             </p>
@@ -173,7 +173,7 @@ const EsolangDetails: React.FC = () => {
               <strong>Dimensions:</strong>{" "}
               {language.dimensions.map((dimension, index) => (
                 <a key={index} href={dimension} className="link-primary me-2">
-                  {decodeURIComponent(dimension)}
+                  {decodeURIComponent(dimension).split("/").pop()}
                 </a>
               ))}
             </p>
@@ -184,7 +184,7 @@ const EsolangDetails: React.FC = () => {
               <strong>Memory System:</strong>{" "}
               {language.memorySystem.map((memorySystem, index) => (
                 <a key={index} href={memorySystem} className="link-primary me-2">
-                  {decodeURIComponent(memorySystem)}
+                  {decodeURIComponent(memorySystem).split("/").pop()}
                 </a>
               ))}
             </p>
@@ -195,7 +195,7 @@ const EsolangDetails: React.FC = () => {
               <strong>Has categories:</strong>{" "}
               {language.categories.map((category, index) => (
                 <a key={index} href={category} className="link-primary me-2">
-                  {decodeURIComponent(category)}
+                  {decodeURIComponent(category).split("/").pop()}
                 </a>
               ))}
             </p>
