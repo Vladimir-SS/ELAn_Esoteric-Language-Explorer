@@ -4,11 +4,13 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 """
 
-ESOLANGS_NAME_LIST_QUERY = PREFIXES + """
-SELECT (STRAFTER(STR(?esolang), "http://localhost:5173/esolangs/") AS ?name)
-WHERE {
+BASE_URI = "http://localhost:5173/esolangs/"
+
+ESOLANGS_NAME_LIST_QUERY = PREFIXES + f"""
+SELECT (STRAFTER(STR(?esolang), "{BASE_URI}") AS ?name)
+WHERE {{
   ?esolang rdf:type esolang:EsotericLanguage .
-}
+}}
 """
 
 def create_esolang_name_query(esolang_name: str | None) -> str:
@@ -38,7 +40,7 @@ def create_esolang_name_query(esolang_name: str | None) -> str:
 
     if esolang_name:
         query += f"""
-        FILTER (STRAFTER(STR(?esolang), "http://localhost:5173/esolangs/") = "{esolang_name}")
+        FILTER (STRAFTER(STR(?esolang), "{BASE_URI}") = "{esolang_name}")
         """
     query += "}"
 
@@ -54,7 +56,7 @@ def create_esolang_search_query(search_term: str, limit: int, offset: int) -> st
         SELECT ?esolang
         WHERE {{
           ?esolang rdf:type esolang:EsotericLanguage .
-          FILTER (CONTAINS(LCASE(STRAFTER(STR(?esolang), "http://localhost:5173/esolangs/")), LCASE("{safe_search_term}")))
+          FILTER (CONTAINS(LCASE(STRAFTER(STR(?esolang), "{BASE_URI}")), LCASE("{safe_search_term}")))
         }}
         LIMIT {limit} OFFSET {offset}
         """
