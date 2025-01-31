@@ -52,8 +52,19 @@ class EsolangScraper:
             ],
         }
 
+        log_file = os.path.join(self.data_dir, 'esolang_scraper.log')
+
         logging_level = logging.DEBUG if debug else logging.INFO
-        logging.basicConfig(level=logging_level, format="%(asctime)s - %(levelname)s - %(message)s") # For additional info: %(filename)s:%(lineno)d
+        logging.basicConfig(
+            level=logging_level,
+            format="%(asctime)s - %(levelname)s - %(message)s", # For additional info: %(filename)s:%(lineno)d
+            handlers=[
+                logging.FileHandler(log_file, mode='w', encoding='utf-8'),
+                logging.StreamHandler()
+            ]
+        )
+
+        logging.info("Esolangs scraper initialized.")
 
     def load_html_content(self, url):
         try:
@@ -112,13 +123,13 @@ class EsolangScraper:
 
     def extract_extensions_from_html(self, cell):
         code_tags = cell.find_all('code')
-        extensions = []
+        extensions = set()
 
         for tag in code_tags:
             text = tag.get_text()
-            extensions += re.findall(r'\.\w+', text)
+            extensions.update(re.findall(r'\.\w+', text))
 
-        return extensions
+        return list(extensions)
 
     def extract_language_data_table(self, language_html_content):
         rename_mapping = {
@@ -157,8 +168,16 @@ class EsolangScraper:
                         cell = row.find('td')
                         if cell:
                             content = cell.get_text(strip=True)
+
+
                             if matched_header in array_content_fields:
-                                content = [value.strip() for value in content.split(',')]
+                                if '<br/>' in str(cell) and matched_header in array_content_fields:
+                                    logging.info(f"Found values separated by <br/> in {matched_header}")
+                                    split_content = cell.decode_contents().split('<br/>')
+
+                                    content = [BeautifulSoup(value.strip(), 'html.parser').get_text() for value in split_content] # Remove HTML tags for cases like <a href="...">...</a>
+                                else:
+                                    content = [value.strip() for value in content.split(',')]
 
                             if matched_header == "File extension(s)":
                                 content = self.extract_extensions_from_html(cell)
