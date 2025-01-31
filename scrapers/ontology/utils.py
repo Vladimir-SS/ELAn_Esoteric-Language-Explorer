@@ -7,33 +7,48 @@ XSD = rdflib.XSD
 RDFS = rdflib.RDFS
 FOAF = rdflib.Namespace("http://xmlns.com/foaf/0.1/")
 
+uri_prefixes = {
+    "hasParadigm": "paradigm",
+    "hasComputationalClass": "computational-class",
+    "hasMemorySystem": "memory-system",
+    "hasDimension": "dimension",
+    "hasCategory": "category",
+    "hasTypeSystem": "type-system",
+    "hasDialect": "dialect",
+}
+
 def sanitize_uri(value):
     """
     Percent-encodes invalid characters in a URI fragment.
     """
     return quote(str(value).encode("utf-8"), safe="")
 
+def add_link(graph, subject_uri, relationship_type, prefix, value, class_uri=None):
+    """
+    Adds a relationship link to the graph with a properly formatted URI.
+    """
+    sanitized_value = sanitize_uri(value)
+    if sanitized_value:
+        object_uri = rdflib.URIRef(f"{ESOLANG}{prefix}/{sanitized_value}")
+        graph.add((subject_uri, relationship_type, object_uri))
+        if class_uri:
+            create_individual(graph, class_uri, object_uri)
+
 def add_relationships(graph, subject_uri, relationship_type_name, values, create_individuals=False):
     """
     Adds relationships to the graph, where both subject and object are URIs. Handles both single values and lists.
     """
     relationship_type = ESOLANG[relationship_type_name]
-    if create_individuals:
-        class_uri = ESOLANG[relationship_type_name[3:]]  # Remove 'has' prefix
+
+    class_uri = ESOLANG[relationship_type_name[3:]] if create_individuals else None
+
+    prefix = uri_prefixes.get(relationship_type_name, "")
 
     if isinstance(values, list):
         for value in values:
-            object_uri = ESOLANG[sanitize_uri(value)]
-            if object_uri:
-                graph.add((subject_uri, relationship_type, object_uri))
-                if create_individuals:
-                    create_individual(graph, class_uri, object_uri)
+            add_link(graph, subject_uri, relationship_type, prefix, value, class_uri)
     elif values:
-        object_uri = ESOLANG[sanitize_uri(values)]
-        if object_uri:
-            graph.add((subject_uri, relationship_type, object_uri))
-            if create_individuals:
-                create_individual(graph, class_uri, object_uri)
+        add_link(graph, subject_uri, relationship_type, prefix, values, class_uri)
 
 def create_individual(graph, class_uri, individual_uri):
     graph.add((individual_uri, rdflib.RDF.type, class_uri))

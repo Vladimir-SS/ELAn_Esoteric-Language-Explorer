@@ -20,13 +20,10 @@ subcategories = [
     ESOLANG["MemorySystem"],
     ESOLANG["Dimension"],
     ESOLANG["Paradigm"],
-]
+] # Might need to be removed
 
 with open("./data/esolangs-cleaned.json", "r", encoding="utf-8") as f:
     json_data = json.load(f)
-
-for subcategory in subcategories:
-    create_sub_class_of(graph, subcategory, ESOLANG.Category)
 
 add_property_metadata(graph, ESOLANG.url, "url",
                       "Links to the official URL of the esolang.",

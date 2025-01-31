@@ -98,12 +98,10 @@ def extract_attribute_from_categories(language, attribute, keywords):
         language[attribute] = list(items)
     language["Categories"] = new_categories
 
-def clean_categories(language):
-    computational_classes = set(language.get("ComputationalClass") or [])
-    categories = set(language.get("Categories") or [])
-
-    common = computational_classes.intersection(categories)
-    language["Categories"] = list(categories - common)
+def mini_fix_influenced_by(language):
+    influenced_by = language.get('InfluencedBy')
+    if influenced_by == "a":
+        language['InfluencedBy'] = None
 
 def clean_data(input_file, output_file):
     with open(input_file, 'r', encoding='utf-8') as json_file:
@@ -135,6 +133,8 @@ def clean_data(input_file, output_file):
         extract_attribute_from_categories(language, "Dimensions", DIMENSIONS)
         extract_attribute_from_categories(language, "MemorySystem", MEMORY_SYSTEMS)
         extract_attribute_from_categories(language, "ComputationalClass", COMPUTATIONAL_CLASSES)
+
+        mini_fix_influenced_by(language)
 
     with open(output_file, 'w', encoding='utf-8') as json_file:
         json.dump(data, json_file, ensure_ascii=False, indent=4)
