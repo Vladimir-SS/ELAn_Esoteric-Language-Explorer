@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Esolang } from "../constants/types";
+import FieldList from "./FieldList";
 
 const EsolangDetails: React.FC = () => {
   const { name } = useParams<{ name: string }>();
@@ -84,122 +85,47 @@ const EsolangDetails: React.FC = () => {
             {language.shortDescription ? language.shortDescription : "N/A"}
           </p>
 
-          {language.paradigms && language.paradigms.length > 0 && (
-            <p className="mb-2">
-              <strong>Paradigms:</strong>{" "}
-              {language.paradigms.map((paradigm, index) => (
-                <a key={index} href={paradigm} className="link-primary me-2">
-                  {decodeURIComponent(paradigm).split("/").pop()}
-                </a>
-              ))}
-            </p>
-          )}
-
-          {language.influencedBy && language.influencedBy.length > 0 && (
-            <p className="mb-2">
-              <strong>Influenced by:</strong>{" "}
-              {language.influencedBy.map((influencedBy, index) => (
-                <a
-                  key={index}
-                  href={influencedBy}
-                  className="link-primary me-2"
-                >
-                  {decodeURIComponent(influencedBy).split("/").pop()}
-                </a>
-              ))}
-            </p>
-          )}
-
-          {language.influenced && language.influenced.length > 0 && (
-            <p className="mb-2">
-              <strong>Influenced:</strong>{" "}
-              {language.influenced.map((influenced, index) => (
-                <a key={index} href={influenced} className="link-primary me-2">
-                  {decodeURIComponent(influenced).split("/").pop()}
-                </a>
-              ))}
-            </p>
-          )}
-
-          {language.fileExtensions && language.fileExtensions.length > 0 && (
-            <p className="mb-2">
-              <strong>File Extensions:</strong>{" "}
-              {language.fileExtensions.join(", ")}
-            </p>
-          )}
-
-          {language.computationalClasses &&
-            language.computationalClasses.length > 0 && (
-              <p className="mb-2">
-                <strong>Computational Classes:</strong>{" "}
-                {language.computationalClasses.map(
-                  (computationalClass, index) => (
-                    <a
-                      key={index}
-                      href={computationalClass}
-                      className="link-primary me-2"
-                    >
-                      {decodeURIComponent(computationalClass).split("/").pop()}
-                    </a>
-                  )
-                )}
-              </p>
-            )}
-
-          {language.typeSystems && language.typeSystems.length > 0 && (
-            <p className="mb-2">
-              <strong>Type Systems:</strong>{" "}
-              {language.typeSystems.map((typeSystem, index) => (
-                <a key={index} href={typeSystem} className="link-primary me-2">
-                  {decodeURIComponent(typeSystem).split("/").pop()}
-                </a>
-              ))}
-            </p>
-          )}
-
-          {language.dialects && language.dialects.length > 0 && (
-            <p className="mb-2">
-              <strong>Dialects:</strong>{" "}
-              {language.dialects.map((dialect, index) => (
-                <a key={index} href={dialect} className="link-primary me-2">
-                  {decodeURIComponent(dialect).split("/").pop()}
-                </a>
-              ))}
-            </p>
-          )}
-
-          {language.dimensions && (
-            <p className="mb-2">
-              <strong>Dimensions:</strong>{" "}
-              {language.dimensions.map((dimension, index) => (
-                <a key={index} href={dimension} className="link-primary me-2">
-                  {decodeURIComponent(dimension).split("/").pop()}
-                </a>
-              ))}
-            </p>
-          )}
-
-          {language.memorySystem && (
-            <p className="mb-2">
-              <strong>Memory System:</strong>{" "}
-              {language.memorySystem.map((memorySystem, index) => (
-                <a key={index} href={memorySystem} className="link-primary me-2">
-                  {decodeURIComponent(memorySystem).split("/").pop()}
-                </a>
-              ))}
-            </p>
-          )}
-
-          {language.categories && language.categories.length > 0 && (
-            <p className="mb-2">
-              <strong>Has categories:</strong>{" "}
-              {language.categories.map((category, index) => (
-                <a key={index} href={category} className="link-primary me-2">
-                  {decodeURIComponent(category).split("/").pop()}
-                </a>
-              ))}
-            </p>
-          )}
+          <FieldList
+            title="Paradigm(s)"
+            items={language.paradigms ?? []}
+          />
+          <FieldList
+            title="Influenced by"
+            items={language.influencedBy ?? []}
+          />
+          <FieldList
+            title="Influenced"
+            items={language.influenced ?? []}
+          />
+          <FieldList
+            title="File Extension(s)"
+            items={language.fileExtensions ?? []}
+            isLinkList={false}
+          />
+          <FieldList
+            title="Computational Class(es)"
+            items={language.computationalClasses ?? []}
+          />
+          <FieldList
+            title="Type Systems"
+            items={language.typeSystems ?? []}
+          />
+          <FieldList
+            title="Dialects"
+            items={language.dialects ?? []}
+          />
+          <FieldList
+            title="Dimensions"
+            items={language.dimensions ?? []}
+          />
+          <FieldList
+            title="Memory System"
+            items={language.memorySystem ?? []}
+          />
+          <FieldList
+            title="Has categories"
+            items={language.categories ?? []}
+          />
         </div>
       </div>
     </div>
