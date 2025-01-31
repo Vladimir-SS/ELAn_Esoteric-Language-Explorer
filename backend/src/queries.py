@@ -43,3 +43,21 @@ def create_esolang_name_query(esolang_name: str | None) -> str:
     query += "}"
 
     return query
+
+
+def create_esolang_search_query(search_term: str, limit: int, offset: int) -> str:
+    safe_search_term = search_term.replace('"', '\\"')
+
+    query = (
+        PREFIXES
+        + f"""
+        SELECT ?esolang
+        WHERE {{
+          ?esolang rdf:type esolang:EsotericLanguage .
+          FILTER (CONTAINS(LCASE(STRAFTER(STR(?esolang), "http://localhost:5173/esolangs/")), LCASE("{safe_search_term}")))
+        }}
+        LIMIT {limit} OFFSET {offset}
+        """
+    )
+
+    return query
