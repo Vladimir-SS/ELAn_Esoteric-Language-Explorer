@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import EsolangsList from './components/EsolangsList';
 import EsolangDetails from './components/EsolangDetails';
 import { useEffect, useState } from 'react';
+import { ToastContainer } from 'react-toastify';
 
 const App: React.FC = () => {
     const [theme, setTheme] = useState("dark");
@@ -37,6 +38,17 @@ const App: React.FC = () => {
                     <Route path="/esolangs/:name" element={<EsolangDetails />} />
                 </Routes>
             </div>
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
         </Router>
     );
 };

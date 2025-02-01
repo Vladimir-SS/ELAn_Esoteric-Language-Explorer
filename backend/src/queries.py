@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 
 PREFIXES = """
 PREFIX esolang: <http://localhost:5173/esolangs/>
@@ -69,14 +69,16 @@ def create_esolang_search_query(
     file_extension: List[str],
     type_system: List[str],
     dialect: List[str],
-    limit: int,
-    offset: int,
+    limit: Optional[int],
+    offset: Optional[int]
 ) -> str:
     query_parts = [
         f'SELECT (STRAFTER(STR(?esolang), "{BASE_URI}") AS ?name) WHERE {{',
         "?esolang rdf:type esolang:EsotericLanguage .",
-        f"FILTER(CONTAINS(LCASE(STR(?esolang)), LCASE('{search_term}')))",
     ]
+
+    if search_term:
+        query_parts.append(f"FILTER(CONTAINS(LCASE(STR(?esolang)), LCASE('{search_term}')))")
 
     # if year_created:
     #     query_parts.append("VALUES ?yearCreated {"
@@ -108,7 +110,12 @@ def create_esolang_search_query(
     if dialect:
         query_parts.extend(create_filter_query_parts("hasDialect", "dialect", dialect))
 
-    query_parts.append("} LIMIT " + str(limit) + " OFFSET " + str(offset))
+    query_parts.append("}")
+
+    if limit is not None:
+        query_parts.append(f"LIMIT {limit}")
+    if offset is not None:
+        query_parts.append(f"OFFSET {offset}")
 
     return PREFIXES + "\n".join(query_parts)
 

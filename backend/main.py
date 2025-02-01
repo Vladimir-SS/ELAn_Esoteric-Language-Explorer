@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import List, Dict, Optional
 from fastapi import FastAPI, HTTPException, Query
 from src import SPARQLClient
 from src import *
@@ -63,8 +63,8 @@ async def search_esolangs(
     file_extension: List[str] = Query(None),
     type_system: List[str] = Query(None),
     dialect: List[str] = Query(None),
-    limit=20,
-    offset=0,
+    limit: Optional[int] = Query(None),
+    offset: Optional[int] = Query(None),
 ):
     """Search for esolangs based on a search term and various filters."""
     try:

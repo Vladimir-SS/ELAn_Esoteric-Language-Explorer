@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FilterDropdown from "./FilterDropdown";
 import { FilterName, toSnakeCase } from "../constants/constants";
 import FilterBadge from "./FilterBadge";
+import { toast } from "react-toastify";
 
 interface FiltersPanelProps {
   onEsolangsChanged: (esolangs: string[]) => void;
@@ -11,7 +12,6 @@ const FiltersPanel: React.FC<FiltersPanelProps> = ({ onEsolangsChanged }) => {
   const [searchInput, setSearchInput] = useState<string>("");
   const [selectedFilters, setSelectedFilters] = useState<{ [key: string]: string[]; }>({});
   const [loading, setLoading] = React.useState(true);
-  const [error, setError] = React.useState<string | null>(null);
 
   const handleSearchInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchInput(e.target.value);
@@ -61,20 +61,56 @@ const FiltersPanel: React.FC<FiltersPanelProps> = ({ onEsolangsChanged }) => {
 
   const handleApplyFilters = async () => {
     try {
+      toast.info("Request is being processed...", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: false,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+      });
       const queryParams = createQueryParams();
       const url = `/api/esolangs/search/?${queryParams}`;
       console.log(url);
       const response = await fetch(url);
 
       if (!response.ok) {
-        throw new Error("Languages not found");
-      }
-      const data = await response.json();
-      console.log(data);
+        if (response.status === 404) {
+          toast.warn("No results found", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: true,
+          });
+        } else {
+          throw new Error("Languages not found");
+        }
+      } else {
+        const data = await response.json();
+        console.log(data);
 
-      onEsolangsChanged(data);
+        toast.success("Search successful", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: true,
+        });
+
+        if (data.length === 0) {
+          toast.warn("No results found", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: true,
+          });
+        } else {
+          onEsolangsChanged(data);
+        }
+      }
     } catch (err: any) {
-      setError(err.message);
+      toast.error(`Error: ${err.message}`, {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: true,
+      });
     } finally {
       setLoading(false);
     }
