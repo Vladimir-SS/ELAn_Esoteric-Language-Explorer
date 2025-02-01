@@ -24,6 +24,9 @@ def get_esolangs():
         esolangs = [esolang["name"]["value"] for esolang in result]
 
         return esolangs
+    except HTTPException as e:
+        logging.error(f"Error fetching esolangs: {e.detail}", exc_info=True)
+        raise e
     except Exception as e:
         logging.error(f"Error fetching esolangs: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
@@ -40,6 +43,9 @@ async def get_esolang(esolang_name: str):
             raise HTTPException(status_code=404, detail="No data found.")
 
         return get_esolang_from_query_result(esolang_name, result)
+    except HTTPException as e:
+        logging.error(f"Error fetching esolang: {e.detail}", exc_info=True)
+        raise e
     except Exception as e:
         logging.error(f"Error fetching esolang: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
@@ -86,9 +92,12 @@ async def search_esolangs(
         print("Result: ", result)
         esolangs = [esolang["name"]["value"] for esolang in result]
         return esolangs
+    except HTTPException as e:
+        logging.error(f"Error during search: {e.detail}", exc_info=True)
+        raise e
     except Exception as e:
-        logging.error(f"Error during search: {e}", exc_info=True)
-        raise HTTPException(status_code=500, detail=str(e))
+        logging.error(f"Unexpected error during search: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
 
 
 @app.get("/api/year-created", response_model=List[str])
@@ -101,9 +110,12 @@ async def get_years_created():
         years = [year["yearCreated"]["value"] for year in result]
 
         return years
+    except HTTPException as e:
+        logging.error(f"Error fetching years created: {e.detail}", exc_info=True)
+        raise e
     except Exception as e:
+        logging.error(f"Error fetching years created: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
-
 
 @app.get("/api/category", response_model=List[str])
 async def get_categories():
@@ -115,7 +127,11 @@ async def get_categories():
         categories = [category["category"]["value"] for category in result]
 
         return categories
+    except HTTPException as e:
+        logging.error(f"Error fetching categories: {e.detail}", exc_info=True)
+        raise e
     except Exception as e:
+        logging.error(f"Error fetching categories: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
 
 
@@ -129,7 +145,11 @@ async def get_paradigms():
         paradigms = [paradigm["paradigm"]["value"] for paradigm in result]
 
         return paradigms
+    except HTTPException as e:
+        logging.error(f"Error fetching paradigms: {e.detail}", exc_info=True)
+        raise e
     except Exception as e:
+        logging.error(f"Error fetching paradigms: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
 
 
@@ -143,7 +163,11 @@ async def get_computational_classes():
         classes = [class_["computationalClass"]["value"] for class_ in result]
 
         return classes
+    except HTTPException as e:
+        logging.error(f"Error fetching computational classes: {e.detail}", exc_info=True)
+        raise e
     except Exception as e:
+        logging.error(f"Error fetching computational classes: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
 
 
@@ -157,7 +181,11 @@ async def get_memory_systems():
         systems = [system["memorySystem"]["value"] for system in result]
 
         return systems
+    except HTTPException as e:
+        logging.error(f"Error fetching memory systems: {e.detail}", exc_info=True)
+        raise e
     except Exception as e:
+        logging.error(f"Error fetching memory systems: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
 
 
@@ -171,7 +199,11 @@ async def get_dimensions():
         dimensions = [dimension["dimension"]["value"] for dimension in result]
 
         return dimensions
+    except HTTPException as e:
+        logging.error(f"Error fetching dimensions: {e.detail}", exc_info=True)
+        raise e
     except Exception as e:
+        logging.error(f"Error fetching dimensions: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
 
 
@@ -185,7 +217,11 @@ async def get_type_systems():
         systems = [system["typeSystem"]["value"] for system in result]
 
         return systems
+    except HTTPException as e:
+        logging.error(f"Error fetching type systems: {e.detail}", exc_info=True)
+        raise e
     except Exception as e:
+        logging.error(f"Error fetching type systems: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
 
 
@@ -199,7 +235,11 @@ async def get_dialects():
         dialects = [dialect["dialect"]["value"] for dialect in result]
 
         return dialects
+    except HTTPException as e:
+        logging.error(f"Error fetching dialects: {e.detail}", exc_info=True)
+        raise e
     except Exception as e:
+        logging.error(f"Error fetching dialects: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
 
 
@@ -213,7 +253,11 @@ async def get_file_extensions():
         extensions = [extension["fileExtension"]["value"] for extension in result]
 
         return extensions
+    except HTTPException as e:
+        logging.error(f"Error fetching file extensions: {e.detail}", exc_info=True)
+        raise e
     except Exception as e:
+        logging.error(f"Error fetching file extensions: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
 
 
@@ -225,7 +269,11 @@ async def get_sparql_data(query: str):
         if not result:
             logging.info("No data found.")
             raise HTTPException(status_code=404, detail="No data found.")
+
         return result
+    except HTTPException as e:
+        logging.error(f"Error fetching SPARQL data: {e.detail}", exc_info=True)
+        raise e
     except Exception as e:
         logging.error(f"Error fetching SPARQL data: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
