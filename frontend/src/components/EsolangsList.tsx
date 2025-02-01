@@ -52,7 +52,7 @@ const EsolangsList: React.FC = () => {
     };
 
     return (
-        <div className="container mt-4">
+        <div className="container-fluid mt-4">
             <h1 className="mb-4">Esoteric Language List ({languages.length} languages)</h1>
             <FiltersPanel onEsolangsChanged={onEsolangsChanged} />
             <div className="row d-flex flex-wrap justify-content-start g-3">

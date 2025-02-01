@@ -119,7 +119,7 @@ const FiltersPanel: React.FC<FiltersPanelProps> = ({ onEsolangsChanged }) => {
 
 
   return (
-    <div className="container mt-4 mb-4">
+    <div className="container-fluid mt-4 mb-4">
       <div className="input-group mb-3 searchbar">
         <input
           type="text"

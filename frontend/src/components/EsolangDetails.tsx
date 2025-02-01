@@ -45,10 +45,8 @@ const EsolangDetails: React.FC = () => {
   }
 
   return (
-    <div className="container mt-5">
-      <div className="d-flex justify-content-between align-items-center">
-        <h1>Esoteric Language Details</h1>
-      </div>
+    <div className="container-fluid mt-5">
+      <h1 className="mb-4">Esoteric Language Details</h1>
       <div className="card">
         <div className="card-body">
           <h1 className="card-title">{decodeURIComponent(language.name)}</h1>
