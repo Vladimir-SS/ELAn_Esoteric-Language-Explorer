@@ -80,12 +80,6 @@ def create_esolang_search_query(
     if search_term:
         query_parts.append(f"FILTER(CONTAINS(LCASE(STR(?esolang)), LCASE('{search_term}')))")
 
-    # if year_created:
-    #     query_parts.append("VALUES ?yearCreated {"
-    #                         + " ".join([f'"{year}"' for year in year_created])
-    #                         + "}")
-    #     query_parts.append("?esolang esolang:yearCreated ?yearCreated ." )
-
     if paradigm:
         query_parts.extend(create_filter_query_parts("hasParadigm", "paradigm", paradigm))
 
@@ -93,22 +87,29 @@ def create_esolang_search_query(
         query_parts.extend(create_filter_query_parts("hasCategory", "category", category))
 
     if memory_system:
-        query_parts.extend(create_filter_query_parts("hasMemorySystem", "memory_system", memory_system))
+        query_parts.extend(create_filter_query_parts("hasMemorySystem", "memory-system", memory_system))
 
     if dimension:
         query_parts.extend(create_filter_query_parts("hasDimension", "dimension", dimension))
 
     if computational_class:
-        query_parts.extend(create_filter_query_parts("hasComputationalClass", "computational_class", computational_class))
-
-    if file_extension:
-        query_parts.extend(create_filter_query_parts("fileExtension", "file_extension", file_extension))
+        query_parts.extend(create_filter_query_parts("hasComputationalClass", "computational-class", computational_class))
 
     if type_system:
-        query_parts.extend(create_filter_query_parts("hasTypeSystem", "type_system", type_system))
+        query_parts.extend(create_filter_query_parts("hasTypeSystem", "type-system", type_system))
 
     if dialect:
         query_parts.extend(create_filter_query_parts("hasDialect", "dialect", dialect))
+
+    if file_extension:
+        for value in file_extension:
+            query_parts.append(f"?esolang esolang:fileExtension \"{value}\" .")
+
+    if year_created:
+        query_parts.insert(0, "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>")
+        query_parts.append("?esolang esolang:yearCreated ?yearCreated .")
+        years_values = " ".join([f'"{year}"^^xsd:gYear' for year in year_created])
+        query_parts.append(f"VALUES ?yearCreated {{{years_values}}}")
 
     query_parts.append("}")
 

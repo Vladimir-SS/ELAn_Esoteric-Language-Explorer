@@ -53,7 +53,7 @@ async def get_esolang(esolang_name: str):
 
 @app.get("/api/esolangs/search/", response_model=List[str])
 async def search_esolangs(
-    search_term: str,
+    search_term: str = None,
     paradigm: List[str] = Query(None),
     category: List[str] = Query(None),
     year_created: List[str] = Query(None),

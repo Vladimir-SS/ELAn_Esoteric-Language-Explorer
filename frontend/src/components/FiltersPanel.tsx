@@ -82,6 +82,7 @@ const FiltersPanel: React.FC<FiltersPanelProps> = ({ onEsolangsChanged }) => {
             autoClose: 3000,
             hideProgressBar: true,
           });
+          onEsolangsChanged([]);
         } else {
           throw new Error("Languages not found");
         }
@@ -101,6 +102,7 @@ const FiltersPanel: React.FC<FiltersPanelProps> = ({ onEsolangsChanged }) => {
             autoClose: 3000,
             hideProgressBar: true,
           });
+          onEsolangsChanged([]);
         } else {
           onEsolangsChanged(data);
         }
