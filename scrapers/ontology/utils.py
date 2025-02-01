@@ -29,7 +29,7 @@ def add_link(graph, subject_uri, relationship_type, prefix, value, class_uri=Non
     """
     sanitized_value = sanitize_uri(value)
     if sanitized_value:
-        object_uri = rdflib.URIRef(f"{ESOLANG}{prefix}/{sanitized_value}")
+        object_uri = rdflib.URIRef(f"{ESOLANG}{prefix}{sanitized_value}")
         graph.add((subject_uri, relationship_type, object_uri))
         if class_uri:
             create_individual(graph, class_uri, object_uri)
@@ -43,6 +43,8 @@ def add_relationships(graph, subject_uri, relationship_type_name, values, create
     class_uri = ESOLANG[relationship_type_name[3:]] if create_individuals else None
 
     prefix = uri_prefixes.get(relationship_type_name, "")
+    if prefix:
+        prefix += "/"
 
     if isinstance(values, list):
         for value in values:
