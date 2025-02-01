@@ -61,8 +61,16 @@ h4 {
     margin: 0;
 }
 
+.searchbar {
+    max-width: 50%;
+}
+
 @media (max-width: 768px) {
     .content-box {
         width: 100%;
+    }
+
+    .searchbar {
+        max-width: 90%;
     }
 }

@@ -91,14 +91,25 @@ const FiltersPanel: React.FC<FiltersPanelProps> = ({ onEsolangsChanged }) => {
 
   return (
     <div className="container mt-4 mb-4">
-      <div className="input-group w-50 mb-3">
+      <div className="input-group mb-3 searchbar">
         <input
           type="text"
           className="form-control rounded-left border-end-0"
+
           value={searchInput}
           onChange={handleSearchInputChange}
           placeholder="Search esolangs..."
         />
+        {searchInput && (
+          <button
+            className="btn btn-outline-secondary"
+            type="button"
+            title="Clear search"
+            onClick={() => setSearchInput("")}
+          >
+            ✕
+          </button>
+        )}
         <button
           className="btn btn-primary"
           type="button"
@@ -107,7 +118,7 @@ const FiltersPanel: React.FC<FiltersPanelProps> = ({ onEsolangsChanged }) => {
           Search
         </button>
       </div>
-      <div className="mb-3" style={{ display: "flex" }}>
+      <div className="mb-3 d-flex flex-wrap gap-2">
         <FilterDropdown
           filterName={FilterName.YearCreated}
           onFilterChange={handleFilterChange}
@@ -164,11 +175,6 @@ const FiltersPanel: React.FC<FiltersPanelProps> = ({ onEsolangsChanged }) => {
               </div>
             </div>
           )}
-        </div>
-        <div>
-          <button className="btn btn-primary" onClick={handleApplyFilters}>
-            Filter Esolangs
-          </button>
         </div>
       </div>
     </div>
