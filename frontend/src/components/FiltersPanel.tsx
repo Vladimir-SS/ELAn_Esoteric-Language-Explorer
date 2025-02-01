@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import FilterDropdown from "./FilterDropdown";
 import { FilterName, toSnakeCase } from "../constants/constants";
+import FilterBadge from "./FilterBadge";
 
 interface FiltersPanelProps {
   onEsolangsChanged: (esolangs: string[]) => void;
@@ -79,15 +80,7 @@ const FiltersPanel: React.FC<FiltersPanelProps> = ({ onEsolangsChanged }) => {
     }
   };
 
-  const FilterBadge = React.memo(({ filterName, value, onRemove }: any) => (
-    <span className="badge bg-secondary m-1 text-truncate" title={value}>
-      <button
-        className="btn-close me-1"
-        onClick={() => onRemove(filterName, value)}
-      />
-      {value}
-    </span>
-  ));
+
 
   return (
     <div className="container mt-4 mb-4">
@@ -161,7 +154,7 @@ const FiltersPanel: React.FC<FiltersPanelProps> = ({ onEsolangsChanged }) => {
           {Object.keys(selectedFilters).length > 0 && (
             <div>
               <strong className="me-2">Selected Filters:</strong>
-              <div style={{ display: "flex", flexWrap: "wrap" }}>
+              <div className="d-flex flex-wrap">
                 {Object.entries(selectedFilters).map(([filterName, values]) =>
                   values.map((value) => (
                     <FilterBadge
