@@ -102,10 +102,8 @@ const FiltersPanel: React.FC<FiltersPanelProps> = ({ onEsolangsChanged }) => {
             autoClose: 3000,
             hideProgressBar: true,
           });
-          onEsolangsChanged([]);
-        } else {
-          onEsolangsChanged(data);
         }
+        onEsolangsChanged(data);
       }
     } catch (err: any) {
       toast.error(`Error: ${err.message}`, {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Pagination from "./Pagination";
 import FiltersPanel from "./FiltersPanel";
+import Badge from "./Badge";
 
 const EsolangsList: React.FC = () => {
   const [languages, setLanguages] = useState<string[]>([]);
@@ -65,30 +65,7 @@ const EsolangsList: React.FC = () => {
         {currentLanguages.length > 0 ? (
           <div className="row">
             {currentLanguages.map((language, index) => {
-              const decodedName = decodeURIComponent(language);
-              return (
-                <div className="col-md-3 mx-1 my-2" key={index}>
-                  <div className="card">
-                    <div className="card-body" style={{display: "flex", flexDirection: "column"}}>
-                      <h5
-                        className="card-title text-truncate mb-3"
-                        title={decodedName}
-                      >
-                        {decodedName}
-                      </h5>
-                      <button
-                        className="btn btn-sm btn-primary"
-                        style={{width: "fit-content", alignSelf: "end"}}
-                        onClick={() =>
-                          (window.location.href = `/esolangs/${language}`)
-                        }
-                      >
-                        Read more
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              );
+              return <Badge key={index} title={language} isEsolang/>;
             })}
           </div>
         ) : (
