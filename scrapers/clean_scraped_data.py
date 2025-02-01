@@ -141,6 +141,7 @@ def clean_data(input_file, output_file):
 
     print(f"Data cleaned and saved to '{output_file}'.")
 
-input_file = 'data/esolangs-data.json'
+# input_file = 'data/esolangs-data.json'
+input_file = 'data/esolangs-data-with-dbpedia.json'
 output_file = 'data/esolangs-cleaned.json'
 clean_data(input_file, output_file)
