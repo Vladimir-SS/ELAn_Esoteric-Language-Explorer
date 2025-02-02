@@ -8,7 +8,8 @@
     "build-css": "postcss --config ./cssnow.json css/scholarly.css",
     "watch-css": "postcss --watch --config ./cssnow.json css/scholarly.css",
     "build": "npm run build-css && npm run build-js",
-    "watch": "concurrently --kill-others \"npm run watch-css\" \"npm run watch-js\""
+    "watch": "concurrently --kill-others \"npm run watch-css\" \"npm run watch-js\"",
+    "deploy": "gh-pages -d ."
   },
   "devDependencies": {
     "babel-cli": "6.6.5",
@@ -35,5 +36,8 @@
     "transform": [
       "babelify"
     ]
+  },
+  "dependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
