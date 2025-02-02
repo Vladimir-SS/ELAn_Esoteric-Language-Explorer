@@ -140,12 +140,12 @@ def create_years_created_query() -> str:
 def create_categories_query() -> str:
     query = (
         PREFIXES
-        + """
-        SELECT DISTINCT ?category
-        WHERE {
+        + f"""
+        SELECT DISTINCT (STRAFTER(STR(?category), "{BASE_URI}category/") AS ?name)
+        WHERE {{
           ?esolang rdf:type esolang:EsotericLanguage .
           ?esolang esolang:hasCategory ?category .
-        }
+        }}
         ORDER BY ?category
         """
     )
@@ -156,12 +156,12 @@ def create_categories_query() -> str:
 def create_paradigms_query() -> str:
     query = (
         PREFIXES
-        + """
-        SELECT DISTINCT ?paradigm
-        WHERE {
+        + f"""
+        SELECT DISTINCT (STRAFTER(STR(?paradigm), "{BASE_URI}paradigm/") AS ?name)
+        WHERE {{
           ?esolang rdf:type esolang:EsotericLanguage .
           ?esolang esolang:hasParadigm ?paradigm .
-        }
+        }}
         ORDER BY ?paradigm
         """
     )
@@ -172,12 +172,12 @@ def create_paradigms_query() -> str:
 def create_computational_classes_query() -> str:
     query = (
         PREFIXES
-        + """
-        SELECT DISTINCT ?computationalClass
-        WHERE {
+        + f"""
+        SELECT DISTINCT (STRAFTER(STR(?computationalClass), "{BASE_URI}computational-class/") AS ?name)
+        WHERE {{
           ?esolang rdf:type esolang:EsotericLanguage .
           ?esolang esolang:hasComputationalClass ?computationalClass .
-        }
+        }}
         ORDER BY ?computationalClass
         """
     )
@@ -188,12 +188,12 @@ def create_computational_classes_query() -> str:
 def create_memory_systems_query() -> str:
     query = (
         PREFIXES
-        + """
-        SELECT DISTINCT ?memorySystem
-        WHERE {
+        + f"""
+        SELECT DISTINCT (STRAFTER(STR(?memorySystem), "{BASE_URI}memory-system/") AS ?name)
+        WHERE {{
           ?esolang rdf:type esolang:EsotericLanguage .
           ?esolang esolang:hasMemorySystem ?memorySystem .
-        }
+        }}
         ORDER BY ?memorySystem
         """
     )
@@ -204,12 +204,12 @@ def create_memory_systems_query() -> str:
 def create_dimensions_query() -> str:
     query = (
         PREFIXES
-        + """
-        SELECT DISTINCT ?dimension
-        WHERE {
+        + f"""
+        SELECT DISTINCT (STRAFTER(STR(?dimension), "{BASE_URI}dimension/") AS ?name)
+        WHERE {{
           ?esolang rdf:type esolang:EsotericLanguage .
           ?esolang esolang:hasDimension ?dimension .
-        }
+        }}
         ORDER BY ?dimension
         """
     )
@@ -220,12 +220,12 @@ def create_dimensions_query() -> str:
 def create_type_systems_query() -> str:
     query = (
         PREFIXES
-        + """
-        SELECT DISTINCT ?typeSystem
-        WHERE {
+        + f"""
+        SELECT DISTINCT (STRAFTER(STR(?typeSystem), "{BASE_URI}type-system/") AS ?name)
+        WHERE {{
           ?esolang rdf:type esolang:EsotericLanguage .
           ?esolang esolang:hasTypeSystem ?typeSystem .
-        }
+        }}
         ORDER BY ?typeSystem
         """
     )
@@ -236,12 +236,12 @@ def create_type_systems_query() -> str:
 def create_dialects_query() -> str:
     query = (
         PREFIXES
-        + """
-        SELECT DISTINCT ?dialect
-        WHERE {
+        + f"""
+        SELECT DISTINCT (STRAFTER(STR(?dialect), "{BASE_URI}dialect/") AS ?name)
+        WHERE {{
           ?esolang rdf:type esolang:EsotericLanguage .
           ?esolang esolang:hasDialect ?dialect .
-        }
+        }}
         ORDER BY ?dialect
         """
     )

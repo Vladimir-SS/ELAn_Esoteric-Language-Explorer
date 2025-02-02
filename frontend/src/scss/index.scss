@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import "./variables.scss";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 :root {
@@ -56,6 +56,39 @@ h4 {
 
 .searchbar {
     max-width: 50%;
+}
+
+.small-badge {
+    width: 20 * $spacing-unit;
+}
+
+.medium-badge {
+    width: 25 * $spacing-unit;
+}
+
+.sticky-language-bar {
+    position: fixed;
+    right: 0;
+    padding: $spacing-unit;
+    display: flex;
+    flex-direction: column;
+    border: $border-width solid $secondary;
+    border-radius: $border-radius-base;
+    z-index: 1000;
+    margin: $spacing-unit;
+
+    &.bottom {
+    bottom: 0;
+  }
+
+    &.top {
+      top: 6 * $spacing-unit;
+    }
+}
+
+.drag-button-container {
+  position: absolute;
+  right: 0;
 }
 
 @media (max-width: 768px) {
