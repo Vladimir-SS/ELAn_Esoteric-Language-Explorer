@@ -1,0 +1,27 @@
+main
+    ScrictMode
+    SolangCompareProvider
+    App >
+        Route
+        Navbar >
+            Link
+        CompareEsolangBar
+        EsolangsList >
+            FiltersPanel >
+                SearchBar
+                FilterDropdown
+                FilterBadge
+            Badge
+            Pagination
+        EsolangDetails >
+            FieldList >
+                Link
+        PropertyList >
+            Badge
+        PropertyDetails >
+            Badge
+        CompareEsolangs >
+            EsolangDetails >
+                FieldList >
+                    List
+        ToastContainer

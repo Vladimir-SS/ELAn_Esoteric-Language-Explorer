@@ -302,6 +302,74 @@
         <li><strong>Docker</strong>: A platform for developing, shipping, and running applications in containers, which simplifies deployment and ensures consistency across environments.</li>
       </ul>
     </section>
+
+    <section id="frontend">
+  <h3>Frontend</h3>
+  <p>The frontend of the system is built using <strong>React.js</strong>. The following is a visual representation of the component tree with an explanation of each component’s role:</p>
+
+  <div style="display: flex; justify-content: space-between;">
+    <div style="margin-top: 90px;">
+      <img src="images/ReactComponentsTree.PNG" alt="React Components Tree" width="400">
+    </div>
+
+    <div style="max-width: 500px; margin-left: 20px;">
+      <h4>Component Breakdown</h4>
+      <ul>
+        <li><strong>main</strong>: The root of the application, where the React app is mounted.</li>
+        <li><strong>StrictMode</strong>: A wrapper that helps detect potential problems in the application during development.</li>
+        <li><strong>EsolangCompareProvider</strong>: A context provider that manages and shares the state of the esolang comparison across the app.</li>
+        <li><strong>App</strong>: The main component that handles the routing and contains core sections of the app.</li>
+        <ul>
+          <li><strong>Route</strong>: Handles URL-based routing, determining which component to render based on the current path.</li>
+          <li><strong>Navbar</strong>: The navigation bar that contains links for routing to different pages in the app.</li>
+          <ul>
+            <li><strong>Link</strong>: Each individual link within the navbar, responsible for routing to other pages.</li>
+          </ul>
+          <li><strong>CompareEsolangBar</strong>: A component that lets users select and remove languages for comparison.</li>
+          <li><strong>EsolangsList</strong>: Displays the esolangs available in the app.</li>
+          <ul>
+            <li><strong>FiltersPanel</strong>: Contains filter-related components for narrowing down the displayed list of esolangs.</li>
+            <ul>
+              <li><strong>SearchBar</strong>: A search input for users to search through esolangs.</li>
+              <li><strong>FilterDropdown</strong>: A dropdown menu to filter esolangs based on certain criteria.</li>
+              <li><strong>FilterBadge</strong>: A badge that displays the applied filters.</li>
+            </ul>
+            <li><strong>Badge</strong>: Displays a small clickable badge for a language or feature.</li>
+            <li><strong>Pagination</strong>: Controls the pagination of the esolangs list for better navigation.</li>
+          </ul>
+          <li><strong>EsolangDetails</strong>: Displays detailed information about a selected esolang.</li>
+          <ul>
+            <li><strong>FieldList</strong>: Displays a field with a list of items related to an esolang, where each item can either be a link or plain text.</li>
+            <ul>
+              <li><strong>Link</strong></li>
+            </ul>
+          </ul>
+          <li><strong>PropertyList</strong>: Displays a list of properties related to the esolang.</li>
+          <ul>
+            <li><strong>Badge</strong></li>
+          </ul>
+          <li><strong>PropertyDetails</strong>: Shows detailed information about a specific property of an esolang.</li>
+          <ul>
+            <li><strong>Badge</strong></li>
+          </ul>
+          <li><strong>CompareEsolangs</strong>: Allows users to compare multiple esolangs.</li>
+          <ul>
+            <li><strong>EsolangDetails</strong></li>
+            <ul>
+              <li><strong>FieldList</strong></li>
+              <ul>
+                <li><strong>List</strong></li>
+              </ul>
+            </ul>
+          </ul>
+          <li><strong>ToastContainer</strong>: A component that shows toast notifications for various actions like success or error messages.</li>
+        </ul>
+      </ul>
+    </div>
+  </div>
+
+  <p>This modular approach ensures that each component is responsible for a specific part of the user interface, enabling flexibility and scalability in development.</p>
+</section>
     <section id="data-scraping">
       <h3>Data Scraping</h3>
       <p>The esolang data used in this system was gathered through various methods, including scraping and querying external resources. Here's an overview of the data acquisition process:</p>
@@ -323,7 +391,8 @@
       <p>The data from these sources is then transformed into an RDF format, stored in the Apache Jena Fuseki database, and made accessible through SPARQL queries.</p>
       <section id="DBPedia-query">
         <h4>DBPedia Query Process</h4>
-        <p>For DBPedia, the following SPARQL query was used to retrieve information about esoteric programming languages, including details such as their designer, memory system, year created, and more. However, only six languages were returned, and all of them were already present on esolang.org:</p>
+        <p>The following SPARQL query was used to retrieve information from DBPedia,
+          but only six languages were returned, all of which were already found on esolang.org:</p>
         <pre><code>PREFIX dbo: &lt;http://dbpedia.org/ontology/&gt;
       PREFIX dbp: &lt;http://dbpedia.org/property/&gt;
       PREFIX dbc: &lt;http://dbpedia.org/resource/Category:&gt;
@@ -357,11 +426,12 @@
 
         FILTER (lang(?shortDescription) = "en")  # Filters abstracts in English
       }</code></pre>
-        <p>Although this query was designed to pull a variety of attributes for esoteric programming languages, the results were limited to six languages that were already found on esolang.org.</p>
       </section>
       <section id="WikiData-query">
         <h4>WikiData Query Process</h4>
-        <p>For WikiData, the following SPARQL query was used to retrieve similar information, such as the language's designer, inception date, influenced by, and file extensions. The query returned 46 results, but none of them contained new information that was not already found on esolang.org:</p>
+        <p>Similarly, this SPARQL query was used to retrieve data from WikiData.
+          Although it returned 46 results, none of them provided new information
+          beyond what was already available on esolang.org:</p>
         <pre><code>
       SELECT DISTINCT ?language ?languageLabel
                       ?description ?designerLabel ?inception
@@ -383,7 +453,6 @@
         SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
       }
       ORDER BY ?languageLabel</code></pre>
-        <p>Although the query retrieved 46 results, none of the data returned provided any additional insights beyond what was already available on esolang.org, leading to the decision to not include this data in the system.</p>
       </section>
     </section>
   </section>
