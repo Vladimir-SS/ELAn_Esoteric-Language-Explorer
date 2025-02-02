@@ -2,9 +2,10 @@ from typing import List, Dict, Optional
 from fastapi import FastAPI, HTTPException, Query
 from src import SPARQLClient
 from src import *
-from src.utils import get_esolang_from_query_result
+from src.utils import *
 import urllib.parse
 import logging
+from sklearn.metrics.pairwise import cosine_similarity
 
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
 
@@ -276,4 +277,35 @@ async def get_sparql_data(query: str):
         raise e
     except Exception as e:
         logging.error(f"Error fetching SPARQL data: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/api/esolangs/similar/{esolang_name}", response_model=List[str])
+async def get_similar_esolangs(esolang_name: str):
+    """Fetch similar esolangs based on the given esolang name."""
+    try:
+        embeddings = load_embeddings()
+        if embeddings is None:
+            triples = sparql_client.query(create_all_triples_query())
+            embeddings = compute_embeddings(triples)
+
+        esolang_url = f"{BASE_URI}{urllib.parse.quote(esolang_name)}"
+        given_language_embedding = embeddings[esolang_url]
+        print("Given language embedding: ", given_language_embedding)
+
+        similarities = {
+            entity: cosine_similarity([given_language_embedding], [embedding])[0][0]
+            for entity, embedding in embeddings.items()
+            if entity != esolang_url
+        }
+        similarities = {entity: float(score) for entity, score in similarities.items()}
+        similar_languages = sorted(similarities.items(), key=lambda x: x[1], reverse=True)[:15]
+        print("Similar languages: ", similar_languages)
+
+        return [language for language, _ in similar_languages]
+    except HTTPException as e:
+        logging.error(f"Error fetching similar esolangs: {e.detail}", exc_info=True)
+        raise e
+    except Exception as e:
+        logging.error(f"Error fetching similar esolangs: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))

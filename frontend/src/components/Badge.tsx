@@ -12,6 +12,8 @@ const Badge: React.FC<BadgeProps> = ({ title, isEsolang }) => {
   const { addLanguage } = useEsolangCompare();
   const navigate = useNavigate();
 
+  const decodedTitle = decodeURIComponent(title).split("/").pop();
+
   return (
     <div className="col-md-3 mx-1 my-2">
       <div className="card">
@@ -19,26 +21,22 @@ const Badge: React.FC<BadgeProps> = ({ title, isEsolang }) => {
           className="card-body"
           style={{ display: "flex", flexDirection: "column" }}
         >
-          <h5
-            className="card-title text-truncate mb-3"
-            title={decodeURIComponent(title)}
-          >
-            {decodeURIComponent(title).split("/").pop()}
+          <h5 className="card-title text-truncate mb-3" title={decodedTitle}>
+            {decodedTitle}
           </h5>
           <div style={{ alignSelf: "flex-end" }}>
             {isEsolang && (
               <button
                 className="btn btn-sm btn-outline-primary mx-2"
-                onClick={() => addLanguage(title)}
+                onClick={() => addLanguage(decodedTitle || "")}
               >
                 Compare
               </button>
-
             )}
             <button
               className="btn btn-sm btn-primary"
               onClick={() =>
-                navigate(isEsolang ? `/esolangs/${title}` : `${title}`)
+                navigate(isEsolang ? `/esolangs/${decodedTitle}` : `${title}`)
               }
             >
               {isEsolang ? "See more" : "See languages"}
