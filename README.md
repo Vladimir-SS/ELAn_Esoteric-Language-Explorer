@@ -27,7 +27,7 @@
 <h4>
     <a href="https://github.com/Vladimir-SS/ELAn_Esoteric-Language-Explorer/">View Demo</a>
   <span> · </span>
-    <a href="https://github.com/Vladimir-SS/ELAn_Esoteric-Language-Explorer">Documentation</a>
+    <a href="https://github.com/Vladimir-SS/ELAn_Esoteric-Language-Explorer/tree/main/documentation">Documentation</a>
   <span> · </span>
     <a href="https://github.com/Vladimir-SS/ELAn_Esoteric-Language-Explorer/issues/">Report Bug</a>
   <span> · </span>
