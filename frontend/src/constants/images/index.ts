@@ -1,1 +1,1 @@
-import { Image } from '../types';
+// import { Image } from '../types';

@@ -12,15 +12,14 @@ interface FiltersPanelProps {
 const FiltersPanel: React.FC<FiltersPanelProps> = ({ onEsolangsChanged }) => {
   const [searchInput, setSearchInput] = useState<string>("");
   const [selectedFilters, setSelectedFilters] = useState<{ [key: string]: string[]; }>({});
-  const [loading, setLoading] = React.useState(true);
 
   const handleSearchInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchInput(e.target.value);
   };
 
   const clearSearchInput = () => {
-      setSearchInput("");
-    };
+    setSearchInput("");
+  };
 
   const handleFilterChange = (filterName: string, value: string) => {
     setSelectedFilters((prevFilters) => {
@@ -116,8 +115,6 @@ const FiltersPanel: React.FC<FiltersPanelProps> = ({ onEsolangsChanged }) => {
         autoClose: 3000,
         hideProgressBar: true,
       });
-    } finally {
-      setLoading(false);
     }
   };
 

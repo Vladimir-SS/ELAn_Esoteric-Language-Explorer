@@ -22,7 +22,7 @@ subcategories = [
     ESOLANG["Paradigm"],
 ] # Might need to be removed
 
-with open("./data/esolangs-cleaned.json", "r", encoding="utf-8") as f:
+with open("./data/esolangs-data-final.json", "r", encoding="utf-8") as f:
     json_data = json.load(f)
 
 add_property_metadata(graph, ESOLANG.url, "url",
