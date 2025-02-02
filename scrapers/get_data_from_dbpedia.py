@@ -43,7 +43,6 @@ WHERE {
   OPTIONAL { ?language dbp:released ?released. }
   OPTIONAL { ?language dbp:date ?date. }
   OPTIONAL { ?language dbp:memorySystem ?memorySystem. }
-  OPTIONAL { ?language dbp:implementations ?referenceImplementation. }
   OPTIONAL { ?language dbp:influencedBy ?influencedBy. }
   OPTIONAL { ?language dbp:influenced ?influenced. }
   OPTIONAL { ?language dbp:fileExtensions ?fileExt1. }
