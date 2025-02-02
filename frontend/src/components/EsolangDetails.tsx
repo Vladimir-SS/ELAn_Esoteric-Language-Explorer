@@ -2,20 +2,26 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Esolang } from "../constants/types";
 import FieldList from "./FieldList";
+import { useEsolangCompare } from "../context/EsolangCompareContext";
 
-const EsolangDetails: React.FC = () => {
-  const { name } = useParams<{ name: string }>();
+interface EsolangDetailsProps {
+  name?: string;
+
+}
+
+const EsolangDetails: React.FC<EsolangDetailsProps> = (props) => {
+  const { name: paramName } = useParams<{ name: string }>();
+  const name = props.name || paramName;
 
   const [language, setLanguage] = React.useState<Esolang>();
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);
+  const { addLanguage } = useEsolangCompare();
 
   useEffect(() => {
     const fetchLanguage = async () => {
       try {
-        console.log(name);
         const encodedName = encodeURIComponent(name ?? "");
-        console.log(encodedName);
         const response = await fetch(`/api/esolangs/${encodedName}`);
         if (!response.ok) {
           throw new Error("Language not found");
@@ -44,9 +50,21 @@ const EsolangDetails: React.FC = () => {
     );
   }
 
+  const showTitleBar = paramName === name;
+
   return (
     <div className="container-fluid mt-5">
-      <h1 className="mb-4">Esoteric Language Details</h1>
+      {showTitleBar && (
+        <div className="d-flex justify-content-between flex-wrap align-items-center">
+          <h1 className="mb-4">Esoteric Language Details</h1>
+          <button
+            className="btn btn-sm btn-outline-primary mx-2"
+            onClick={() => name && addLanguage(name)}
+          >
+            Compare
+          </button>
+        </div>
+      )}
       <div className="card">
         <div className="card-body">
           <h1 className="card-title">{decodeURIComponent(language.name)}</h1>
@@ -83,18 +101,12 @@ const EsolangDetails: React.FC = () => {
             {language.shortDescription ? language.shortDescription : "N/A"}
           </p>
 
-          <FieldList
-            title="Paradigm(s)"
-            items={language.paradigms ?? []}
-          />
+          <FieldList title="Paradigm(s)" items={language.paradigms ?? []} />
           <FieldList
             title="Influenced by"
             items={language.influencedBy ?? []}
           />
-          <FieldList
-            title="Influenced"
-            items={language.influenced ?? []}
-          />
+          <FieldList title="Influenced" items={language.influenced ?? []} />
           <FieldList
             title="File Extension(s)"
             items={language.fileExtensions ?? []}
@@ -104,26 +116,14 @@ const EsolangDetails: React.FC = () => {
             title="Computational Class(es)"
             items={language.computationalClasses ?? []}
           />
-          <FieldList
-            title="Type Systems"
-            items={language.typeSystems ?? []}
-          />
-          <FieldList
-            title="Dialects"
-            items={language.dialects ?? []}
-          />
-          <FieldList
-            title="Dimensions"
-            items={language.dimensions ?? []}
-          />
+          <FieldList title="Type Systems" items={language.typeSystems ?? []} />
+          <FieldList title="Dialects" items={language.dialects ?? []} />
+          <FieldList title="Dimensions" items={language.dimensions ?? []} />
           <FieldList
             title="Memory System"
             items={language.memorySystem ?? []}
           />
-          <FieldList
-            title="Has categories"
-            items={language.categories ?? []}
-          />
+          <FieldList title="Has categories" items={language.categories ?? []} />
         </div>
       </div>
     </div>

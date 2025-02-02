@@ -39,7 +39,7 @@ const FilterDropdown: React.FC<Props> = ({ filterName, onFilterChange }) => {
   };
 
   return (
-    <div className="form-group me-2" style={{ width: "200px" }}>
+    <div className="form-group me-2 small-badge">
       <label htmlFor={filterName} className="text-truncate" title={filterName}>
         {filterName}
       </label>

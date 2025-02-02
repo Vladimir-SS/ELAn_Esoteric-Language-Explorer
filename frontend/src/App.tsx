@@ -7,6 +7,8 @@ import { useEffect, useState } from 'react';
 import { ToastContainer } from 'react-toastify';
 import PropertyList from './components/PropertyList';
 import PropertyDetails from './components/PropertyDetails';
+import CompareEsolangsBar from "./components/CompareEsolangsBar";
+import CompareEsolangs from './components/CompareEsolangs';
 
 const App: React.FC = () => {
     const [theme, setTheme] = useState("dark");
@@ -34,6 +36,7 @@ const App: React.FC = () => {
     return (
         <Router>
             <Navbar />
+            <CompareEsolangsBar />
             <div className="content">
                 <Routes>
                     <Route path="/" element={<EsolangsList />} />
@@ -52,6 +55,7 @@ const App: React.FC = () => {
                     <Route path="/esolangs/memory-system/:name" element={<PropertyDetails propertyPath="memory-system" />} />
                     <Route path="/esolangs/type-system" element={<PropertyList propertyPath="type-system" propertyPluralName="Type Systems" />} />
                     <Route path="/esolangs/type-system/:name" element={<PropertyDetails propertyPath="type-system" />} />
+                    <Route path="/compare" element={<CompareEsolangs />} />
 
                 </Routes>
             </div>

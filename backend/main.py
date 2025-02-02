@@ -124,7 +124,7 @@ async def get_categories():
         result = sparql_client.query(create_categories_query())
         if not result:
             raise HTTPException(status_code=404, detail="No data found.")
-        categories = [category["category"]["value"] for category in result]
+        categories = [category["name"]["value"] for category in result]
 
         return categories
     except HTTPException as e:
@@ -142,7 +142,7 @@ async def get_paradigms():
         result = sparql_client.query(create_paradigms_query())
         if not result:
             raise HTTPException(status_code=404, detail="No data found.")
-        paradigms = [paradigm["paradigm"]["value"] for paradigm in result]
+        paradigms = [paradigm["name"]["value"] for paradigm in result]
 
         return paradigms
     except HTTPException as e:
@@ -160,7 +160,7 @@ async def get_computational_classes():
         result = sparql_client.query(create_computational_classes_query())
         if not result:
             raise HTTPException(status_code=404, detail="No data found.")
-        classes = [class_["computationalClass"]["value"] for class_ in result]
+        classes = [class_["name"]["value"] for class_ in result]
 
         return classes
     except HTTPException as e:
@@ -178,7 +178,7 @@ async def get_memory_systems():
         result = sparql_client.query(create_memory_systems_query())
         if not result:
             raise HTTPException(status_code=404, detail="No data found.")
-        systems = [system["memorySystem"]["value"] for system in result]
+        systems = [system["name"]["value"] for system in result]
 
         return systems
     except HTTPException as e:
@@ -196,7 +196,7 @@ async def get_dimensions():
         result = sparql_client.query(create_dimensions_query())
         if not result:
             raise HTTPException(status_code=404, detail="No data found.")
-        dimensions = [dimension["dimension"]["value"] for dimension in result]
+        dimensions = [dimension["name"]["value"] for dimension in result]
 
         return dimensions
     except HTTPException as e:
@@ -214,7 +214,7 @@ async def get_type_systems():
         result = sparql_client.query(create_type_systems_query())
         if not result:
             raise HTTPException(status_code=404, detail="No data found.")
-        systems = [system["typeSystem"]["value"] for system in result]
+        systems = [system["name"]["value"] for system in result]
 
         return systems
     except HTTPException as e:
@@ -232,7 +232,7 @@ async def get_dialects():
         result = sparql_client.query(create_dialects_query())
         if not result:
             raise HTTPException(status_code=404, detail="No data found.")
-        dialects = [dialect["dialect"]["value"] for dialect in result]
+        dialects = [dialect["name"]["value"] for dialect in result]
 
         return dialects
     except HTTPException as e:

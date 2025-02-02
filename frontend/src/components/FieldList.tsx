@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 interface FieldListProps {
     title: string;
     items: string[];
@@ -12,9 +14,9 @@ const FieldList: React.FC<FieldListProps> = ({ title, items, isLinkList = true }
             <strong>{title}:</strong>{" "}
             {isLinkList ? (
                 items.map((item, index) => (
-                    <a key={index} href={item} className="link-primary me-2">
+                    <Link key={index} to={item} className="link-primary me-2">
                         {decodeURIComponent(item).split("/").pop()}
-                    </a>
+                    </Link>
                 ))
             ) : (
                 <span>
