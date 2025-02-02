@@ -19,8 +19,8 @@
     <dl>
       <dt>Authors</dt>
       <dd>
-        <a href="#">Ştefan-Vladimir Sbârcea</a>,
-        <a href="#">Bianca-Ştefana Popa</a>
+        <a href="https://vladimir-ss.github.io/Portfolio/" target="_blank">Ştefan-Vladimir Sbârcea</a>,
+        <a href="https://popabiancastefana.github.io/Portfolio/" target="_blank">Bianca-Ştefana Popa</a>
       </dd>
       <dt>License</dt>
       <dd>
@@ -307,12 +307,84 @@
       <p>The esolang data used in this system was gathered through various methods, including scraping and querying external resources. Here's an overview of the data acquisition process:</p>
 
       <ul>
-        <li><strong>Data Source:</strong> The main source of esolang-related information is <a role="doc-biblioref">esolang.org</a>, a comprehensive repository for esoteric programming languages.</li>
+        <li><strong>Data Source:</strong> The main source of esolang-related information is
+          <a role="doc-biblioref">esolang.org</a>, a comprehensive repository for esoteric programming languages.
+          Data from esolang.org is scraped using
+          <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"
+            target="_blank"
+            rel="noopener noreferrer">
+            BeautifulSoup
+          </a>
+          , a Python library for web scraping, which parses HTML and extracts the required information.</li>
         <li><strong>MediaWiki API:</strong> Data from esolang.org is queried via the <strong>MediaWiki API</strong> to gather detailed information about the languages.</li>
         <li><strong>DBPedia</strong> and <strong>WikiData:</strong> Additionally, information from <a role="doc-biblioref">DBPedia</a> and <a role="doc-biblioref">WikiData</a> is queried using SPARQL to enrich the dataset, providing broader context and linking esolangs to other related topics in the open knowledge base.</li>
       </ul>
 
       <p>The data from these sources is then transformed into an RDF format, stored in the Apache Jena Fuseki database, and made accessible through SPARQL queries.</p>
+      <section id="DBPedia-query">
+        <h4>DBPedia Query Process</h4>
+        <p>For DBPedia, the following SPARQL query was used to retrieve information about esoteric programming languages, including details such as their designer, memory system, year created, and more. However, only six languages were returned, and all of them were already present on esolang.org:</p>
+        <pre><code>PREFIX dbo: &lt;http://dbpedia.org/ontology/&gt;
+      PREFIX dbp: &lt;http://dbpedia.org/property/&gt;
+      PREFIX dbc: &lt;http://dbpedia.org/resource/Category:&gt;
+      PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
+      PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+      SELECT DISTINCT ?language ?shortDescription
+                      (COALESCE(?designer, ?developer) AS ?designedBy)
+                      ?paradigm ?memorySystem
+                      (COALESCE(?released, ?date) AS ?yearCreated)
+                      ?influencedBy ?influenced
+                      (COALESCE(?fileExt1, ?fileExt2) AS ?fileExtensions)
+                      ?languageName ?url
+      WHERE {
+        ?language a dbo:ProgrammingLanguage ;
+                  dbo:abstract ?shortDescription ;
+                  dcterms:subject dbc:Esoteric_programming_languages .
+
+        OPTIONAL { ?language dbp:paradigm ?paradigm. }
+        OPTIONAL { ?language dbp:designer ?designer. }
+        OPTIONAL { ?language dbp:developer ?developer. }
+        OPTIONAL { ?language dbp:released ?released. }
+        OPTIONAL { ?language dbp:date ?date. }
+        OPTIONAL { ?language dbp:memorySystem ?memorySystem. }
+        OPTIONAL { ?language dbp:influencedBy ?influencedBy. }
+        OPTIONAL { ?language dbp:influenced ?influenced. }
+        OPTIONAL { ?language dbp:fileExtensions ?fileExt1. }
+        OPTIONAL { ?language dbp:fileExt ?fileExt2. }
+        OPTIONAL { ?language rdfs:label ?languageName. }
+        OPTIONAL { ?language dbp:url ?url. }
+
+        FILTER (lang(?shortDescription) = "en")  # Filters abstracts in English
+      }</code></pre>
+        <p>Although this query was designed to pull a variety of attributes for esoteric programming languages, the results were limited to six languages that were already found on esolang.org.</p>
+      </section>
+      <section id="WikiData-query">
+        <h4>WikiData Query Process</h4>
+        <p>For WikiData, the following SPARQL query was used to retrieve similar information, such as the language's designer, inception date, influenced by, and file extensions. The query returned 46 results, but none of them contained new information that was not already found on esolang.org:</p>
+        <pre><code>
+      SELECT DISTINCT ?language ?languageLabel
+                      ?description ?designerLabel ?inception
+                      ?publicationDate ?influencedByLabel ?influencedLabel
+                      ?fileExtensionLabel ?URL
+      WHERE {
+        ?language wdt:P31 wd:Q610140. # Instance of "esoteric programming language"
+
+        OPTIONAL { ?language rdfs:label ?languageLabel.
+                  FILTER(LANG(?languageLabel) = "en") }
+        OPTIONAL { ?language wdt:P50 ?designer. }
+        OPTIONAL { ?language wdt:P571 ?inception. }
+        OPTIONAL { ?language wdt:P577 ?publicationDate. }
+        OPTIONAL { ?language wdt:P737 ?influencedBy. }
+        OPTIONAL { ?language wdt:P1705 ?influenced. }
+        OPTIONAL { ?language wdt:P1195 ?fileExtension. }
+        OPTIONAL { ?language wdt:P856 ?URL. }
+
+        SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+      }
+      ORDER BY ?languageLabel</code></pre>
+        <p>Although the query retrieved 46 results, none of the data returned provided any additional insights beyond what was already available on esolang.org, leading to the decision to not include this data in the system.</p>
+      </section>
     </section>
   </section>
 </body>
