@@ -58,6 +58,7 @@ def create_filter_query_parts(property_name: str, property_path: str, values: Li
 
     return query_parts
 
+
 def create_esolang_search_query(
     search_term: str,
     year_created: List[str],
@@ -259,6 +260,19 @@ def create_file_extensions_query() -> str:
           ?esolang esolang:fileExtension ?fileExtension .
         }
         ORDER BY ?fileExtension
+        """
+    )
+
+    return query
+
+def create_all_triples_query() -> str:
+    query = (
+        PREFIXES
+        + """
+        SELECT ?s ?p ?o
+        WHERE {
+          ?s ?p ?o
+        }
         """
     )
 

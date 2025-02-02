@@ -1,4 +1,7 @@
 from typing import List, Dict
+import pickle
+from sentence_transformers import SentenceTransformer
+import numpy as np
 
 def get_esolang_from_query_result(esolang_name: str, result: List[Dict] ) -> Dict:
     print("Result: ", type(result))
@@ -65,3 +68,40 @@ def get_esolang_from_query_result(esolang_name: str, result: List[Dict] ) -> Dic
     esolang["dialects"] = list(esolang["dialects"])
 
     return esolang
+
+
+def compute_embeddings(triples_result: List[Dict]) -> Dict:
+    try:
+        triples = [
+            " ".join([binding["s"]["value"], binding["p"]["value"], binding["o"]["value"]])
+            for binding in triples_result
+        ]
+        entities = list(set(binding["s"]["value"] for binding in triples_result))
+
+        model = SentenceTransformer("all-MiniLM-L6-v2")
+        embeddings = model.encode(triples)
+        entity_embeddings = {}
+
+        for entity in entities:
+            entity_triples = [
+                embedding
+                for triple, embedding in zip(triples, embeddings)
+                if entity in triple
+            ]
+            if entity_triples:
+                entity_embeddings[entity] = np.mean(entity_triples, axis=0)
+
+        with open("src/entity_embeddings.pkl", "wb") as f:
+            pickle.dump(entity_embeddings, f)
+
+        return entity_embeddings
+    except Exception as e:
+        raise e
+
+
+def load_embeddings():
+    try:
+        with open("src/entity_embeddings.pkl", "rb") as f:
+            return pickle.load(f)
+    except FileNotFoundError:
+        return None

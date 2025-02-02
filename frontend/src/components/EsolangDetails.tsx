@@ -3,10 +3,10 @@ import { useParams } from "react-router-dom";
 import { Esolang } from "../constants/types";
 import FieldList from "./FieldList";
 import { useEsolangCompare } from "../context/EsolangCompareContext";
+import Badge from "./Badge";
 
 interface EsolangDetailsProps {
   name?: string;
-
 }
 
 const EsolangDetails: React.FC<EsolangDetailsProps> = (props) => {
@@ -14,6 +14,7 @@ const EsolangDetails: React.FC<EsolangDetailsProps> = (props) => {
   const name = props.name || paramName;
 
   const [language, setLanguage] = React.useState<Esolang>();
+  const [similarLanguages, setSimilarLanguages] = React.useState<string[]>();
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);
   const { addLanguage } = useEsolangCompare();
@@ -30,12 +31,27 @@ const EsolangDetails: React.FC<EsolangDetailsProps> = (props) => {
         setLanguage(data);
       } catch (err: any) {
         setError(err.message);
+      }
+    };
+
+    const fetchSimilarLanguages = async () => {
+      try {
+        const encodedName = encodeURIComponent(name ?? "");
+        const response = await fetch(`/api/esolangs/similar/${encodedName}`);
+        if (!response.ok) {
+          throw new Error("Similar languages not found");
+        }
+        const data = await response.json();
+        setSimilarLanguages(data);
+      } catch (err: any) {
+        setError(err.message);
       } finally {
         setLoading(false);
       }
     };
 
     fetchLanguage();
+    fetchSimilarLanguages();
   }, [name]);
 
   if (loading) {
@@ -50,11 +66,11 @@ const EsolangDetails: React.FC<EsolangDetailsProps> = (props) => {
     );
   }
 
-  const showTitleBar = paramName === name;
+  const inCompareMode = !!props.name;
 
   return (
     <div className="container-fluid mt-5">
-      {showTitleBar && (
+      {!inCompareMode && (
         <div className="d-flex justify-content-between flex-wrap align-items-center">
           <h1 className="mb-4">Esoteric Language Details</h1>
           <button
@@ -126,6 +142,26 @@ const EsolangDetails: React.FC<EsolangDetailsProps> = (props) => {
           <FieldList title="Has categories" items={language.categories ?? []} />
         </div>
       </div>
+      {!inCompareMode && (
+        <div className="card mt-4">
+          {similarLanguages && similarLanguages.length > 0 ? (
+            <div className="card-body">
+              <h3 className="card-title">Similar languages</h3>
+              <div className="row">
+                {similarLanguages.map((language) => (
+                  <Badge
+                    key={language}
+                    title={decodeURIComponent(language)}
+                    isEsolang
+                  />
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div className="card-body">No similar languages found</div>
+          )}
+        </div>
+      )}
     </div>
   );
 };
