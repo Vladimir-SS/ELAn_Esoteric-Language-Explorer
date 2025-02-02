@@ -1,6 +1,0 @@
-venv
-.dockerignore
-Dockerfile
-README.md
-.gitignore
-__pycache__

@@ -1,1 +1,2 @@
-/apache-jena-fuseki-*
+node_modules/
+npm-debug.log
