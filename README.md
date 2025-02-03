@@ -26,7 +26,7 @@
 </p>
 
 <h4>
-    <a href="https://github.com/Vladimir-SS/ELAn_Esoteric-Language-Explorer/">View Demo</a>
+    <a href="https://www.youtube.com/watch?v=oxjl7SNVwlQ">View Demo</a>
   <span> · </span>
     <a href="https://vladimir-ss.github.io/ELAn_Esoteric-Language-Explorer/">Documentation</a>
   <span> · </span>
