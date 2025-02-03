@@ -1,7 +1,7 @@
 import rdflib
 from urllib.parse import quote
 
-ESOLANG = rdflib.Namespace("http://localhost:5173/esolangs/")
+ESOLANG = rdflib.Namespace("https://frontend-728286732053.us-central1.run.app/")
 OWL = rdflib.OWL
 XSD = rdflib.XSD
 RDFS = rdflib.RDFS
