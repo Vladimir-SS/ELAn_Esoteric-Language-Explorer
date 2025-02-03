@@ -1,4 +1,4 @@
-FROM node:18-slim
+FROM node:18-slim AS build
 
 WORKDIR /app
 
@@ -8,6 +8,16 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 5173
+RUN npm run build
 
-CMD ["npm", "run", "dev-exposed"]
+FROM nginx:alpine AS prod
+
+COPY --from=build /app/dist /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.conf
+
+ENV PORT 8080
+EXPOSE 8080
+
+
+CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
+# CMD ["npm", "run", "dev-exposed"]
