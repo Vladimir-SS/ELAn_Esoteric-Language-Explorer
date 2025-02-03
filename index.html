@@ -363,74 +363,101 @@
     </section>
 
     <section id="frontend">
-  <h3>Frontend</h3>
-  <p>The frontend of the system is built using <strong>React.js</strong>. The following is a visual representation of the component tree with an explanation of each component’s role:</p>
+    <h3>Frontend</h3>
+    <p>The frontend of the system is built using <strong>React.js</strong>. The following is a visual representation of the component tree with an explanation of each component’s role:</p>
 
-  <div style="display: flex; justify-content: space-between;">
-    <div style="margin-top: 90px;">
-      <img src="images/ReactComponentsTree.PNG" alt="React Components Tree" width="400">
-    </div>
+    <div style="display: flex; justify-content: space-between;">
+      <div style="margin-top: 90px;">
+        <img src="images/ReactComponentsTree.PNG" alt="React Components Tree" width="400">
+      </div>
 
-    <div style="max-width: 500px; margin-left: 20px;">
-      <h4>Component Breakdown</h4>
-      <ul>
-        <li><strong>main</strong>: The root of the application, where the React app is mounted.</li>
-        <li><strong>StrictMode</strong>: A wrapper that helps detect potential problems in the application during development.</li>
-        <li><strong>EsolangCompareProvider</strong>: A context provider that manages and shares the state of the esolang comparison across the app.</li>
-        <li><strong>App</strong>: The main component that handles the routing and contains core sections of the app.</li>
+      <div style="max-width: 500px; margin-left: 20px;">
+        <h4>Component Breakdown</h4>
         <ul>
-          <li><strong>Route</strong>: Handles URL-based routing, determining which component to render based on the current path.</li>
-          <li><strong>Navbar</strong>: The navigation bar that contains links for routing to different pages in the app.</li>
+          <li><strong>main</strong>: The root of the application, where the React app is mounted.</li>
+          <li><strong>StrictMode</strong>: A wrapper that helps detect potential problems in the application during development.</li>
+          <li><strong>EsolangCompareProvider</strong>: A context provider that manages and shares the state of the esolang comparison across the app.</li>
+          <li><strong>App</strong>: The main component that handles the routing and contains core sections of the app.</li>
           <ul>
-            <li><strong>Link</strong>: Each individual link within the navbar, responsible for routing to other pages.</li>
-          </ul>
-          <li><strong>CompareEsolangBar</strong>: A component that lets users select and remove languages for comparison.</li>
-          <li><strong>EsolangsList</strong>: Displays the esolangs available in the app.</li>
-          <ul>
-            <li><strong>FiltersPanel</strong>: Contains filter-related components for narrowing down the displayed list of esolangs.</li>
+            <li><strong>Route</strong>: Handles URL-based routing, determining which component to render based on the current path.</li>
+            <li><strong>Navbar</strong>: The navigation bar that contains links for routing to different pages in the app.</li>
             <ul>
-              <li><strong>SearchBar</strong>: A search input for users to search through esolangs.</li>
-              <li><strong>FilterDropdown</strong>: A dropdown menu to filter esolangs based on certain criteria.</li>
-              <li><strong>FilterBadge</strong>: A badge that displays the applied filters.</li>
+              <li><strong>Link</strong>: Each individual link within the navbar, responsible for routing to other pages.</li>
             </ul>
-            <li><strong>Badge</strong>: Displays a small clickable badge for a language or feature.</li>
-            <li><strong>Pagination</strong>: Controls the pagination of the esolangs list for better navigation.</li>
-          </ul>
-          <li><strong>EsolangDetails</strong>: Displays detailed information about a selected esolang.</li>
-          <ul>
-            <li><strong>FieldList</strong>: Displays a field with a list of items related to an esolang, where each item can either be a link or plain text.</li>
+            <li><strong>CompareEsolangBar</strong>: A component that lets users select and remove languages for comparison.</li>
+            <li><strong>EsolangsList</strong>: Displays the esolangs available in the app.</li>
             <ul>
-              <li><strong>Link</strong></li>
-            </ul>
-          </ul>
-          <li><strong>PropertyList</strong>: Displays a list of properties related to the esolang.</li>
-          <ul>
-            <li><strong>Badge</strong></li>
-          </ul>
-          <li><strong>PropertyDetails</strong>: Shows detailed information about a specific property of an esolang.</li>
-          <ul>
-            <li><strong>Badge</strong></li>
-          </ul>
-          <li><strong>CompareEsolangs</strong>: Allows users to compare multiple esolangs.</li>
-          <ul>
-            <li><strong>EsolangDetails</strong></li>
-            <ul>
-              <li><strong>FieldList</strong></li>
+              <li><strong>FiltersPanel</strong>: Contains filter-related components for narrowing down the displayed list of esolangs.</li>
               <ul>
-                <li><strong>List</strong></li>
+                <li><strong>SearchBar</strong>: A search input for users to search through esolangs.</li>
+                <li><strong>FilterDropdown</strong>: A dropdown menu to filter esolangs based on certain criteria.</li>
+                <li><strong>FilterBadge</strong>: A badge that displays the applied filters.</li>
+              </ul>
+              <li><strong>Badge</strong>: Displays a small clickable badge for a language or feature.</li>
+              <li><strong>Pagination</strong>: Controls the pagination of the esolangs list for better navigation.</li>
+            </ul>
+            <li><strong>EsolangDetails</strong>: Displays detailed information about a selected esolang.</li>
+            <ul>
+              <li><strong>FieldList</strong>: Displays a field with a list of items related to an esolang, where each item can either be a link or plain text.</li>
+              <ul>
+                <li><strong>Link</strong></li>
               </ul>
             </ul>
+            <li><strong>PropertyList</strong>: Displays a list of properties related to the esolang.</li>
+            <ul>
+              <li><strong>Badge</strong></li>
+            </ul>
+            <li><strong>PropertyDetails</strong>: Shows detailed information about a specific property of an esolang.</li>
+            <ul>
+              <li><strong>Badge</strong></li>
+            </ul>
+            <li><strong>CompareEsolangs</strong>: Allows users to compare multiple esolangs.</li>
+            <ul>
+              <li><strong>EsolangDetails</strong></li>
+              <ul>
+                <li><strong>FieldList</strong></li>
+                <ul>
+                  <li><strong>List</strong></li>
+                </ul>
+              </ul>
+            </ul>
+            <li><strong>ToastContainer</strong>: A component that shows toast notifications for various actions like success or error messages.</li>
           </ul>
-          <li><strong>ToastContainer</strong>: A component that shows toast notifications for various actions like success or error messages.</li>
         </ul>
-      </ul>
+      </div>
     </div>
-  </div>
-
   <p>This modular approach ensures that each component is responsible for a specific part of the user interface, enabling flexibility and scalability in development.</p>
+  </section>
 </section>
-    <section id="data-scraping">
-      <h3>Data Scraping</h3>
+  <section id="considerations-regarding-the-model">
+    <h1>Considerations Regarding the RDF-based Knowledge Model</h1>
+    <!-- -The expressiveness of the RDF-based ontology
+    -Real-World Usage of the RDF Model -->
+    <section id="expressiveness-of-the-ontology">
+      <h2>Expressiveness of the Ontology</h2>
+      <!-- <p>The RDF-based ontology used in the ELAn system is designed to capture a wide range of properties and relationships related to esoteric programming languages. The ontology is structured to represent the following aspects:</p>
+      <ul>
+        <li><strong>Language Properties:</strong> Attributes such as name, year of creation, designer, and short description are captured to provide essential information about each language.</li>
+        <li><strong>Computational Properties:</strong> Details about computational classes, memory systems, paradigms, and type systems are included to describe the computational characteristics of esolangs.</li>
+        <li><strong>Relationships:</strong> Relationships between languages, paradigms, categories, and other entities are defined to establish connections and enable meaningful queries.</li>
+        <li><strong>External Knowledge Integration:</strong> The ontology allows for integration with external knowledge bases like DBpedia and Wikidata, enhancing the depth and breadth of information available to users.</li>
+      </ul>
+      <p>The ontology's expressiveness ensures that the system can accommodate diverse queries and provide comprehensive insights into esoteric programming languages.</p> -->
+    </section>
+    <section id="real-word-usage">
+      <h2>Real-World Usage of the RDF Model</h2>
+      <!-- <p>The RDF model used in the ELAn system has practical applications in various scenarios, including:</p>
+      <ul>
+        <li><strong>Structured Data Representation:</strong> The RDF model organizes esolang information in a structured format, enabling efficient storage, retrieval, and analysis of language properties.</li>
+        <li><strong>Querying and Filtering:</strong> SPARQL queries leverage the RDF model to search for esolangs based on specific criteria, facilitating advanced filtering and exploration.</li>
+        <li><strong>Knowledge Discovery:</strong> The RDF model supports the discovery of relationships between esolangs, paradigms, and computational classes, offering valuable insights into the esoteric programming landscape.</li>
+        <li><strong>Integration with External Sources:</strong> By aligning with Linked Data principles, the RDF model enables seamless integration with external knowledge bases, enhancing the system's knowledge base and providing users with a broader context.</li>
+      </ul>
+      <p>The real-world usage of the RDF model demonstrates its effectiveness in managing esolang data and enabling sophisticated interactions with the information stored in the system.</p> -->
+    </section>
+  </section>
+    <section id="pragmatic-use-of-data">
+      <h3>Pragmatic use of external data/knowledge sources</h3>
       <p>The esolang data used in this system was gathered through various methods, including scraping and querying external resources. Here's an overview of the data acquisition process:</p>
 
       <ul>
@@ -574,6 +601,68 @@ COMPUTATIONAL_CLASS_REPLACEMENTS = {
       }
       ORDER BY ?languageLabel</code></pre>
       </section>
+  </section>
+  <section id="user-guide">
+    <h2>User Guide</h2>
+    <section id="case-studies">
+      <h3>Use Cases</h3>
+      <section id="case-study-1">
+        <h4>Case Study 1: Finding Similar Languages</h4>
+        <p>Use the system to find languages that are similar to the well-known esoteric language Brainfuck.</p>
+        <ul>
+          <li>Visit the Esoteric Language Explorer website main page.</li>
+          <li>
+            In the search bar enter "Brainfuck" and click search.
+            <img src="images/CaseStudy1a.png" alt="Case Study 1.a" width="100%">
+          </li>
+          <li>Click on the "Brainfuck" language to view its details.</li>
+          <li>View the language details and scroll to the "Similar Languages" section.</li>
+          <li>
+            Examine the list of similar languages provided by the similarity search feature.
+            <img src="images/CaseStudy1b.png" alt="Case Study 1.b" width="100%">
+          </li>
+        </ul>
+      <p>Users learn about other languages that share features with Brainfuck, which could be useful for comparative studies or for users looking to expand their knowledge of esoteric languages with similar mechanics.</p>
+      </section>
+      <section id="case-study-2">
+        <h4>Case Study 2: Comparing Languages</h4>
+        <p>Continuing from the previous case study, compare Brainfuck with another esoteric language, such as Ook!.</p>
+        <ul>
+          <li>While on the Brainfuck language details page, click on the "Compare" button. In the bottom right corner, a badge will appear indicating that Brainfuck is selected for comparison.</li>
+          <li>Visit the Esoteric Language Explorer website main page.</li>
+          <li>Search for "Ook!", a language similar to Brainfuck but designed to be more readable by orangutans. Click on its "Compare" button.</li>
+          <li>Click on the "Compare" button from the bottom right corner or from the navigation bar to view a side-by-side comparison of Brainfuck and Ook!.</li>
+          <li>View the side-by-side comparison of Brainfuck and Ook! to identify similarities and differences between the two languages.</li>
+        </ul>
+        <img src="images/CaseStudy2.png" alt="Case Study 2" width="100%">
+      </section>
+      <section id="case-study-3">
+        <h4>Case Study 3: Discovering Unique Programming Paradigms</h4>
+         Identify and explore unique programming paradigms in esoteric programming languages.
+        <ul>
+          <li>Visit the Esoteric Language Explorer website main page.</li>
+          <li>Click on the "Paradigms" link in the navigation bar to access the list of unique programming paradigms.</li>
+          <li>Explore the paradigms and click on a specific paradigm to view languages that follow that paradigm.</li>
+          <li>Review the list of languages and their details to understand how different paradigms are implemented in esoteric languages.</li>
+        </ul>
+        <img src="images/CaseStudy3a.png" alt="Case Study 3.a" width="100%">
+        <p>Another way to explore paradigms is by finding languages that incorporate diverse programming approaches.</p>
+        <ul>
+          <li>Visit the Esoteric Language Explorer website main page.</li>
+          <li>Click on the "Paradigms" filter and select both "Imperative" and "Functional" paradigms.</li>
+          <li>Examine the filtered list of languages to see those that combine both paradigms.</li>
+          <li>Explore the languages to understand how they incorporate multiple programming paradigms.</li>
+        </ul>
+        <img src="images/CaseStudy3b.png" alt="Case Study 3.b" width="100%">
+        <p>Users can use this feature to study unconventional programming paradigms and their applications in esoteric languages, broadening their understanding of programming concepts.</p>
+      </section>
+    </section>
+    <section id="demo-video">
+      <h3>Demo Video</h3>
+      <p>
+        Watch the demo video below to see the Esoteric Language Explorer in action:
+      </p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="Demo Video" allowfullscreen></iframe>
     </section>
   </section>
 </body>
