@@ -4,6 +4,7 @@ import { Esolang } from "../constants/types";
 import FieldList from "./FieldList";
 import { useEsolangCompare } from "../context/EsolangCompareContext";
 import Badge from "./Badge";
+import { toast } from "react-toastify";
 
 interface EsolangDetailsProps {
   name?: string;
@@ -11,7 +12,7 @@ interface EsolangDetailsProps {
 
 const EsolangDetails: React.FC<EsolangDetailsProps> = (props) => {
   const { name: paramName } = useParams<{ name: string }>();
-  const name = props.name || paramName;
+  const name = props.name ?? paramName;
 
   const [language, setLanguage] = React.useState<Esolang>();
   const [similarLanguages, setSimilarLanguages] = React.useState<string[]>();
@@ -39,6 +40,15 @@ const EsolangDetails: React.FC<EsolangDetailsProps> = (props) => {
         const encodedName = encodeURIComponent(name ?? "");
         const response = await fetch(`/api/esolangs/similar/${encodedName}`);
         if (!response.ok) {
+          if (response.status === 404) {
+            toast.warn("No similar languages found", {
+              position: "top-right",
+              autoClose: 3000,
+              hideProgressBar: true,
+            });
+            setSimilarLanguages([]);
+            return;
+          }
           throw new Error("Similar languages not found");
         }
         const data = await response.json();
@@ -151,7 +161,7 @@ const EsolangDetails: React.FC<EsolangDetailsProps> = (props) => {
                 {similarLanguages.map((language) => (
                   <Badge
                     key={language}
-                    title={decodeURIComponent(language)}
+                    title={language}
                     isEsolang
                   />
                 ))}

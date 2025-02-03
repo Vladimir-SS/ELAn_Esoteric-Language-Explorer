@@ -290,7 +290,10 @@ async def get_similar_esolangs(esolang_name: str):
             embeddings = compute_embeddings(triples)
 
         esolang_url = f"{BASE_URI}{urllib.parse.quote(esolang_name)}"
-        given_language_embedding = embeddings[esolang_url]
+        given_language_embedding = embeddings.get(esolang_url)
+        if given_language_embedding is None:
+            logging.info(f"Embedding not found for {esolang_name}")
+            raise HTTPException(status_code=404, detail="Embedding not found.")
         print("Given language embedding: ", given_language_embedding)
 
         similarities = {
@@ -300,9 +303,12 @@ async def get_similar_esolangs(esolang_name: str):
         }
         similarities = {entity: float(score) for entity, score in similarities.items()}
         similar_languages = sorted(similarities.items(), key=lambda x: x[1], reverse=True)[:15]
+
+        if not similar_languages:
+            raise HTTPException(status_code=404, detail="No similar esolangs found")
         print("Similar languages: ", similar_languages)
 
-        return [language for language, _ in similar_languages]
+        return [urllib.parse.unquote(entity.replace(BASE_URI, "")) for entity, _ in similar_languages]
     except HTTPException as e:
         logging.error(f"Error fetching similar esolangs: {e.detail}", exc_info=True)
         raise e
