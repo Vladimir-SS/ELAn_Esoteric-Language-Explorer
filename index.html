@@ -91,33 +91,55 @@
           <li><strong>Type Systems</strong> – The type system (if any) used in the language.</li>
       </ul>
     </section>
+    <section id="rdf-model">
+      <h3>RDF Model </h3>
+      <p>
+          The application uses an <a role="doc-biblioref">RDF (Resource Description Framework)</a> model to structure and store information about esoteric programming languages. 
+          RDF triples (<strong>subject-predicate-object</strong>) define relationships between entities, ensuring a flexible and queryable knowledge graph.
+      </p>
+      <p>For example, a triple could represent:</p>
+      <pre>
+      (LanguageX, esolang:hasParadigm, Functional)
+      (LanguageY, esolang:hasComputationalClass, Turing-complete)
+      </pre>
+      <p>
+          The RDF model is implemented using
+          <a href="https://rdflib.readthedocs.io/" target="_blank">
+            <code>rdflib</code>
+          </a>
+          in Python, with entities like <code>EsotericLanguage</code> linked to properties such as
+          <code>designedBy</code>, <code>computationalClass</code>, and <code>memorySystem</code>.
+      </p>
 
-      <section id="rdf-model">
-        <h3>RDF Model</h3>
+      <section id="vocabulary-taxonomy">
+        <h4>Vocabulary and Taxonomy Choices</h4>
         <p>
-            The application uses an <a role="doc-biblioref">RDF (Resource Description Framework)</a> model to structure and store information about esoteric programming languages. 
-            RDF triples (<strong>subject-predicate-object</strong>) define relationships between entities, ensuring a flexible and queryable knowledge graph.
+          The ontology is structured around the core concept of <strong>esoteric programming languages (esolangs)</strong>. The primary classes and properties used in the RDF model include:
         </p>
-        <p>For example, a triple could represent:</p>
-        <pre>
-        (LanguageX, esolang:hasParadigm, Functional)
-        (LanguageY, esolang:hasComputationalClass, Turing-complete)
-        </pre>
+        <ul>
+          <li><strong>Classes:</strong> <em>EsotericLanguage</em>, <em>ComputationalClass</em>, <em>MemorySystem</em>, <em>Dimension</em>, <em>Paradigm</em>, <em>Category</em>, <em>TypeSystem</em>, and <em>Dialect</em> represent different aspects of esolangs.</li>
+          <li><strong>Properties:</strong> Relationships between languages and their characteristics are defined using properties like <em>hasCategory</em>, <em>hasParadigm</em>, <em>hasComputationalClass</em>, etc.</li>
+        </ul>
         <p>
-            The RDF model is implemented using
-            <a href="https://rdflib.readthedocs.io/" target="_blank">
-              <code>rdflib</code>
-            </a>
-            in Python, with entities like <code>EsotericLanguage</code> linked to properties such as
-            <code>designedBy</code>, <code>computationalClass</code>, and <code>memorySystem</code>.
-
+          These choices allow for a rich representation of esolangs and their features, making it possible to describe each language's attributes in a structured manner.
+        </p>
       </section>
-
-      <section id="querying-data">
-        <h3>Querying the Data</h3>
+      <section id="usage-application">
+        <h4>Usage and Application of the Model</h4>
         <p>
-            The RDF data is queried using <a role="doc-biblioref">SPARQL</a>, enabling structured searches based on relationships. The application provides queries to retrieve 
-            language metadata, classifications, and influences.
+          This RDF model enables efficient querying and retrieval of data related to esolangs. For instance, users can:
+        </p>
+        <ul>
+          <li>Search for languages based on specific <strong>computational classes</strong> (e.g., Turing-complete languages),</li>
+          <li>Explore relationships such as which languages were <strong>influenced by</strong> others or which paradigms they follow,</li>
+          <li>Identify languages that share particular <strong>memory systems</strong> or <strong>dimensions</strong>.</li>
+        </ul>
+      </section>
+      <section id="querying-data">
+        <h4>Querying the Data</h4>
+        <p>
+            The RDF data is queried using <a role="doc-biblioref">SPARQL</a>, enabling structured searches based on relationships.
+            The application provides queries to retrieve language metadata, classifications, and influences.
         </p>
         <p>Example query to list all esoteric languages:</p>
         <pre>
@@ -153,6 +175,7 @@
         <p>
             By leveraging RDF and SPARQL, the application ensures efficient querying and structured knowledge representation.
         </p>
+      </section>
     </section>
   </section>
   <section id="api-endpoints">
@@ -429,33 +452,6 @@
   <p>This modular approach ensures that each component is responsible for a specific part of the user interface, enabling flexibility and scalability in development.</p>
   </section>
 </section>
-  <section id="considerations-regarding-the-model">
-    <h1>Considerations Regarding the RDF-based Knowledge Model</h1>
-    <!-- -The expressiveness of the RDF-based ontology
-    -Real-World Usage of the RDF Model -->
-    <section id="expressiveness-of-the-ontology">
-      <h2>Expressiveness of the Ontology</h2>
-      <!-- <p>The RDF-based ontology used in the ELAn system is designed to capture a wide range of properties and relationships related to esoteric programming languages. The ontology is structured to represent the following aspects:</p>
-      <ul>
-        <li><strong>Language Properties:</strong> Attributes such as name, year of creation, designer, and short description are captured to provide essential information about each language.</li>
-        <li><strong>Computational Properties:</strong> Details about computational classes, memory systems, paradigms, and type systems are included to describe the computational characteristics of esolangs.</li>
-        <li><strong>Relationships:</strong> Relationships between languages, paradigms, categories, and other entities are defined to establish connections and enable meaningful queries.</li>
-        <li><strong>External Knowledge Integration:</strong> The ontology allows for integration with external knowledge bases like DBpedia and Wikidata, enhancing the depth and breadth of information available to users.</li>
-      </ul>
-      <p>The ontology's expressiveness ensures that the system can accommodate diverse queries and provide comprehensive insights into esoteric programming languages.</p> -->
-    </section>
-    <section id="real-word-usage">
-      <h2>Real-World Usage of the RDF Model</h2>
-      <!-- <p>The RDF model used in the ELAn system has practical applications in various scenarios, including:</p>
-      <ul>
-        <li><strong>Structured Data Representation:</strong> The RDF model organizes esolang information in a structured format, enabling efficient storage, retrieval, and analysis of language properties.</li>
-        <li><strong>Querying and Filtering:</strong> SPARQL queries leverage the RDF model to search for esolangs based on specific criteria, facilitating advanced filtering and exploration.</li>
-        <li><strong>Knowledge Discovery:</strong> The RDF model supports the discovery of relationships between esolangs, paradigms, and computational classes, offering valuable insights into the esoteric programming landscape.</li>
-        <li><strong>Integration with External Sources:</strong> By aligning with Linked Data principles, the RDF model enables seamless integration with external knowledge bases, enhancing the system's knowledge base and providing users with a broader context.</li>
-      </ul>
-      <p>The real-world usage of the RDF model demonstrates its effectiveness in managing esolang data and enabling sophisticated interactions with the information stored in the system.</p> -->
-    </section>
-  </section>
     <section id="pragmatic-use-of-data">
       <h3>Pragmatic use of external data/knowledge sources</h3>
       <p>The esolang data used in this system was gathered through various methods, including scraping and querying external resources. Here's an overview of the data acquisition process:</p>
@@ -662,7 +658,7 @@ COMPUTATIONAL_CLASS_REPLACEMENTS = {
       <p>
         Watch the demo video below to see the Esoteric Language Explorer in action:
       </p>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="Demo Video" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/QHdx2r_1hSk?si=lCMqf-1LXXjkG9q5" title="Demo Video" allowfullscreen></iframe>
     </section>
   </section>
 </body>
