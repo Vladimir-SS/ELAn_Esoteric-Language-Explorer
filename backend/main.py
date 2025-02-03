@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %
 
 app = FastAPI()
 
-sparql_client = SPARQLClient("http://host.docker.internal:3030/Esolangs/sparql") # Change to "http://localhost:3030/Esolangs/sparql" if not using Docker
+sparql_client = SPARQLClient("http://34.68.61.144:3030/Esolangs/sparql") # Change to "http://localhost:3030/Esolangs/sparql" if not using Docker or http://host.docker.internal:3030/Esolangs/sparql if using Docker
 
 @app.get("/api/esolangs", response_model=List[str])
 def get_esolangs():
