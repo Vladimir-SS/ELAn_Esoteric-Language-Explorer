@@ -6,13 +6,21 @@ from src.utils import *
 import urllib.parse
 import logging
 from sklearn.metrics.pairwise import cosine_similarity
+from fastapi.middleware.cors import CORSMiddleware
 
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
 
-
 app = FastAPI()
 
-sparql_client = SPARQLClient("http://34.68.61.144:3030/Esolangs/sparql") # Change to "http://localhost:3030/Esolangs/sparql" if not using Docker or http://host.docker.internal:3030/Esolangs/sparql if using Docker
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+sparql_client = SPARQLClient("http://104.154.222.106:3030/Esolangs/sparql") # Change to "http://localhost:3030/Esolangs/sparql" if not using Docker or http://host.docker.internal:3030/Esolangs/sparql if using Docker
 
 @app.get("/api/esolangs", response_model=List[str])
 def get_esolangs():
