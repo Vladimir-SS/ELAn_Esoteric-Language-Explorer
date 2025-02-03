@@ -15,10 +15,13 @@ const EsolangDetails: React.FC<EsolangDetailsProps> = (props) => {
   const name = props.name ?? paramName;
 
   const [language, setLanguage] = React.useState<Esolang>();
-  const [similarLanguages, setSimilarLanguages] = React.useState<string[]>();
+  const [similarLanguages, setSimilarLanguages] = React.useState<string[]>([]);
   const [loading, setLoading] = React.useState(true);
+  const [loadingSimilar, setLoadingSimilar] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);
   const { addLanguage } = useEsolangCompare();
+
+  const inCompareMode = !!props.name;
 
   useEffect(() => {
     const fetchLanguage = async () => {
@@ -32,6 +35,8 @@ const EsolangDetails: React.FC<EsolangDetailsProps> = (props) => {
         setLanguage(data);
       } catch (err: any) {
         setError(err.message);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -56,12 +61,14 @@ const EsolangDetails: React.FC<EsolangDetailsProps> = (props) => {
       } catch (err: any) {
         setError(err.message);
       } finally {
-        setLoading(false);
+        setLoadingSimilar(false);
       }
     };
 
     fetchLanguage();
-    fetchSimilarLanguages();
+    if (!inCompareMode) {
+      fetchSimilarLanguages();
+    }
   }, [name]);
 
   if (loading) {
@@ -75,8 +82,6 @@ const EsolangDetails: React.FC<EsolangDetailsProps> = (props) => {
       </div>
     );
   }
-
-  const inCompareMode = !!props.name;
 
   return (
     <div className="container-fluid mt-5">
@@ -154,7 +159,9 @@ const EsolangDetails: React.FC<EsolangDetailsProps> = (props) => {
       </div>
       {!inCompareMode && (
         <div className="card mt-4">
-          {similarLanguages && similarLanguages.length > 0 ? (
+          {loadingSimilar ? (
+            <div className="card-body">Loading similar languages...</div>
+          ) : similarLanguages && similarLanguages.length > 0 ? (
             <div className="card-body">
               <h3 className="card-title">Similar languages</h3>
               <div className="row">
