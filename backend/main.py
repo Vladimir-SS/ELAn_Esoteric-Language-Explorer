@@ -308,7 +308,7 @@ async def get_similar_esolangs(esolang_name: str):
             raise HTTPException(status_code=404, detail="No similar esolangs found")
         print("Similar languages: ", similar_languages)
 
-        return [urllib.parse.unquote(entity.replace(BASE_URI, "")) for entity, _ in similar_languages]
+        return [entity.replace(BASE_URI, "") for entity, _ in similar_languages]
     except HTTPException as e:
         logging.error(f"Error fetching similar esolangs: {e.detail}", exc_info=True)
         raise e

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import FilterDropdown from "./FilterDropdown";
-import { FilterName, toSnakeCase } from "../constants/constants";
+import { FilterName, toSnakeCase, escapeMap } from "../constants/constants";
 import FilterBadge from "./FilterBadge";
 import { toast } from "react-toastify";
 import SearchBar from "./SearchBar";
@@ -49,6 +49,10 @@ const FiltersPanel: React.FC<FiltersPanelProps> = ({ onEsolangsChanged }) => {
     });
   };
 
+  function escapeSpecialCharacters(input: string): string {
+    return input.replace(/[!‘()*]/g, (match) => escapeMap[match]);
+  }
+
   const createQueryParams = () => {
     const queryParams = Object.entries(selectedFilters)
       .map(([key, values]) =>
@@ -60,7 +64,7 @@ const FiltersPanel: React.FC<FiltersPanelProps> = ({ onEsolangsChanged }) => {
       return queryParams;
     }
 
-    return queryParams + `&search_term=${encodeURIComponent(searchInput)}`;
+    return queryParams + `&search_term=` + encodeURIComponent(escapeSpecialCharacters(searchInput));
   };
 
   const handleApplyFilters = async () => {

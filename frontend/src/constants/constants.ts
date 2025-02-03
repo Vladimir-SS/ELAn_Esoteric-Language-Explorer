@@ -25,3 +25,11 @@ export const toSnakeCase = (str: string): string => {
         .replace(/\s+/g, "_")
         .toLowerCase();
     }
+
+export const escapeMap: { [key: string]: string } = {
+      '!': '%21',
+      '‘': '%E2%80%98',
+      '(': '%28',
+      ')': '%29',
+      '*': '%2A'
+    };
