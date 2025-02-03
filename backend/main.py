@@ -20,7 +20,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-sparql_client = SPARQLClient("http://104.154.222.106:3030/Esolangs/sparql") # Change to "http://localhost:3030/Esolangs/sparql" if not using Docker or http://host.docker.internal:3030/Esolangs/sparql if using Docker
+sparql_client = SPARQLClient("https://fuseki-728286732053.us-central1.run.app/Esolangs/query") # Change to "http://localhost:3030/Esolangs/sparql" if not using Docker or http://host.docker.internal:3030/Esolangs/sparql if using Docker
 
 @app.get("/api/esolangs", response_model=List[str])
 def get_esolangs():
