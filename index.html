@@ -259,6 +259,19 @@
       </p>
     </section>
 
+    <section id="get-similar-esolangs">
+      <h3>GET /api/esolangs/similar/{esolang_name}</h3>
+      <p>
+        Fetches a list of esoteric programming languages similar to the specified language based on semantic embeddings.
+      </p>
+      <pre>
+        GET /api/esolangs/similar/{esolang_name}
+      </pre>
+      <p>
+        Utilizing a pre-trained machine learning model and cosine similarity calculations, it ranks and returns the top languages that share the most contextually relevant features with the given language, offering a valuable tool for users exploring related esoteric programming languages.
+      </p>
+    </section>
+
     <section id="sparql-data">
       <h3>GET /api/sparql-data</h3>
       <p>
@@ -275,6 +288,52 @@
   </section>
   <section id="system-overview">
     <h2>System Overview</h2>
+
+    <section id="functionalities">
+      <h3>Functionalities</h3>
+      <section id="searching-filtering">
+        <h4>Searching and Filtering</h4>
+        <p>
+          Users can search for esoteric programming languages based on various criteria, including <strong>language name, year created, paradigm, category, memory system, dimension, computational class, file extension, type system or dialect</strong>.</p>
+        <p>
+          Users can select multiple values for each filter and deselect them with ease, offering a flexible and efficient method to pinpoint specific languages or explore a subset of esolangs.
+        </p>
+        <img src="images/Search.PNG" alt="Search" width="100%">
+        <img src="images/Filters.PNG" alt="Filters" width="100%">
+      </section>
+
+      <section id="language-details">
+        <h4>Language Details and Similar Languages</h4>
+        <p>
+          Detailed information about each esoteric language includes its <strong>name, data source, alias, year of creation, designer, short description, dimensions, memory system, paradigms, influenced by, influences, categories, file extensions, computational classes, and type systems</strong>. 
+        </p>
+        <p>Many properties are linked to dedicated pages displaying all languages associated with that property.</p>
+        <p>Additionally, there is a section listing languages similar to the selected language.</p>
+        <img src="images/LanguageDetails.PNG" alt="Language Details" width="100%">
+      </section>
+
+      <section id="see-categories-paradigms">
+        <h4>Properties dedicated pages</h4>
+        <p>
+          Most properties have a dedicated page displaying all potential values, each linked to the languages that has those specific characteristics.
+          The navigation bar provides direct access to the categories and paradigms pages.
+        </p>
+        <img src="images/ValuesOfProperty.PNG" alt="Values Of Property" width="100%">
+        <img src="images/LanguagesWithSpecificProperty.PNG" alt="Languages With Specific Property" width="100%">
+      </section>
+
+      <section id="comparing-languages">
+        <h4>Comparing Languages</h4>
+        <p>
+          Throughout the app—whether on the filter page, a property page, or the similar languages section—users can select two languages for a side-by-side comparison.
+        </p>
+        <p>
+          A persistent bedge at the corner of the page shows which languages are currently selected for comparison, allowing to deselect any or navigate directly to the comparison page from there or via the navigation bar. This feature provides users with considerable flexibility in comparing languages.
+        </p>
+        <img src="images/ComparePage.PNG" alt="Compare Page" width="100%">
+      </section>
+
+    </section>
 
     <section id="tech-stack">
       <h3>Tech Stack</h3>
@@ -389,6 +448,67 @@
       </ul>
 
       <p>The data from these sources is then transformed into an RDF format, stored in the Apache Jena Fuseki database, and made accessible through SPARQL queries.</p>
+
+      <section id="Esolangs-scraping">
+        <h4>Esolangs.org Scraping Process</h4>
+        <p>
+          Languages pages on esolangs.org lack a structured format, which complicates the scraping process. The scraping was conducted in several stages:
+        </p>
+        <ul>
+          <li>Scraping the main page to collect a list of languages and their links, exporting the data in CSV format.</li>
+          <li>Scraping each language page to gather detailed information:</li>
+              <ul>
+                <li>Extracted short description from the first paragraph in the page.</li>
+                <li>Retrieved most of the language properties from the data table, which is present on some language pages.</li>
+                <li>Extracted categories from the categories section.</li>
+                <li>Defined patterns for properties not clearly specified:
+                  <pre><code>
+self.PATTERNS = {
+  "Alias": [
+      r"the title of this article is also called ([^.]+)",
+      r"the correct title is actually ([^.]+)",
+  ],
+  "DesignedBy": [
+      rf"developed by {user_pattern}",
+      rf"made by {user_pattern}",
+      rf"invented by {user_pattern}",
+      rf"implemented by {user_pattern}",
+      rf"devised by {user_pattern}",
+      rf"designed by {user_pattern}",
+      rf"created by {user_pattern}",
+      rf"discovered by {user_pattern}",
+      r"by (User:\S+)",
+  ],
+  ... }
+
+  user_pattern = r"(User:\S+|[\w\s]+)"
+                  </pre></code>
+                </li>
+                <li>Extracted file extensions that are present throughout the page.</li>
+                <li>Gathered relevant properties from other tables within the page.</li>
+                <li>Saved the data in a json file for further processing.</li>
+              </ul>
+          <li>Cleaning the data.</li>
+              <ul>
+                <li>Removed null indicators and other unwanted characters.</li>
+                <li>Extracted year of creation from the language categories, cleaned ranges of years and other cases ("2012(designed)", "Category:2024:2024").</li>
+                <li>Removed categories that duplicated some properties, or moved them to the coresponding properties.</li>
+                <li>Standardized the format for some properties, defined replacements for some values to ensure consistency.</li>
+                <pre><code>
+COMPUTATIONAL_CLASS_REPLACEMENTS = {
+    "turing-complete": "turing-complete",
+    "linear-bounded-automat": "linear-bounded-automaton",
+    "finite-state-automat": "finite-state-automaton",
+    "turing-tarpit": "turing-tarpit",
+    "pushdown-automat": "push-down-automaton",
+    "push-down-automat": "push-down-automaton"
+}
+                </code></pre>
+                <li>Removed values that were not relevant.</li>
+              </ul>
+        </ul>
+      </section>
+
       <section id="DBPedia-query">
         <h4>DBPedia Query Process</h4>
         <p>The following SPARQL query was used to retrieve information from DBPedia,
