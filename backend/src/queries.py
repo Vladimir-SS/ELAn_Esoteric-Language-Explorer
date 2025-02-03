@@ -1,12 +1,11 @@
 from typing import List, Optional
+BASE_URI = "https://frontend-728286732053.us-central1.run.app/esolangs/"
 
-PREFIXES = """
-PREFIX esolang: <http://localhost:5173/esolangs/>
+PREFIXES = f"""
+PREFIX esolang: <{BASE_URI}>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 """
-
-BASE_URI = "http://localhost:5173/esolangs/"
 
 ESOLANGS_NAME_LIST_QUERY = PREFIXES + f"""
 SELECT (STRAFTER(STR(?esolang), "{BASE_URI}") AS ?name)

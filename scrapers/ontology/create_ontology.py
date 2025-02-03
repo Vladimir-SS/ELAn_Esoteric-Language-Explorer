@@ -6,7 +6,7 @@ from utils import (
 )
 
 graph = rdflib.Graph()
-base_uri = "https://frontend-728286732053.us-central1.run.app/"
+base_uri = "https://frontend-728286732053.us-central1.run.app/esolangs/"
 
 OWL = rdflib.OWL
 XSD = rdflib.XSD
