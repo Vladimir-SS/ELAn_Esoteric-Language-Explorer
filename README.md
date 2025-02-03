@@ -1,3 +1,4 @@
+<!-- Tags: #project #infoiasi #wade #web -->
 <div align="center">
 
   <h1>ELAn-Esoteric-Language-Explorer</h1>
@@ -43,17 +44,12 @@
 - [:notebook\_with\_decorative\_cover: Table of Contents](#notebook_with_decorative_cover-table-of-contents)
   - [:star2: About the Project](#star2-about-the-project)
     - [:space\_invader: Tech Stack](#space_invader-tech-stack)
-    - [:dart: Features](#dart-features)
-    - [:art: Color Reference](#art-color-reference)
   - [:toolbox: Getting Started](#toolbox-getting-started)
     - [:bangbang: Prerequisites](#bangbang-prerequisites)
     - [:gear: Installation](#gear-installation)
     - [:running: Run Locally](#running-run-locally)
-    - [:triangular\_flag\_on\_post: Deployment](#triangular_flag_on_post-deployment)
-  - [:eyes: Usage](#eyes-usage)
   - [:wave: Contributing](#wave-contributing)
   - [:warning: License](#warning-license)
-  - [:handshake: Contact](#handshake-contact)
 
 
 
@@ -101,33 +97,6 @@
     <li><a href="https://www.docker.com/">Docker</a></li>
   </ul>
 </details>
-
-<!-- Features -->
-### :dart: Features
-
-<!-- - Feature 1
-- Feature 2
-- Feature 3 -->
-
-<!-- Color Reference -->
-### :art: Color Reference
-
-| Color           | Hex                                                              |
-| --------------- | ---------------------------------------------------------------- |
-| Primary Color   | ![#222831](https://via.placeholder.com/10/222831?text=+) #222831 |
-| Secondary Color | ![#393E46](https://via.placeholder.com/10/393E46?text=+) #393E46 |
-| Accent Color    | ![#00ADB5](https://via.placeholder.com/10/00ADB5?text=+) #00ADB5 |
-| Text Color      | ![#EEEEEE](https://via.placeholder.com/10/EEEEEE?text=+) #EEEEEE |
-
-
-<!-- Env Variables -->
-<!-- ### :key: Environment Variables
-
-To run this project, you will need to add the following environment variables to your .env file
-
-`API_KEY`
-
-`ANOTHER_API_KEY` -->
 
 <!-- Getting Started -->
 ## 	:toolbox: Getting Started
@@ -200,37 +169,6 @@ docker-compose restart backend-fastapi
 
 > **⚠️ Note:** For the backend API to work, you need to have Apache Jena Fuseki running on `http://localhost:3030` with a dataset named `Esolangs`.
 
-<!-- Deployment -->
-### :triangular_flag_on_post: Deployment
-
-<!-- To deploy this project run
-
-```bash
-  yarn deploy
-``` -->
-
-
-<!-- Usage -->
-## :eyes: Usage
-
-<!-- Use this space to tell a little more about your project and how it can be used. Show additional screenshots, code samples, demos or link to other resources.
-
-
-```javascript
-import Component from 'my-project'
-
-function App() {
-  return <Component />
-}
-``` -->
-
-<!-- Roadmap -->
-<!-- ## :compass: Roadmap
-
-* [x] Todo 1
-* [ ] Todo 2 -->
-
-
 <!-- Contributing -->
 ## :wave: Contributing
 
@@ -238,35 +176,7 @@ function App() {
   <img src="https://contrib.rocks/image?repo=Vladimir-SS/ELAn_Esoteric-Language-Explorer" />
 </a>
 
-<!-- Code of Conduct -->
-<!-- ### :scroll: Code of Conduct
-
-Please read the [Code of Conduct](https://github.com/Vladimir-SS/ELAn_Esoteric-Language-Explorer/blob/master/CODE_OF_CONDUCT.md) -->
-
-<!-- FAQ -->
-<!-- ## :grey_question: FAQ
-
-- Question 1
-
-  + Answer 1
-
-- Question 2
-
-  + Answer 2 -->
-
-
 <!-- License -->
 ## :warning: License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-
-<!-- Contact -->
-## :handshake: Contact
-
-<!-- Your Name - email@email_client.com -->
-
-
-<!-- Acknowledgments -->
-<!-- ## :gem: Acknowledgements -->
-
